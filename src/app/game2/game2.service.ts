@@ -2,14 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Game2Service {
-  readonly totalTrials = 84;
+  readonly totalTrials = 3;
 
   endowmentT0: number;
   endowmentT1: number;
-  delayEvents = {
-    isWaitingForOpp: false,
-    isWaitingForReturn: false
-  }
   oppIds: number[];
 
   constructor() { }
@@ -56,25 +52,5 @@ export class Game2Service {
       ids.push(id);
     }
     return ids;
-  }
-
-  setDelay(event: string, threshold: number, minTime: number): void {
-    let prob = Math.random();
-    if (prob <= threshold) {
-      this.delayEvents[event] = true;
-      let time = Math.random() * 3500 + minTime;
-      setTimeout(() => {
-        this.delayEvents[event] = false;
-        this.setTime(event);
-      }, time);
-    } else {
-      this.setTime(event);
-    }
-  }
-
-  setTime(event: string): void {
-    if (event === 'isWaitingForOpp') {
-      this.endowmentT0 = performance.now();
-    }
   }
 }

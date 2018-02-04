@@ -7,13 +7,13 @@ import { CurParticipantService } from '../participant/cur-participant.service';
 import { ParticipantService } from '../participant/participant.service';
 
 @Component({
-  selector: 'tg-sias',
-  templateUrl: './sias.component.html',
-  styleUrls: ['./sias.component.css'],
+  selector: 'tg-ocir',
+  templateUrl: './ocir.component.html',
+  styleUrls: ['./ocir.component.css'],
   providers: [ ParticipantService ]
 })
 
-export class SiasComponent {
+export class OcirComponent {
   answers: { value: string }[] = [
     { value: '0' },
     { value: '0' },
@@ -28,7 +28,7 @@ export class SiasComponent {
               private participantService: ParticipantService,
               private curParticipantService: CurParticipantService,
               private http: Http) {
-    this.http.get('/assets/sias.json')
+    this.http.get('/assets/ocir.json')
             .subscribe(res => {
               this.questions = res.json();
             });

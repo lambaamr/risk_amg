@@ -21,6 +21,7 @@ import { Game2Component } from './game2/game2.component';
 import { SurveyInstructionsComponent } from './survey-instructions/survey-instructions.component';
 import { SurveyInstructions2Component } from './survey-instructions2/survey-instructions2.component';
 import { SiasComponent } from './sias/sias.component';
+import { OcirComponent } from './ocir/ocir.component';
 
 import { IpRouteGuardService } from './ip-route-guard.service';
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'slot-instructions', component: SlotInstructions2Component },
   { path: 'survey-instructions', component: SurveyInstructions2Component },
   { path: 'sias', component: SiasComponent },
+  { path: 'ocir', component: OcirComponent },
   { path: 'amg-task', component: AmgTask2Component },
   { path: 'game2', component: Game2Component },
   { path: 'trust-instructions', component: TrustInstructions2Component },

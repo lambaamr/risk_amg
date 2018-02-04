@@ -128,7 +128,6 @@ export class Game2Component implements AfterViewInit, OnDestroy {
     this.drift();
     this.curParticipantService.addOpponent(this.oppSettings[oppId].actualId);
     this.curParticipantService.addProportion(this.opponent.player.meanProp);
-    this.game2Service.setDelay('isWaitingForOpp', 0.5, 500);
   }
 
   setEndowment() {
@@ -140,7 +139,6 @@ export class Game2Component implements AfterViewInit, OnDestroy {
     this.curParticipantService.addReturn(this.oppReturn);
     this.curParticipantService.addNetGain(this.netGain);
     this.curParticipantService.addActualProp(this.opponent.player.proportion);
-    this.game2Service.setDelay('isWaitingForReturn', 1, 1000);
     this.flip = 'active';
   }
 

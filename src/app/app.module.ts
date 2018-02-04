@@ -41,6 +41,7 @@ import { Game2Component } from './game2/game2.component';
 import { SurveyInstructionsComponent } from './survey-instructions/survey-instructions.component';
 import { SurveyInstructions2Component } from './survey-instructions2/survey-instructions2.component';
 import { SiasComponent } from './sias/sias.component';
+import { OcirComponent } from './ocir/ocir.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { SiasComponent } from './sias/sias.component';
     Game2Component,
     SurveyInstructionsComponent,
     SurveyInstructions2Component,
-    SiasComponent
+    SiasComponent,
+    OcirComponent
   ],
   imports: [
     BrowserModule,
