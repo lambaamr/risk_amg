@@ -1,0 +1,6 @@
+
+<div id="survey-instructions2">
+  <div *ngFor="let surveyinstruction of survey_instructions">
+    <tg-survey-instructions *ngIf="page === surveyinstruction.page" [page]="surveyinstruction.page" [text]="surveyinstruction.text" [imgSrc]="surveyinstruction.img" [maxPage]="maxPage" (pageChange)="pageChange($event)"></tg-survey-instructions>
+  </div>
+</div> <!-- #instructions -->

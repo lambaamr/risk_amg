@@ -1,0 +1,5 @@
+<div id="trust-instructions2">
+  <div *ngFor="let trustinstruction of trust_instructions">
+    <tg-trust-instructions *ngIf="page === trustinstruction.page" [page]="trustinstruction.page" [text]="trustinstruction.text" [imgSrc]="trustinstruction.img" [maxPage]="maxPage" (pageChange)="pageChange($event)"></tg-trust-instructions>
+  </div>
+</div> <!-- #instructions -->

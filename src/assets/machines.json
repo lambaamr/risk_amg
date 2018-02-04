@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "I-Bot-A5",
+        "meanProp": 0.02,
+        "directions": [1, 1, -1],
+        "img": "",
+        "highlight": "white"
+    },
+    {
+        "id": 2,
+        "name": "Chip-5",
+        "meanProp": 0.25,
+        "directions": [-1, 1, 1],
+        "img": "",
+        "highlight": "white"
+    },
+    {
+        "id": 3,
+        "name": "Bors-5",
+        "meanProp": 0.45,
+        "directions": [-1, -1, 1],
+        "img": "",
+        "highlight": "white"
+    }
+]

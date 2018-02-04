@@ -1,0 +1,5 @@
+<div id="amg-instructions2">
+  <div *ngFor="let amginstruction of amg_instructions">
+    <tg-amg-instructions *ngIf="page === amginstruction.page" [page]="amginstruction.page" [text]="amginstruction.text" [imgSrc]="amginstruction.img" [maxPage]="maxPage" (pageChange)="pageChange($event)"></tg-amg-instructions>
+  </div>
+</div> <!-- #instructions -->

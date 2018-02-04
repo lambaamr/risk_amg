@@ -1,0 +1,5 @@
+<div id="slot-instructions2">
+  <div *ngFor="let slotinstruction of slot_instructions">
+    <tg-slot-instructions *ngIf="page === slotinstruction.page" [page]="slotinstruction.page" [text]="slotinstruction.text" [imgSrc]="slotinstruction.img" [maxPage]="maxPage" (pageChange)="pageChange($event)"></tg-slot-instructions>
+  </div>
+</div> <!-- #instructions -->

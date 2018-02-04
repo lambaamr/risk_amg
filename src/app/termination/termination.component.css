@@ -1,0 +1,12 @@
+.card {
+  width: 580px;
+  height: 400px;
+  margin: 12% auto 0 auto;
+  text-align: center;
+}
+
+.message {
+  width: 400px;
+  margin: auto;
+  padding: 25% 0 25% 0;
+}
