@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "<h3>THIS WILL BE THE OCIR</h3>",
+    "question": "<h3>THIS WILL BE THE GAD</h3>",
     "a": "option",
     "b": "option",
     "c": "option",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "question": "<h3>THIS WILL BE THE OCIR</h3>",
+    "question": "<h3>THIS WILL BE THE GAD</h3>",
     "a": "option",
     "b": "option",
     "c": "option",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "question": "<h3>THIS WILL BE THE OCIR</h3>",
+    "question": "<h3>THIS WILL BE THE GAD</h3>",
     "a": "option",
     "b": "option",
     "c": "option",

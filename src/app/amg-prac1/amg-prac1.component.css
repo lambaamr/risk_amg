@@ -1,0 +1,89 @@
+.amgprac {
+  width: 1200px;
+  margin: auto;
+}
+
+.welcome-text {
+  width: 750px;
+  height: 520px;
+  margin: auto;
+  padding: 50px 80px 80px 80px;
+  margin-top: 7%;
+  box-sizing: border-box;
+}
+
+.welcome-text button {
+  float: right;
+  margin-top: 25px;
+}
+
+.welcome-text div {
+  margin-top: 50px;
+}
+
+/* Change this */
+.amgprac-text {
+  width: 70%;
+  height: 50px;
+  padding: 25px 50px 0 50px;
+  margin-right: auto;
+  float: center;
+  box-sizing: border-box;
+  position:absolute;
+  bottom:120px;
+  left: 192px;
+}
+
+.amgprac-text div {
+  position:absolute;
+  bottom:-4px;
+  left: 260px;
+  float: center;
+}
+
+/* change this */
+.amgprac-image {
+  width: 80%;
+  height: 420px;
+  margin-bottom: 10%;
+  margin-left: -145px;
+  margin-right: auto;
+  float: center;
+  box-sizing: border-box;
+  background-color:#E7E6E6;
+}
+
+p {
+    font-size: 100px;
+    width: 500px;
+    position: fixed;
+    top: 27%;
+    left: 49%;
+}
+
+/* change this */
+img {
+  width: 700px;
+  height: auto;
+  display: block;
+  margin: auto;
+  padding-top: 2.5%;
+  float: center;
+}
+
+.amgprac-buttons {
+  position: absolute;
+  bottom: 90px;
+  right: 60px;
+}
+
+.amgprac-buttons button {
+  margin-left: 55px;
+}
+
+tg-nav-button {
+  position: absolute;
+  bottom: 45px;
+  right: 60px;
+  margin-top: 10px;
+}

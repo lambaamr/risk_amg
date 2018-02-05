@@ -2,28 +2,28 @@
   {
     "id": 1,
     "question": "<h3>THIS WILL BE THE SIAS</h3>",
-    "a": "I get to keep $0.60 for myself, and the other $0.40 gets quadrupled to $1.60. The other player then decides how much to give back to me.",
-    "b": "I get to keep $0.40 for myself, and then the other $0.60 gets tripled to $1.80. The other player then gives me back half of it.",
-    "c": "fake haha",
-    "d": "fake haha",
+    "a": "option",
+    "b": "option",
+    "c": "option",
+    "d": "option",
     "ans": ""
   },
   {
     "id": 2,
-    "question": "<h3>WTHIS WILL BE THE SIAS</h3>",
-    "a": "I will be asked to select one of three players to play with on that round.",
-    "b": "I will be randomly paired with one of three players on that round.",
-    "c": "fake haha",
-    "d": "fake haha",
+    "question": "<h>WTHIS WILL BE THE SIAS</h3>",
+    "a": "option",
+    "b": "option",
+    "c": "option",
+    "d": "option",
     "ans": ""
   },
   {
     "id": 3,
     "question": "<h3>THIS WILL BE THE SIAS</h3>",
-    "a": "To try to receive as much money as possible on each round as two of my rounds will be randomly selected to determine my bonus payment.",
-    "b": "To try to accrue as many points as possible, as the total number of points will determine my bonus payment.",
-    "c": "fake haha",
-    "d": "fake haha",
+    "a": "option",
+    "b": "option",
+    "c": "option",
+    "d": "option",
     "ans": ""
   }
 ]

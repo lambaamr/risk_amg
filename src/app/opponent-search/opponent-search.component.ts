@@ -12,8 +12,8 @@ import { NavButtonComponent } from '../nav-button/nav-button.component';
 
 export class OpponentSearchComponent implements OnInit {
   opponentFound: boolean = false;
-  players: string[]; 
-  
+  players: string[];
+
   constructor(private http: Http) {
     this.http.get('/assets/players.json')
         .subscribe(res => {
@@ -22,6 +22,6 @@ export class OpponentSearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => this.opponentFound = true, 8000);
+    setTimeout(() => this.opponentFound = true, 12000);
   }
 }

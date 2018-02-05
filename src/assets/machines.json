@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "I-Bot-A5",
+        "name": "Slotty-A5",
         "meanProp": 0.02,
         "directions": [1, 1, -1],
         "img": "",

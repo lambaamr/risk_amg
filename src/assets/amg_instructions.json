@@ -1,62 +1,47 @@
 [
   {
     "page": 1,
-    "text": "<p>THIS PART WILL START YOUR AMG TASK INSTRUCTIONS</p>",
+    "text": "<p>You will now begin the first part of the experiment.This task should take you approximately 15-20 minutes to complete. Please pay close attention to the following instructions.</p>",
     "img": ""
   },
   {
     "page": 2,
-    "text": "<p>INSTRUCTIONS AMG WILL GO HERE :)</p>",
-    "img": "/assets/images/image1.png"
+    "text": "<p>In this study, you will see lotteries like the one pictured on this screen. Each lottery represents a real bag with 100 poker chips in it (some red and some blue).</p>",
+    "img": "/assets/images/image1c.png"
   },
   {
     "page": 3,
-    "text": "<p>On each round, you will first press the <strong>red</strong> button, which will pair you with the other player you are playing with on that <strong>round</strong>.</p>",
-    "img": "/assets/images/image2.png"
+    "text": "<p>The number of red and blue chips inside the bag is represented by the size of the red and blue bars and the numbers written inside them. In this example, most chips are blue (75 out of 100), and fewer are red (25 out of 100).</p>",
+    "img": "/assets/images/image1c.png"
   },
   {
     "page": 4,
-    "text": "<p>After you have been paired with a player on that round, you will be asked to decide how much of $1.00 you would like to invest by sending it to the other player and how much to keep for yourself.</p><p>Using the slider scale provided, you can decide how much of $1.00 to invest in $0.10 increments.</p>",
-    "img": "/assets/images/image3.png"
+    "text": "<p>This means that if you were to draw a poker chip at random from this bag, you would be more likely to draw a blue one than a red one. If you decided to play this lottery, the computer would draw a chip at random from a lottery containing 75 blue chips and 25 red chips at the end of the study. The color of the chip you draw will determine how much money you earn.</p>",
+    "img": "/assets/images/image1c.png"
   },
   {
     "page": 5,
-    "text": "<p>However, you must make a minimum investment of $0.10, so <strong>$0 is not an option.</strong></p><p>Otherwise, feel free to invest as much or as little as you would like.</p>",
-    "img": "/assets/images/image3.png"
+    "text": "<p>Above and below each bar is a number indicating a dollar amount, which represents how much money you could earn in that lottery. If you play this lottery and draw a blue chip, you will get an additional $2.50. If you draw a red chip instead, you will get $0. Please note that the colors may be associated with different monetary amounts in each lottery, such that the blue chips will sometimes represent getting $0, and the red chips will sometimes represent getting $0.</p>",
+    "img": "/assets/images/image2c.png"
   },
   {
     "page": 6,
-    "text": "<p>After you decide how much of the $1.00 you want to invest in the other player, your investment will be <strong>quadrupled (x4)!</strong></p>",
-    "img": "/assets/images/image4.png"
+    "text": "<p>On some trials, part of the bar will be hidden, and you will only have partial information about the number of red and blue chips inside the bag. For example, in this lottery, you can see that there are 25 blue chips and 25 red chips. The remaining 50 chips could be all red, all blue, or any combination of red and blue.</p>",
+    "img": "/assets/images/image3c.png"
   },
   {
     "page": 7,
-    "text": "<p>The other player can decide to keep all the money for themselves or <strong>give you back some portion of it.</strong></p>",
-    "img": "/assets/images/image5.png"
+    "text": "<p>On each trial, you will be asked to choose between two options using the <strong>[E]</strong> and <strong>[I]</strong> keys, which correspond to the left and right options. For example, you can either earn a certain $0.25, or play the lottery for an uncertain gain. Keep in mind that the side the certain $0.25 or lottery appears on will switch throughout the task.</p>",
+    "img": "/assets/images/image4c.png"
   },
   {
     "page": 8,
-    "text": "<p>To recap, on each round of this game you will first press the <strong>red</strong> button and you will be paired with one of 3 players.</p><p>You will then decide how much of $1.00 you would like to invest and how much to keep for yourself, keeping in mind that <strong>$0 is not an option.</strong></p>",
-    "img": "/assets/images/image2.png"
+    "text": "<p>If this phase of the experiment is selected to determine your bonus payment, the computer will randomly select two of your trials to be realized. Based on your decision on that trial, we will either pay you the certain $0.25 or have a computer play the lottery on your behalf, such that any winnings from the lottery will be added to you bonus payment.</p>",
+    "img": "/assets/images/image4c.png"
   },
   {
     "page": 9,
-    "text": "<p>Whatever money you decide to invest will then be <strong>quadrupled (x4)</strong> as it is sent to the other player.</p><p>The other player will then decide how much money they would like to keep for themselves and how much to return back to you.</p>",
-    "img": "/assets/images/image4.png"
-  },
-  {
-    "page": 10,
-    "text": "<p>After the other player makes their decision, you will be notified of their decisions and the outcome on that round.</p><p>You will then push the button again to play with another player.</p>",
-    "img": "/assets/images/image6.png"
-  },
-  {
-    "page": 11,
-    "text": "<p>At the end of the game, we will randomly select two of your rounds to determine your bonus payment, so <strong>the best strategy is to receive as much money as possible on each round.</strong></p>",
-    "img": "/assets/images/image6.png"
-  },
-  {
-    "page": 12,
-    "text": "<p>The game will probably take you 30 minutes. If you do not have 30 minutes to complete this task, please exit now and do not proceed.</p><p>If you would like to play this game, please proceed to answer the quiz questions correctly in order to enter the game and be paired with other players online.</p><p><strong>If you are still unsure about the task instructions, please use the 'back' button to review the instructions. Failure to answer all quiz questions correctly will result in the termination of the session.</strong></p>",
-    "img": "/assets/images/image1.png"
+    "text": "<p>If you understand all task instructions please click “Practice”. You will be shown 4 practice trials to ensure that you understand the nature of the task. If any portions of the experiment are unclear to you please use the “back” button to review.</p>",
+    "img": "/assets/images/image4c.png"
   }
 ]

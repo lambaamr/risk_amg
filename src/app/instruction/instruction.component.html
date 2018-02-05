@@ -6,11 +6,11 @@
   </div> <!-- #welcome-text -->
 
   <div *ngIf="page > 1" class="instruction-text card">
-    <h2>Instructions</h2>
+    <h2>Experiment Guidelines</h2>
     <div [innerHTML]="text"></div>
     <div class="instruction-buttons">
       <button (click)="setPage(page - 1)">Back</button>
-      <button *ngIf="page < maxPage" (click)="setPage(page + 1)">Next</button> 
+      <button *ngIf="page < maxPage" (click)="setPage(page + 1)">Next</button>
     </div> <!-- #instructions-buttons -->
     <tg-nav-button *ngIf="page === maxPage" url="quiz" label="Go to Quiz"></tg-nav-button>
   </div> <!-- #instruction-text -->
@@ -18,4 +18,3 @@
   <div *ngIf="page > 1" class="instruction-image card"><img [src]="imgSrc"></div>
 
 </div> <!-- #instruction -->
-

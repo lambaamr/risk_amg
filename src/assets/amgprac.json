@@ -1,0 +1,22 @@
+[
+  {
+    "page": 0,
+    "text": "<p>You will now complete practice trials of the lottery task. Click 'Next' to proceed. </p>",
+    "img": ""
+  },
+  {
+    "page": 1,
+    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "img": "/assets/images/image1.png"
+  },
+  {
+    "page": 2,
+    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "img": "/assets/images/image30.png"
+  },
+  {
+    "page": 3,
+    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "img": "/assets/images/image55.png"
+  }
+]

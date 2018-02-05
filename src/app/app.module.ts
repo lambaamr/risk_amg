@@ -42,6 +42,10 @@ import { SurveyInstructionsComponent } from './survey-instructions/survey-instru
 import { SurveyInstructions2Component } from './survey-instructions2/survey-instructions2.component';
 import { SiasComponent } from './sias/sias.component';
 import { OcirComponent } from './ocir/ocir.component';
+import { CesdComponent } from './cesd/cesd.component';
+import { GadComponent } from './gad/gad.component';
+import { AmgPrac1Component } from './amg-prac1/amg-prac1.component';
+import { AmgPrac2Component } from './amg-prac2/amg-prac2.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +75,11 @@ import { OcirComponent } from './ocir/ocir.component';
     SurveyInstructionsComponent,
     SurveyInstructions2Component,
     SiasComponent,
-    OcirComponent
+    OcirComponent,
+    CesdComponent,
+    GadComponent,
+    AmgPrac1Component,
+    AmgPrac2Component
   ],
   imports: [
     BrowserModule,
