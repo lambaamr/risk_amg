@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
 
 export enum KEY_CODE {
-  e = 69,
-  i = 73
+  f = 70,
+  j = 74
 }
 
 @Component({
@@ -36,11 +36,11 @@ export class AmgPrac1Component implements OnInit {
 
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    if (!this.isFixation && event.keyCode === KEY_CODE.e) {
+    if (!this.isFixation && event.keyCode === KEY_CODE.f) {
       this.setFixation(1000);
     }
 
-    if (!this.isFixation && event.keyCode === KEY_CODE.i) {
+    if (!this.isFixation && event.keyCode === KEY_CODE.j) {
       this.setFixation(1000);
     }
   }

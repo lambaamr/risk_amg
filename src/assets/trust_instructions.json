@@ -56,12 +56,12 @@
   },
   {
     "page": 12,
-    "text": "<p>At the end of the game, if this portion is selected we will randomly select two of your rounds to determine your bonus payment, so <strong>the best strategy is to receive as much money as possible on each round.</strong></p>",
+    "text": "<p>At the end of the game, if this portion is selected we will randomly select one of your rounds to determine your bonus payment, so <strong>the best strategy is to receive as much money as possible on each round.</strong></p>",
     "img": "/assets/images/image6a.png"
   },
   {
     "page": 13,
-    "text": "<p>Please review any instructions that are still unclear using the 'back' and 'forward' buttons.</p><p>If you understand the game instructions please click 'Start Game' to be paired with other players online. <strong>Again, please note, this may take a few minutes so please be patient.</strong></p>",
+    "text": "<p>Please review any instructions that are still unclear using the 'Back' and 'Next' buttons.</p><p>If you understand the game instructions please click 'Start Game' to be paired with other players online. <strong>Again, please note, this may take a few minutes so please be patient.</strong></p>",
     "img": "/assets/images/image1a.png"
   }
 ]

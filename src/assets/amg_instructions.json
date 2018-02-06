@@ -31,17 +31,17 @@
   },
   {
     "page": 7,
-    "text": "<p>On each trial, you will be asked to choose between two options using the <strong>[E]</strong> and <strong>[I]</strong> keys, which correspond to the left and right options. For example, you can either earn a certain $0.25, or play the lottery for an uncertain gain. Keep in mind that the side the certain $0.25 or lottery appears on will switch throughout the task.</p>",
+    "text": "<p>On each trial, you will be asked to choose between two options using the <strong>[F]</strong> and <strong>[J]</strong> keys, which correspond to the left and right options. For example, you can either earn a certain $0.25, or play the lottery for an uncertain gain. Keep in mind that the side the certain $0.25 or lottery appears on will switch throughout the task.</p>",
     "img": "/assets/images/image4c.png"
   },
   {
     "page": 8,
-    "text": "<p>If this phase of the experiment is selected to determine your bonus payment, the computer will randomly select two of your trials to be realized. Based on your decision on that trial, we will either pay you the certain $0.25 or have a computer play the lottery on your behalf, such that any winnings from the lottery will be added to you bonus payment.</p>",
+    "text": "<p>If this phase of the experiment is selected to determine your bonus payment, the computer will randomly select one of your trials to be realized. Based on your decision on that trial, we will either pay you the certain $0.25 or have a computer play the lottery on your behalf.</p>",
     "img": "/assets/images/image4c.png"
   },
   {
     "page": 9,
-    "text": "<p>If you understand all task instructions please click “Practice”. You will be shown 4 practice trials to ensure that you understand the nature of the task. If any portions of the experiment are unclear to you please use the “back” button to review.</p>",
+    "text": "<p>If you understand all task instructions please click “Practice”. You will be shown 4 practice trials to ensure that you understand the nature of the task. If any portions of the experiment are unclear to you please use the “Back” button to review.</p>",
     "img": "/assets/images/image4c.png"
   }
 ]
