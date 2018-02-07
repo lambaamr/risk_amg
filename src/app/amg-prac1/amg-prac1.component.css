@@ -21,18 +21,6 @@
   margin-top: 50px;
 }
 
-/* Change this */
-.amgprac-text {
-  width: 70%;
-  height: 50px;
-  padding: 25px 50px 0 50px;
-  margin-right: auto;
-  float: center;
-  box-sizing: border-box;
-  position:absolute;
-  bottom:120px;
-  left: 192px;
-}
 
 .amgprac-text div {
   position:absolute;
@@ -41,17 +29,6 @@
   float: center;
 }
 
-/* change this */
-.amgprac-image {
-  width: 80%;
-  height: 420px;
-  margin-bottom: 10%;
-  margin-left: -145px;
-  margin-right: auto;
-  float: center;
-  box-sizing: border-box;
-  background-color:#E7E6E6;
-}
 
 p {
     font-size: 100px;
