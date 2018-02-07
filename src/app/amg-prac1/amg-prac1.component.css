@@ -27,7 +27,7 @@ img {
   height: 370px;
   float: center;
   margin: auto;
-  margin-top: 120px;
+  margin-top: 170px;
 }
 
 p {
@@ -36,4 +36,10 @@ p {
     position: fixed;
     top: 27%;
     left: 49%;
+}
+
+h3 {
+  position: fixed;
+  top: 15%;
+  left: 34%;
 }
