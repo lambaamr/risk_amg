@@ -1,13 +1,13 @@
 <div class="amg-task1" *ngIf="!isFixation">
   <div *ngIf="page === 0" class="welcome-text card">
-    <h2>Part 1</h2>
+    <h2>Welcome {{ curParticipantService.name | capitalize}}!</h2>
     <div [innerHTML]="text"></div>
     <button (click)="setPage(page + 1)">Next</button>
   </div> <!-- #welcome-text -->
 
-  <div *ngIf="page >= 1" class="amgtask-text card">
+  <div *ngIf="page >= 1" class="amgtask-text">
     <div [innerHTML]="text"></div>
-    <div *ngIf="page >= 1" class="amgtask-image card"><img [src]="imgSrc"></div>
+    <div *ngIf="page >= 1" class="amgtask-image"><img [src]="imgSrc"></div>
   </div> <!-- #instruction-text -->
 
 

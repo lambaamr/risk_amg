@@ -1,5 +1,5 @@
 .amg-prac1 {
-  width: 650px;
+  width: 700px;
   margin: auto;
 }
 
@@ -21,14 +21,8 @@
   margin-top: 50px;
 }
 
+/* Change this */
 
-img {
-  width: 650px;
-  height: 370px;
-  float: center;
-  margin: auto;
-  margin-top: 170px;
-}
 
 p {
     font-size: 100px;
@@ -38,8 +32,12 @@ p {
     left: 49%;
 }
 
-h3 {
-  position: fixed;
-  top: 15%;
-  left: 34%;
+/* change this */
+img {
+  width: 700px;
+  height: auto;
+  display: block;
+  margin: auto;
+  padding-top: 2.5%;
+  float: center;
 }

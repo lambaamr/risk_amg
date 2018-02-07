@@ -6,17 +6,17 @@
   },
   {
     "page": 1,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "text": "",
     "img": "/assets/images/image1.png"
   },
   {
     "page": 2,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "text": "",
     "img": "/assets/images/image30.png"
   },
   {
     "page": 3,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "text": "",
     "img": "/assets/images/image55.png"
   }
 ]

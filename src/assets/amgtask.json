@@ -1,32 +1,22 @@
 [
   {
     "page": 0,
-    "text": "<p>This completes the practice phase. You will now complete the experimental portion. Please click 'Next' to proceed.</p>",
+    "text": "<p>You will now complete practice trials of the lottery task. Click 'Next' to proceed. </p>",
     "img": ""
   },
   {
     "page": 1,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
+    "text": "",
     "img": "/assets/images/image1.png"
   },
   {
     "page": 2,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
-    "img": "/assets/images/image2.png"
+    "text": "",
+    "img": "/assets/images/image30.png"
   },
   {
     "page": 3,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
-    "img": "/assets/images/image3.png"
-  },
-  {
-    "page": 4,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
-    "img": "/assets/images/image4.png"
-  },
-  {
-    "page": 5,
-    "text": "<p>Please use the <strong>[e]</strong> and <strong>[i]</strong> keys to indicate your response.</p>",
-    "img": "/assets/images/image5.png"
+    "text": "",
+    "img": "/assets/images/image55.png"
   }
 ]

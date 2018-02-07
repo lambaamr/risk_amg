@@ -1,6 +1,6 @@
 <div id="amg-task2">
- <div *ngFor="let task of amgtask">
-   <tg-amg-task1 *ngIf="page === task.page" [page]="task.page" [text]="task.text" [imgSrc]="task.img" [maxPage]="maxPage" [pages]="pages" (pageChange)="pageChange($event)" (pagesChange)="pagesChange($event)">
-   </tg-amg-task1> 
- </div>
+ <div *ngFor="let task of amgtask">
+   <tg-amg-task1 *ngIf="page === task.page" [page]="task.page" [text]="task.text" [imgSrc]="task.img" [maxPage]="maxPage" [pages]="pages" (pageChange)="pageChange($event)" (pagesChange)="pagesChange($event)">
+   </tg-amg-task1>
+ </div>
 </div> <!-- #instructions -->

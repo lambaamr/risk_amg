@@ -54,15 +54,15 @@ export class AmgTask1Component implements OnInit {
   }
 
   setFixation(interval: number): void {
-     if (this.pages.length > 0) {
-       this.isFixation = true;
-       setTimeout(() => {
-         this.isFixation = false;
-         let page = this.pages.pop();
-         this.setPage(page);
-       }, interval);
-     } else {
-     this.router.navigateByUrl('/trust-instructions', { replaceUrl: true })
-     }
-   }
+     if (this.pages.length > 0) {
+       this.isFixation = true;
+       setTimeout(() => {
+         this.isFixation = false;
+         let page = this.pages.pop();
+         this.setPage(page);
+       }, interval);
+     } else {
+     this.router.navigateByUrl('/trust-instructions', { replaceUrl: true })
+     }
+   }
 }

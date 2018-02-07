@@ -29,8 +29,6 @@ import { IpService } from './ip.service';
 import { CapitalizePipe } from './capitalize.pipe';
 import { TerminationComponent } from './termination/termination.component';
 import { InformedConsentComponent } from './informed-consent/informed-consent.component';
-import { AmgTask1Component } from './amg-task1/amg-task1.component';
-import { AmgTask2Component } from './amg-task2/amg-task2.component';
 import { AmgInstructionsComponent } from './amg-instructions/amg-instructions.component';
 import { AmgInstructions2Component } from './amg-instructions2/amg-instructions2.component';
 import { TrustInstructionsComponent } from './trust-instructions/trust-instructions.component';
@@ -46,6 +44,8 @@ import { CesdComponent } from './cesd/cesd.component';
 import { GadComponent } from './gad/gad.component';
 import { AmgPrac1Component } from './amg-prac1/amg-prac1.component';
 import { AmgPrac2Component } from './amg-prac2/amg-prac2.component';
+import { AmgTask1Component } from './amg-task1/amg-task1.component';
+import { AmgTask2Component } from './amg-task2/amg-task2.component';
 
 @NgModule({
   declarations: [
@@ -63,8 +63,6 @@ import { AmgPrac2Component } from './amg-prac2/amg-prac2.component';
     CapitalizePipe,
     TerminationComponent,
     InformedConsentComponent,
-    AmgTask1Component,
-    AmgTask2Component,
     AmgInstructionsComponent,
     AmgInstructions2Component,
     TrustInstructionsComponent,
@@ -79,7 +77,9 @@ import { AmgPrac2Component } from './amg-prac2/amg-prac2.component';
     CesdComponent,
     GadComponent,
     AmgPrac1Component,
-    AmgPrac2Component
+    AmgPrac2Component,
+    AmgTask1Component,
+    AmgTask2Component
   ],
   imports: [
     BrowserModule,
