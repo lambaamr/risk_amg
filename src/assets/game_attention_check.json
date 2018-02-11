@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "question": "<h3>In the current study, we ask that you do which of the following?</h3>",
-    "a": "Pay close attention to the instructions and minimize distractions.",
-    "b": "Click through instructions briskly.",
-    "ans": "1"
-  },
-  {
-    "id": 2,
-    "question": "<h3>Which of the following will determine your bonus payment?</h3>",
-    "a": "Total points accumulated throughout various tasks during the study.",
-    "b": "A computer algorithm will randomly select one of the experimental sections you completed and will then select two trials you completed to determine your final bonus payment.",
+    "question": "<h3>What happens if you decide to invest $0.40 during a round?</h3>",
+    "a": "I get to keep $0.40 for myself, and then the other $0.60 gets tripled to $1.80. The other player then gives me back half of it.",
+    "b": "I get to keep $0.60 for myself, and the other $0.40 gets quadrupled to $1.60. The other player then decides how much to give back to me.",
     "ans": "2"
   },
   {
+    "id": 2,
+    "question": "<h3>What happens when you press the red button?</h3>",
+    "a": "I will be randomly paired with one of three players on that round.",
+    "b": "I will be asked to select one of three players to play with on that round.",
+    "ans": "1"
+  },
+  {
     "id": 3,
-    "question": "<h3>If you need to take a rest break during this experiment you should do which of the following?</h3>",
-    "a": "Try your best to take breaks during instruction sections when prompted.",
-    "b": "Leave halfway through an experimental portion and try resetting the task using your “back” or “refresh” browser buttons.",
+    "question": "<h3>What is the best strategy for success in this game?</h3>",
+    "a": "To try to receive as much money as possible on each round as one of my rounds may be randomly selected to determine my bonus payment.",
+    "b": "To try to accrue as many points as possible, as the total number of points will determine my bonus payment.",
     "ans": "1"
   }
 ]

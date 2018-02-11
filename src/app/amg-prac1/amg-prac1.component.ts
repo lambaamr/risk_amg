@@ -62,7 +62,7 @@ export class AmgPrac1Component implements OnInit {
          this.setPage(page);
        }, interval);
      } else {
-     this.router.navigateByUrl('/amg-task', { replaceUrl: true })
+     this.router.navigateByUrl('/part1', { replaceUrl: true })
      }
    }
 }

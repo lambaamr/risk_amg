@@ -1,7 +1,7 @@
 [
   {
     "page": 1,
-    "text": "<p>Congratulations! You have completed Part 1 of the experiment. Part 2 is estimated to take approximately 20-25 minutes.</p><p>If you need to take a short rest break before the next phase please do so now. Otherwise, click 'Next' to proceed.</p>",
+    "text": "<p>Congratulations! You have completed Part 1 of the experiment. Part 2 is estimated to take approximately 20-25 minutes.</p><p>Click 'Next' to proceed.</p>",
     "img": ""
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "page": 9,
-    "text": "<p>After the other player makes their decision, you will be notified of their decisions and the outcome on that round.</p><p>You will then push the button again to play with another player and will be given another dollar.</p>",
+    "text": "<p>After the other player makes their decision, you will be notified of their decisions and the outcome on that round.</p><p>You will then be given another dollar and will push the button again to play with another player.</p>",
     "img": "/assets/images/image6a.png"
   },
   {

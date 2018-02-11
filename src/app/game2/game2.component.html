@@ -32,8 +32,8 @@
 
         <div class="feedback flip-side card">
           <p>You bet <strong>{{ endowment | currency:'USD':true:'1.2-2' }}</strong>.</p>
-          <p>{{ opponent.player.name }} received <strong>{{ (endowment * 4).toFixed(2) | currency:'USD':true:'1.2-2' }}</strong> and returned
-            <strong>{{ oppReturn | currency:'USD':true:'1.2-2' }}</strong> to you.</p>
+          <p>{{ opponent.player.name }} received <strong>{{ (endowment * 4).toFixed(2) | currency:'USD':true:'1.2-2' }}</strong> and paid out
+            <strong>{{ oppReturn | currency:'USD':true:'1.2-2' }}</strong>.</p>
           <button (click)="nextTrial()">Next Round</button>
         </div> <!-- .feedback -->
       </div> <!-- .interactive-elements -->
@@ -55,6 +55,6 @@
     <h4>Congratulations!</h4>
     <p>You have completed the game.</p>
     <div class="nav-button">
-        <tg-nav-button url="survey-instructions" label="Proceed"></tg-nav-button>
+        <tg-nav-button url="part4-instructions" label="Proceed"></tg-nav-button>
     </div>
 </div> <!-- .game-over -->

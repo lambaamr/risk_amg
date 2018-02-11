@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "question": "<h3>In the current study, we ask that you do which of the following?</h3>",
-    "a": "Pay close attention to the instructions and minimize distractions.",
-    "b": "Click through instructions briskly.",
+    "question": "<h3>In this task what do the blue and red chips indicate?</h3>",
+    "a": "The blue and red chips indicate my chances of winning the lottery and winning nothing.",
+    "b": "The blue and red chips indicate my chances of winning the guaranteed $0.25 on each trial.",
     "ans": "1"
   },
   {
     "id": 2,
-    "question": "<h3>Which of the following will determine your bonus payment?</h3>",
-    "a": "Total points accumulated throughout various tasks during the study.",
-    "b": "A computer algorithm will randomly select one of the experimental sections you completed and will then select two trials you completed to determine your final bonus payment.",
+    "question": "<h3>What do the blue chips indicate?</h3>",
+    "a": "The blue chips indicate my chances of losing.",
+    "b": "The blue chips can indicate either my chances of winning or losing on each trial as the role of blue and red chips will switch throughout the task.",
     "ans": "2"
   },
   {
     "id": 3,
-    "question": "<h3>If you need to take a rest break during this experiment you should do which of the following?</h3>",
-    "a": "Try your best to take breaks during instruction sections when prompted.",
-    "b": "Leave halfway through an experimental portion and try resetting the task using your “back” or “refresh” browser buttons.",
-    "ans": "1"
+    "question": "<h3>What does the guaranteed winning of $0.25 represent?</h3>",
+    "a": "The guaranteed $0.25 represents what I will earn whether or not I decide to play the lottery.",
+    "b": "On each trial I can decide whether I would like to take my chances and play the lottery (in which case I would earn the lottery winnings or nothing) or simply select the guaranteed $0.25 option, which means I will receive a sure $0.25 payout if that trial is randomly selected to determine my bonus payment.",
+    "ans": "2"
   }
 ]

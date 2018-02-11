@@ -1,12 +1,7 @@
 [
   {
     "page": 1,
-    "text": "<p>This will start clinical battery</p>",
-    "img": ""
-  },
-  {
-    "page": 2,
-    "text": "<p>CLINICAL BATTERY INSTRUCTIONS WILL GO HERE</p>",
+    "text": "<p>For the last part of this experiment you will be asked to fill out 4 survey questionnaires.</p><p>Each section will ask you questions regarding your actions, thoughts, and feelings. Please respond to questions as honestly as possible. For all questions you will also have the option to indicate if you prefer not to answer.</p><p>All responses will be kept confidential.</p>",
     "img": ""
   }
 ]
