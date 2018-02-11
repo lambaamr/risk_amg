@@ -1,31 +1,44 @@
 <div *ngIf="!answersSubmitted" class="question-panel card">
-  <h2>SIAS</h2>
+  <h2>Survey 1</h2>
+  <p>For each item, please indicate the degree to which you feel the statement is characteristic or true for you.</p>
   <form (ngSubmit)="checkAnswer()" class="quiz-radio type1-text">
-    <div *ngFor="let question of questions; let idx=index">
-      <span [innerHTML]="question.question"></span>
+    <div *ngFor="let ques of quess; let idx=index">
+      <span [innerHTML]="ques.ques"></span>
       <ul>
         <li>
-          <label for="{{question.id}}a">
-            <input type="radio" name="{{question.id}}" id="{{question.id}}a" [(ngModel)]="answers[idx].value" value=1>
-            <span [innerHTML]="question.a"></span>
+          <label for="{{ques.id}}a">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}a" [(ngModel)]="answers[idx].value" value=1>
+            <span [innerHTML]="ques.a"></span>
           </label>
         </li>
         <li>
-          <label for="{{question.id}}b">
-            <input type="radio" name="{{question.id}}" id="{{question.id}}b" [(ngModel)]="answers[idx].value" value=2>
-            <span [innerHTML]="question.b"></span>
+          <label for="{{ques.id}}b">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}b" [(ngModel)]="answers[idx].value" value=2>
+            <span [innerHTML]="ques.b"></span>
           </label>
         </li>
         <li>
-          <label for="{{question.id}}c">
-            <input type="radio" name="{{question.id}}" id="{{question.id}}c" [(ngModel)]="answers[idx].value" value=3>
-            <span [innerHTML]="question.c"></span>
+          <label for="{{ques.id}}c">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}c" [(ngModel)]="answers[idx].value" value=3>
+            <span [innerHTML]="ques.c"></span>
           </label>
         </li>
         <li>
-          <label for="{{question.id}}d">
-            <input type="radio" name="{{question.id}}" id="{{question.id}}d" [(ngModel)]="answers[idx].value" value=4>
-            <span [innerHTML]="question.d"></span>
+          <label for="{{ques.id}}d">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}d" [(ngModel)]="answers[idx].value" value=4>
+            <span [innerHTML]="ques.d"></span>
+          </label>
+        </li>
+        <li>
+          <label for="{{ques.id}}e">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}e" [(ngModel)]="answers[idx].value" value=5>
+            <span [innerHTML]="ques.e"></span>
+          </label>
+        </li>
+        <li>
+          <label for="{{ques.id}}f">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}f" [(ngModel)]="answers[idx].value" value=6>
+            <span [innerHTML]="ques.f"></span>
           </label>
         </li>
       </ul>
@@ -35,5 +48,6 @@
 </div> <!-- .question-panel -->
 
   <div *ngIf="answersSubmitted" class="feedback card">
-      <tg-nav-button url="ocir" label="Proceed"></tg-nav-button>
+        <p> Thank you for your responses. </p>
+      <tg-nav-button url="ocir" label="Next Survey"></tg-nav-button>
     </div>

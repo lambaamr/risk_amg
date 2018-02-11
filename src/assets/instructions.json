@@ -11,7 +11,7 @@
   },
   {
     "page": 3,
-    "text": "<p>Feel free to take down notes or use the “Back” and “Next” buttons below to clarify any details that are unclear.</p><p><strong>Note: Do not use the “back,” “forward,” or “refresh” buttons on your browser during this experiment as doing so will terminate the session.</strong></br></p>",
+    "text": "<p>Feel free to take down notes or use the “Back” and “Next” buttons below to clarify any details that are unclear.</p><p><strong>Note: Do not use the “Back,” “Forward,” or “Refresh” buttons on your browser during this experiment as doing so will terminate the session.</strong></br></p>",
     "img": "/assets/images/pic_guide.png"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "page": 5,
-    "text": "<p>Please feel free to take any resting breaks as necessary but we ask that you try to complete the task in under 2 hours. If you need to take a break part-way through the experiment, please do so during instruction blocks between experimental sections. You will also receive instruction prompts throughout the task that will indicate good stopping points for breaks.</p>",
+    "text": "<p>Please feel free to take any resting breaks as necessary but we ask that you try to complete the task in under 2 hours. If you need to take a break part-way through the experiment, please do so during instruction blocks rather than during testing blocks.</p>",
     "img": "/assets/images/pic_guide.png"
   },
   {

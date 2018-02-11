@@ -21,7 +21,7 @@
   },
   {
     "page": 5,
-    "text": "<p>After you have been paired with a player on that round, you will be asked to decide how much of $1.00 you would like to invest by sending it to the other player and how much to keep for yourself.</p><p>Using the slider scale provided, you can decide how much of $1.00 to invest in $0.10 increments.</p>",
+    "text": "<p>After you have been paired with a player on that round, you will be given $1.00. You will be asked to decide how much of $1.00 you would like to invest by sending it to the other player and how much to keep for yourself.</p><p>Using the slider scale provided, you can decide how much of $1.00 to invest in $0.10 increments.</p>",
     "img": "/assets/images/image3a.png"
   },
   {
@@ -41,27 +41,17 @@
   },
   {
     "page": 9,
-    "text": "<p>To recap, on each round of this game you will first press the <strong>red</strong> button and you will be paired with one of 3 players.</p><p>You will then decide how much of $1.00 you would like to invest and how much to keep for yourself, keeping in mind that <strong>$0 is not an option.</strong></p>",
-    "img": "/assets/images/image2a.png"
+    "text": "<p>After the other player makes their decision, you will be notified of their decisions and the outcome on that round.</p><p>You will then push the button again to play with another player and will be given another dollar.</p>",
+    "img": "/assets/images/image6a.png"
   },
   {
     "page": 10,
-    "text": "<p>Whatever money you decide to invest will then be <strong>quadrupled (x4)</strong> as it is sent to the other player.</p><p>The other player will then decide how much money they would like to keep for themselves and how much to return back to you.</p>",
-    "img": "/assets/images/image4a.png"
+    "text": "<p>At the end of the game, if this portion is selected we will randomly select the payout on one of your rounds to determine your bonus payment, so <strong>the best strategy is to receive as much money as possible on each round.</strong></p>",
+    "img": "/assets/images/image6a.png"
   },
   {
     "page": 11,
-    "text": "<p>After the other player makes their decision, you will be notified of their decisions and the outcome on that round.</p><p>You will then push the button again to play with another player.</p>",
-    "img": "/assets/images/image6a.png"
-  },
-  {
-    "page": 12,
-    "text": "<p>At the end of the game, if this portion is selected we will randomly select one of your rounds to determine your bonus payment, so <strong>the best strategy is to receive as much money as possible on each round.</strong></p>",
-    "img": "/assets/images/image6a.png"
-  },
-  {
-    "page": 13,
-    "text": "<p>Please review any instructions that are still unclear using the 'Back' and 'Next' buttons.</p><p>If you understand the game instructions please click 'Start Game' to be paired with other players online. <strong>Again, please note, this may take a few minutes so please be patient.</strong></p>",
+    "text": "<p>If you understand all task instructions please click the “Quiz” button below. You must answer all 3 quiz questions correctly to ensure that you understand the nature of the task. Once you answer all 3 quiz questions correctly you will be paired with other players online. Otherwise, you will be redirected to the task instructions for additional review.</p>",
     "img": "/assets/images/image1a.png"
   }
 ]

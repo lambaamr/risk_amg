@@ -26,6 +26,11 @@ import { AmgPrac1Component } from './amg-prac1/amg-prac1.component';
 import { AmgPrac2Component } from './amg-prac2/amg-prac2.component';
 import { AmgTask1Component } from './amg-task1/amg-task1.component';
 import { AmgTask2Component } from './amg-task2/amg-task2.component';
+import { AmgQuizComponent } from './amg-quiz/amg-quiz.component';
+import { GameQuizComponent } from './game-quiz/game-quiz.component';
+import { SlotQuizComponent } from './slot-quiz/slot-quiz.component';
+
+
 
 import { IpRouteGuardService } from './ip-route-guard.service';
 
@@ -36,6 +41,9 @@ const routes: Routes = [
   { path: 'game', component: GameComponent },
   { path: 'instructions', component: InstructionsComponent },
   { path: 'quiz', component: QuizComponent },
+  { path: 'amg-quiz', component: AmgQuizComponent },
+  { path: 'game-quiz', component: GameQuizComponent },
+  { path: 'slot-quiz', component: SlotQuizComponent },
   { path: 'amg-instructions', component: AmgInstructions2Component },
   { path: 'slot-instructions', component: SlotInstructions2Component },
   { path: 'survey-instructions', component: SurveyInstructions2Component },

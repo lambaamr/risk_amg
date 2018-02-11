@@ -1,13 +1,13 @@
 .question-panel {
   width: 800px;
-  height: 800px;
+  height: 5400px;
   margin: 2.5% auto 0 auto;
   padding: 15px 90px 0 90px;
 }
 
 .feedback {
   width: 650px;
-  height: 420px;
+  height: 200px;
   padding: 2% 5% 0 6%;
   margin: 10% auto 0 auto;
 }

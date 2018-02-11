@@ -46,6 +46,9 @@ import { AmgPrac1Component } from './amg-prac1/amg-prac1.component';
 import { AmgPrac2Component } from './amg-prac2/amg-prac2.component';
 import { AmgTask1Component } from './amg-task1/amg-task1.component';
 import { AmgTask2Component } from './amg-task2/amg-task2.component';
+import { AmgQuizComponent } from './amg-quiz/amg-quiz.component';
+import { GameQuizComponent } from './game-quiz/game-quiz.component';
+import { SlotQuizComponent } from './slot-quiz/slot-quiz.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +82,10 @@ import { AmgTask2Component } from './amg-task2/amg-task2.component';
     AmgPrac1Component,
     AmgPrac2Component,
     AmgTask1Component,
-    AmgTask2Component
+    AmgTask2Component,
+    AmgQuizComponent,
+    GameQuizComponent,
+    SlotQuizComponent
   ],
   imports: [
     BrowserModule,

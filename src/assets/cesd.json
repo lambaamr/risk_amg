@@ -1,29 +1,202 @@
 [
   {
     "id": 1,
-    "question": "<h3>THIS WILL BE THE CES-D</h3>",
-    "a": "option",
-    "b": "option",
-    "c": "option",
-    "d": "option",
+    "ques": "<h3>I was bothered by things that usually don't bother me.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
     "ans": ""
   },
   {
     "id": 2,
-    "question": "<h3>THIS WILL BE THE CES-D</h3>",
-    "a": "option",
-    "b": "option",
-    "c": "option",
-    "d": "option",
+    "ques": "<h3>I did not feel like eating; my appetite was poor.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
     "ans": ""
   },
   {
     "id": 3,
-    "question": "<h3>THIS WILL BE THE CES-D</h3>",
-    "a": "option",
-    "b": "option",
-    "c": "option",
-    "d": "option",
+    "ques": "<h3>I felt that I could not shake off the blues even with help from my family or friends.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 4,
+    "ques": "<h3>I felt I was just as good as other people.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 5,
+    "ques": "<h3>I had trouble keeping my mind on what I was doing.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 6,
+    "ques": "<h3>I felt depressed.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 7,
+    "ques": "<h3>I felt that everything I did was an effort.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 8,
+    "ques": "<h3>I felt hopeful about the future.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 9,
+    "ques": "<h3>I thought my life had been a failure.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 10,
+    "ques": "<h3>I felt fearful.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 11,
+    "ques": "<h3>My sleep was restless.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 12,
+    "ques": "<h3>I was happy.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 13,
+    "ques": "<h3>I talked less than usual.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 14,
+    "ques": "<h3>I felt lonely.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 15,
+    "ques": "<h3>People were unfriendly.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 16,
+    "ques": "<h3>I enjoyed life.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 17,
+    "ques": "<h3>I had crying spells.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 18,
+    "ques": "<h3>I felt sad.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 19,
+    "ques": "<h3>I felt that people disliked me.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 20,
+    "ques": "<h3>I could not get going.</h3>",
+    "a": "<strong>Rarely</strong> or none of the time (less than 1 day)",
+    "b": "<strong>Some</strong> or a little of the time (1-2 days)",
+    "c": "<strong>Occasionally</strong> or a moderate amount of time (3-4 days)",
+    "d": "<strong>Most</strong> or all of the time (5-7 days)",
+    "e": "Prefer not to answer",
     "ans": ""
   }
 ]

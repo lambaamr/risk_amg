@@ -62,7 +62,7 @@ export class GameService {
     let prob = Math.random();
     if (prob <= threshold) {
       this.delayEvents[event] = true;
-      let time = Math.random() * 3500 + minTime;
+      let time = Math.random() * 2500 + minTime;
       setTimeout(() => {
         this.delayEvents[event] = false;
         this.setTime(event);

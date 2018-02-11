@@ -1,29 +1,82 @@
 [
   {
     "id": 1,
-    "question": "<h3>THIS WILL BE THE GAD</h3>",
-    "a": "option",
-    "b": "option",
-    "c": "option",
-    "d": "option",
+    "ques": "<h3>Feeling nervous, anxious, or on edge</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
     "ans": ""
   },
   {
     "id": 2,
-    "question": "<h3>THIS WILL BE THE GAD</h3>",
-    "a": "option",
-    "b": "option",
-    "c": "option",
-    "d": "option",
+    "ques": "<h3>Not being able to stop or control worrying</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
     "ans": ""
   },
   {
     "id": 3,
-    "question": "<h3>THIS WILL BE THE GAD</h3>",
-    "a": "option",
-    "b": "option",
-    "c": "option",
-    "d": "option",
+    "ques": "<h3>Worrying too much about different things</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 4,
+    "ques": "<h3>Trouble relaxing</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 5,
+    "ques": "<h3>Being so restless that it's hard to sit still</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 6,
+    "ques": "<h3>Becoming easily annoyed or irritable</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 7,
+    "ques": "<h3>Feeling afraid as if something awful might happen</h3>",
+    "a": "<strong>0</strong> Not at all",
+    "b": "<strong>1</strong> Several days",
+    "c": "<strong>2</strong> Over half the days",
+    "d": "<strong>3</strong> Nearly every day",
+    "e": "Prefer not to answer",
+    "ans": ""
+  },
+  {
+    "id": 8,
+    "ques": "<h3>If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?</h3>",
+    "a": "Not difficult at all",
+    "b": "Somewhat difficult",
+    "c": "Very difficult",
+    "d": "Extremely difficult",
+    "e": "Prefer not to answer",
     "ans": ""
   }
 ]

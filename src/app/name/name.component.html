@@ -1,12 +1,12 @@
 <div class="card">
   <h1>Hello!</h1>
-  <p>Please fill out the following:</p>
+  <p>*Please generate a username with the first two letters of your first name, last name, and two digits (e.g.MaNe22).</p>
   <form #nameForm="ngForm" (ngSubmit)="createParticipant()" class="type1-text" autocomplete="off">
     <div class="form-text">
-      <div id="name-label" class="text-label"><label for="name">First name</label></div>
+      <div id="name-label" class="text-label"><label for="name">Username</label></div>
       <input type="text" id="name" name="name" required [(ngModel)]="firstName" #name="ngModel">
       <div *ngIf="name.invalid && (name.dirty || name.touched)" class="warning">
-        <div *ngIf="name.errors.required">*Name is required</div>
+        <div *ngIf="name.errors.required">*Username is Required</div>
       </div>
     </div>
     <div class="form-text">
@@ -25,4 +25,3 @@
       <button type="submit" [disabled]="!isValid()">Submit</button>
   </form>
 </div> <!-- .card -->
-

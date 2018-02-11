@@ -1,7 +1,7 @@
 [
   {
     "page": 1,
-    "text": "<p>You will now begin the first part of the experiment.This task should take you approximately 15-20 minutes to complete. Please pay close attention to the following instructions.</p>",
+    "text": "<p>You will now begin the first part of the experiment. This task should take you approximately 8-10 minutes to complete. Please pay close attention to the following instructions.</p>",
     "img": ""
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "page": 9,
-    "text": "<p>If you understand all task instructions please click “Practice”. You will be shown 4 practice trials to ensure that you understand the nature of the task. If any portions of the experiment are unclear to you please use the “Back” button to review.</p>",
+    "text": "<p>If you understand all task instructions please click the “Quiz” button below. You must answer all 3 quiz questions correctly to ensure that you understand the nature of the task. Once you answer all 3 quiz questions correctly you will enter the practice phase of this section. Otherwise, you will be redirected to the task instructions for additional review.</p>",
     "img": "/assets/images/image4c.png"
   }
 ]

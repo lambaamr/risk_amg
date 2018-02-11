@@ -17,12 +17,29 @@ export class SiasComponent {
   answers: { value: string }[] = [
     { value: '0' },
     { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
     { value: '0' }
   ]
   answersSubmitted: boolean;
   feedback: {}
   numCorrect: number;
-  questions: { question: string, a: string, b: string, ans: string }[];
+  quess: { ques: string, a: string, b: string, ans: string }[];
 
   constructor(private router: Router,
               private participantService: ParticipantService,
@@ -30,7 +47,7 @@ export class SiasComponent {
               private http: Http) {
     this.http.get('/assets/sias.json')
             .subscribe(res => {
-              this.questions = res.json();
+              this.quess = res.json();
             });
     this.http.get('/assets/attention_check_feedback.json')
             .subscribe(res => {
@@ -50,6 +67,6 @@ export class SiasComponent {
       if (parseInt(answer.value) > 0)
         numAnswered++;
     });
-    return numAnswered === 3;
+    return numAnswered === 20;
   }
 }

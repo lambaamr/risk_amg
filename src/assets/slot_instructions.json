@@ -16,7 +16,7 @@
   },
   {
     "page": 4,
-    "text": "<p>After you have been paired with a slot machine on that round, you will be asked to decide how much of $1.00 you would like to bet.</p><p>Using the slider scale provided, you can decide how much of $1.00 to bet in $0.10 increments.</p>",
+    "text": "<p>After you have been paired with a slot machine on that round, you will be given $1.00. You will then be asked to decide how much of $1.00 you would like to bet.</p><p>Using the slider scale provided, you can decide how much of $1.00 to bet in $0.10 increments.</p>",
     "img": "/assets/images/image3b.png"
   },
   {
@@ -36,27 +36,17 @@
   },
   {
     "page": 8,
-    "text": "<p>To recap, on each round of this game you will first press the <strong>red</strong> button and you will play on one of 3 different slot machines.</p><p>You will then decide how much of $1.00 you would like to bet, keeping in mind that <strong>$0 is not an option.</strong></p>",
-    "img": "/assets/images/image2b.png"
+    "text": "<p>After you place your bet, you will be notified of the outcome on that round.</p><p>You will then push the button again to play another slot machine and will be given another dollar.</p>",
+    "img": "/assets/images/image6b.png"
   },
   {
     "page": 9,
-    "text": "<p>Whatever money you bet will then be <strong>quadrupled (x4).</strong></p><p>The slot machine will then return nothing or give you back <strong>some portion of it.</strong></p>",
-    "img": "/assets/images/image4b.png"
+    "text": "<p>At the end of the game, if this portion is selected we will randomly select the payout on one of your rounds to determine your bonus payment, so <strong>the best strategy is to try to win as much money as possible on each round.</strong></p>",
+    "img": "/assets/images/image6b.png"
   },
   {
     "page": 10,
-    "text": "<p>After you place your bet, you will be notified of the outcome on that round.</p><p>You will then push the button again to play another slot machine.</p>",
-    "img": "/assets/images/image6b.png"
-  },
-  {
-    "page": 11,
-    "text": "<p>At the end of the game, if this portion is selected we will randomly select two of your rounds to determine your bonus payment, so <strong>the best strategy is to try to win as much money as possible on each round.</strong></p>",
-    "img": "/assets/images/image6b.png"
-  },
-  {
-    "page": 12,
-    "text": "<p>Please review any instructions that are still unclear using the 'Back' and 'Next' buttons.</p><p>If you understand the game instructions please click 'Start Game' to proceed.</p>",
+    "text": "<p>If you understand all task instructions please click the “Quiz” button below. You must answer all 3 quiz questions correctly to ensure that you understand the nature of the task. Once you answer all 3 quiz questions correctly you may proceed to the game. Otherwise, you will be redirected to the task instructions for additional review.</p>",
     "img": "/assets/images/image1b.png"
   }
 ]

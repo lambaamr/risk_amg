@@ -50,8 +50,7 @@
           </p>
         </div>
         <div *ngIf="!gameService.delayEvents.isWaitingForReturn">
-          <p>You invested <strong>{{ endowment | currency:'USD':true:'1.2-2' }}</strong>, and kept
-            <strong>{{ (1 - endowment).toFixed(2) | currency:'USD':true:'1.2-2' }}</strong> for yourself.</p>
+          <p>You invested <strong>{{ endowment | currency:'USD':true:'1.2-2' }}</strong>.</p>
           <p>{{ opponent.player.name }} received <strong>{{ (endowment * 4).toFixed(2) | currency:'USD':true:'1.2-2' }}</strong> and returned
             <strong>{{ oppReturn | currency:'USD':true:'1.2-2' }}</strong> to you.</p>
           <button (click)="nextTrial()">Next Round</button>
