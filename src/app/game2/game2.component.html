@@ -3,12 +3,12 @@
   <div [hidden]="inTrial"class="opponents-panel">
     <div id="opponents">
       <ul>
-        <li *ngFor="let opponent of oppSettings">
-          <tg-opponent [id]="opponent.id" [meanProp]="opponent.meanProp" [name]="opponent.name" [directions]="opponent.directions" [img]="opponent.img" [highlight]="opponent.highlight"></tg-opponent>
+        <li *ngFor="let opponent2 of oppSettings">
+          <tg-opponent2 [id]="opponent2.id" [meanProplt]="opponent2.meanProplt" [name]="opponent2.name" [directions]="opponent2.directions" [img]="opponent2.img" [highlight]="opponent2.highlight"></tg-opponent2>
         </li>
       </ul>
     </div> <!-- #opponents -->
-    <div id="opponent-button"><button (click)="selectOpponent()" [disabled]="oppSelected">Select Machine</button></div>
+    <div id="opponent-button"><button (click)="selectOpponent2()" [disabled]="oppSelected">Select Machine</button></div>
   </div> <!-- #opponents-panel -->
 
   <div *ngIf="inTrial" id="trial-panel">
@@ -23,28 +23,28 @@
       <div class="interactive-elements" [@flip]="flip">
         <div class="endowmment flip-side card">
           <p>How much would you like to bet?</p>
-          <form id="endowment-form" (ngSubmit)="setEndowment()">
-            <input type="range" name="endowmentSlider" [(ngModel)]="this.endowment" min="0.1" max="1" value=".5" step=".1">
-            <div id="endowment-amount">{{ endowment | currency : 'USD' : true : '1.2-2' }}</div>
-            <button type="submit" [disabled]="endowmentSubmitted">Submit</button>
+          <form id="endowment-form" (ngSubmit)="setEndowmentlt()">
+            <input type="range" name="endowmentSlider" [(ngModel)]="this.endowmentlt" min="0.1" max="1" value=".5" step=".1">
+            <div id="endowment-amount">{{ endowmentlt | currency : 'USD' : true : '1.2-2' }}</div>
+            <button type="submit" [disabled]="endowmentltSubmitted">Submit</button>
           </form>
         </div>
 
         <div class="feedback flip-side card">
-          <p>You bet <strong>{{ endowment | currency:'USD':true:'1.2-2' }}</strong>.</p>
-          <p>{{ opponent.player.name }} received <strong>{{ (endowment * 4).toFixed(2) | currency:'USD':true:'1.2-2' }}</strong> and paid out
+          <p>You bet <strong>{{ endowmentlt | currency:'USD':true:'1.2-2' }}</strong>.</p>
+          <p>{{ opponent2.machine.name }} received <strong>{{ (endowmentlt * 4).toFixed(2) | currency:'USD':true:'1.2-2' }}</strong> and paid out
             <strong>{{ oppReturn | currency:'USD':true:'1.2-2' }}</strong>.</p>
           <button (click)="nextTrial()">Next Round</button>
         </div> <!-- .feedback -->
       </div> <!-- .interactive-elements -->
     </div> <!-- .interactive-panel -->
 
-    <div class="opponent card player">
-      <div class="player-info">
-        <img [src]="opponent.img">
-        <div class="player-name"
-            [ngStyle]="{'background-image': opponent.player.id === 1 ? 'url(' + pixelPaths['blue'] + ')' : opponent.player.id === 2 ? 'url(' + pixelPaths['yellow'] + ')' : 'url(' + pixelPaths['orange'] + ')'}">
-          {{ opponent.player.name }}
+    <div class="opponent card machine">
+      <div class="machine-info">
+        <img [src]="opponent2.img">
+        <div class="machine-name"
+            [ngStyle]="{'background-image': opponent2.machine.id === 1 ? 'url(' + pixelPaths['blue'] + ')' : opponent2.machine.id === 2 ? 'url(' + pixelPaths['yellow'] + ')' : 'url(' + pixelPaths['orange'] + ')'}">
+          {{ opponent2.machine.name }}
         </div>
       </div>
     </div>  <!-- .opponent -->

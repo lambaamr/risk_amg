@@ -23,7 +23,14 @@ export class CurParticipantService {
     proportion: [],
     opponentNumber: [],
     reactionTime: [],
-    returned: []
+    returned: [],
+    endowmentlt: [],
+    actualProportionlt: [],
+    proportionlt: [],
+    netGainslt: [],
+    opponent2Number: [],
+    reactionTimelt: [],
+    returnedlt: []
   };
 
   get participant(): Participant {
@@ -102,12 +109,28 @@ export class CurParticipantService {
     this._participant.actualProportion.push(prop);
   }
 
+  get actualProportionlts(): number[] {
+    return this._participant.actualProportionlt;
+  }
+
+  addActualProplt(proplt: number): void {
+    this._participant.actualProportionlt.push(proplt);
+  }
+
   get netGains(): number[] {
     return this._participant.netGains;
   }
 
   addNetGain(amount: number): void {
     this._participant.netGains.push(amount);
+  }
+
+  get netGainslt(): number[] {
+    return this._participant.netGainslt;
+  }
+
+  addNetGainlt(amount: number): void {
+    this._participant.netGainslt.push(amount);
   }
 
   get opponents(): number[] {
@@ -118,12 +141,28 @@ export class CurParticipantService {
     this._participant.opponentNumber.push(num);
   }
 
+  get opponent2s(): number[] {
+    return this._participant.opponent2Number;
+  }
+
+  addOpponent2(num: number): void {
+    this._participant.opponent2Number.push(num);
+  }
+
   get endowments(): number[] {
     return this._participant.endowment;
   }
 
   addEndowment(amount: number): void {
     this._participant.endowment.push(amount);
+  }
+
+  get endowmentlts(): number[] {
+    return this._participant.endowmentlt;
+  }
+
+  addEndowmentlt(amount: number): void {
+    this._participant.endowmentlt.push(amount);
   }
 
   get returns(): number[] {
@@ -134,6 +173,14 @@ export class CurParticipantService {
     this._participant.returned.push(amount);
   }
 
+  get returnslt(): number[] {
+    return this._participant.returnedlt;
+  }
+
+  addReturnlt(amount: number): void {
+    this._participant.returnedlt.push(amount);
+  }
+
   get reactionTimes(): number[] {
     return this._participant.reactionTime;
   }
@@ -142,11 +189,27 @@ export class CurParticipantService {
     this._participant.reactionTime.push(time);
   }
 
+  get reactionTimeslt(): number[] {
+    return this._participant.reactionTimelt;
+  }
+
+  addReactTimelt(time: number): void {
+    this._participant.reactionTimelt.push(time);
+  }
+
   get proportions(): number[] {
     return this._participant.proportion;
   }
 
   addProportion(proportion: number): void {
     this._participant.proportion.push(proportion);
+  }
+
+  get proportionlts(): number[] {
+    return this._participant.proportionlt;
+  }
+
+  addProportionlt(proportionlt: number): void {
+    this._participant.proportionlt.push(proportionlt);
   }
 }

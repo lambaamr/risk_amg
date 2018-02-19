@@ -15,6 +15,13 @@ export class Participant {
     public proportion?: number[];
     public reactionTime?: number[];
     public returned?: number[];
+    public endowmentlt?: number[];
+    public actualProportionlt?: number[];
+    public proportionlt?: number[];
+    public netGainslt?: number[];
+    public opponent2Number?: number[];
+    public reactionTimelt?: number[];
+    public returnedlt?: number[];
 
     constructor (
         name?: string,

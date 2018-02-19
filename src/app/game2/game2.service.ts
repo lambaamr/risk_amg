@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 export class Game2Service {
   readonly totalTrials = 3;
 
-  endowmentT0: number;
-  endowmentT1: number;
+  endowmentltT0: number;
+  endowmentltT1: number;
   oppIds: number[];
 
   constructor() { }
@@ -26,15 +26,15 @@ export class Game2Service {
 
   getOppId(trial: number): number {
     if (trial % 3 === 1) {
-      this.oppIds = this.randomizeOpponents();
+      this.oppIds = this.randomizeOpponent2s();
     }
     return this.oppIds.shift();
   }
 
-  getReactTime(): number {
-    this.endowmentT1 = performance.now();
-    let reactTime = +(this.endowmentT1 - this.endowmentT0).toFixed(3);
-    return reactTime;
+  getReactTimelt(): number {
+    this.endowmentltT1 = performance.now();
+    let reactTimelt = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
+    return reactTimelt;
   }
 
   inVolatilityPeriod(trial: number): boolean {
@@ -42,7 +42,7 @@ export class Game2Service {
     return trial > 10 && ((remainder >= 0 && remainder < 4) || (remainder > 12 && remainder < 24));
   }
 
-  randomizeOpponents(): number[] {
+  randomizeOpponent2s(): number[] {
     let ids = [];
     let id: number;
     for (let i = 0; i < 3; i++) {

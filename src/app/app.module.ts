@@ -49,6 +49,7 @@ import { AmgTask2Component } from './amg-task2/amg-task2.component';
 import { AmgQuizComponent } from './amg-quiz/amg-quiz.component';
 import { GameQuizComponent } from './game-quiz/game-quiz.component';
 import { SlotQuizComponent } from './slot-quiz/slot-quiz.component';
+import { Opponent2Component } from './opponent2/opponent2.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { SlotQuizComponent } from './slot-quiz/slot-quiz.component';
     AmgTask2Component,
     AmgQuizComponent,
     GameQuizComponent,
-    SlotQuizComponent
+    SlotQuizComponent,
+    Opponent2Component
   ],
   imports: [
     BrowserModule,

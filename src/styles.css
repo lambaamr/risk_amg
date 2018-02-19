@@ -103,7 +103,17 @@ button[disabled] {
   height: 380px;
 }
 
+.card.machine {
+  width: 280px;
+  height: 380px;
+}
+
 .player-info {
+  text-align: center;
+  padding-top: 8%;
+}
+
+.machine-info {
   text-align: center;
   padding-top: 8%;
 }
@@ -118,7 +128,22 @@ button[disabled] {
   padding-top: 10px;
 }
 
+.machine-name {
+  width: 100%;
+  height: 40px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 20px;
+  font-weight: 900;
+  padding-top: 10px;
+}
+
 .player img {
+  width: 220px;
+  margin-bottom: 6%;
+}
+
+.machine img {
   width: 220px;
   margin-bottom: 6%;
 }

@@ -5,7 +5,7 @@ import { Component, OnDestroy, AfterViewInit, ElementRef, ViewChildren, QueryLis
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import { Http } from '@angular/http';
 
-import { OpponentComponent } from '../opponent/opponent.component';
+import { Opponent2Component } from '../opponent2/opponent2.component';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
 import { ParticipantService } from '../participant/participant.service';
 import { CurParticipantService } from '../participant/cur-participant.service';
@@ -35,34 +35,34 @@ import { Game2Service } from './game2.service';
 })
 
 export class Game2Component implements AfterViewInit, OnDestroy {
-  @ViewChildren(OpponentComponent) opponents: QueryList<OpponentComponent>
+  @ViewChildren(Opponent2Component) opponent2s: QueryList<Opponent2Component>
 
-  endowment: number = 0.5;
-  endowmentSubmitted: boolean;
+  endowmentlt: number = 0.5;
+  endowmentltSubmitted: boolean;
   flip: string = 'inactive';
   isGame2Over: boolean;
   inTrial: boolean;
-  netGain: number = 0;
-  opponent: OpponentComponent;
+  netGainlt: number = 0;
+  opponent2: Opponent2Component;
   oppSelected: boolean;
   oppReturn: number;
   playerImgPath: string = '/assets/images/player_purple.png';
   trialNumber: number = 1;
-  imgPaths: string[] = [
-    '/assets/images/machine_blue.png',
-    '/assets/images/machine_yellow.png',
-    '/assets/images/machine_orange.png'
+  machineImgPaths: string[] = [
+    '/assets/images/mach_blue.png',
+    '/assets/images/mach_yellow.png',
+    '/assets/images/mach_orange.png'
   ]
   initSettings: any[] = [
-    { actualId: 1, prop: .02, dir: [1, 1, -1] },
-    { actualId: 2, prop: .25, dir: [-1, 1, 1] },
-    { actualId: 3, prop: .45, dir: [-1, -1, 1] }
+    { actualId: 1, proplt: .02, dir: [1, 1, -1] },
+    { actualId: 2, proplt: .25, dir: [-1, 1, 1] },
+    { actualId: 3, proplt: .45, dir: [-1, -1, 1] }
   ];
   oppSettings: {
     actualId: number,
     id: number,
     name: string,
-    meanProp: number,
+    meanProplt: number,
     directions: number[],
     img: string,
     highlight: string
@@ -72,7 +72,7 @@ export class Game2Component implements AfterViewInit, OnDestroy {
     yellow: '/assets/images/pixel_yellow.png',
     orange: '/assets/images/pixel_orange.png'
   };
-  oppArray: OpponentComponent[];
+  oppArray: Opponent2Component[];
 
   constructor(private participantService: ParticipantService,
               private curParticipantService: CurParticipantService,
@@ -83,7 +83,7 @@ export class Game2Component implements AfterViewInit, OnDestroy {
         .subscribe(res => {
           this.oppSettings = res.json();
           this.setInit(this.setColors.bind(this));
-          this.setInit(this.setInitProportions.bind(this));
+          this.setInit(this.setInitProportionlts.bind(this));
         });
   }
 
@@ -92,8 +92,8 @@ export class Game2Component implements AfterViewInit, OnDestroy {
    */
 
   ngAfterViewInit() {
-    this.opponents.changes.subscribe(() => {
-      this.oppArray = this.opponents.toArray();
+    this.opponent2s.changes.subscribe(() => {
+      this.oppArray = this.opponent2s.toArray();
     });
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#FDFBEB';
   }
@@ -109,14 +109,14 @@ export class Game2Component implements AfterViewInit, OnDestroy {
 
   nextTrial(): void {
     this.inTrial = false;
-    this.endowmentSubmitted = false;
+    this.endowmentltSubmitted = false;
     this.isGame2Over = this.game2Service.checkGame2Over(this.trialNumber);
     this.trialNumber++;
     this.flip = 'inactive';
     this.oppSelected = false;
   }
 
-  selectOpponent(): void {
+  selectOpponent2(): void {
     this.oppSelected = true;
     setTimeout(() => {
         this.inTrial = true;
@@ -124,21 +124,21 @@ export class Game2Component implements AfterViewInit, OnDestroy {
     }, 1200);
     let oppId = this.game2Service.getOppId(this.trialNumber);
     this.oppSettings[oppId].highlight = 'red';
-    this.opponent = this.oppArray[oppId];
+    this.opponent2 = this.oppArray[oppId];
     this.drift();
-    this.curParticipantService.addOpponent(this.oppSettings[oppId].actualId);
-    this.curParticipantService.addProportion(this.opponent.player.meanProp);
+    this.curParticipantService.addOpponent2(this.oppSettings[oppId].actualId);
+    this.curParticipantService.addProportionlt(this.opponent2.machine.meanProplt);
   }
 
-  setEndowment() {
-    this.endowmentSubmitted = true;
-    this.curParticipantService.addReactTime(this.game2Service.getReactTime());
-    this.oppReturn = this.opponent.player.getReturn(this.endowment);
-    this.netGain = +((1 - this.endowment + this.oppReturn).toFixed(2));
-    this.curParticipantService.addEndowment(this.endowment);
-    this.curParticipantService.addReturn(this.oppReturn);
-    this.curParticipantService.addNetGain(this.netGain);
-    this.curParticipantService.addActualProp(this.opponent.player.proportion);
+  setEndowmentlt() {
+    this.endowmentltSubmitted = true;
+    this.curParticipantService.addReactTimelt(this.game2Service.getReactTimelt());
+    this.oppReturn = this.opponent2.machine.getReturnlt(this.endowmentlt);
+    this.netGainlt = +((1 - this.endowmentlt + this.oppReturn).toFixed(2));
+    this.curParticipantService.addEndowmentlt(this.endowmentlt);
+    this.curParticipantService.addReturnlt(this.oppReturn);
+    this.curParticipantService.addNetGainlt(this.netGainlt);
+    this.curParticipantService.addActualProplt(this.opponent2.machine.proportionlt);
     this.flip = 'active';
   }
 
@@ -149,27 +149,27 @@ export class Game2Component implements AfterViewInit, OnDestroy {
   drift(): void {
     if (this.game2Service.inVolatilityPeriod(this.trialNumber)) {
       let dirIdx = this.game2Service.getDirectionsIdx(this.trialNumber);
-      let direction = this.opponent.directions[dirIdx];
-      this.opponent.player.drift(direction);
+      let direction = this.opponent2.directions[dirIdx];
+      this.opponent2.machine.drift(direction);
     }
   }
 
   setInit(setCondition) {
-    let oppOrder = this.game2Service.randomizeOpponents();
-    this.oppSettings.forEach((opponent, index) => {
+    let oppOrder = this.game2Service.randomizeOpponent2s();
+    this.oppSettings.forEach((opponent2, index) => {
       let oppId = oppOrder[index];
-      setCondition(opponent, oppId);
+      setCondition(opponent2, oppId);
     });
   }
 
-  setColors(opponent: any, oppId: number): void {
-    opponent.img = this.imgPaths[oppId];
-    opponent.id = oppId + 1;
+  setColors(opponent2: any, oppId: number): void {
+    opponent2.img = this.machineImgPaths[oppId];
+    opponent2.id = oppId + 1;
   }
 
-  setInitProportions(opponent: any, oppId: number): void {
-    opponent.meanProp = this.initSettings[oppId].prop;
-    opponent.directions = this.initSettings[oppId].dir;
-    opponent.actualId = this.initSettings[oppId].actualId;
+  setInitProportionlts(opponent2: any, oppId: number): void {
+    opponent2.meanProplt = this.initSettings[oppId].proplt;
+    opponent2.directions = this.initSettings[oppId].dir;
+    opponent2.actualId = this.initSettings[oppId].actualId;
   }
 }

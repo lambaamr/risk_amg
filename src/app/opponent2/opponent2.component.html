@@ -1,0 +1,7 @@
+<div [@highlight]="highlight" class="card machine">
+  <div class="machine-info">
+    <div><img [src]="img"></div>
+    <div class="machine-name"
+      [ngStyle]="{'background-image': machine.id === 1 ? 'url(' + pixelPaths['blue'] + ')' : machine.id === 2 ? 'url(' + pixelPaths['yellow'] + ')' : 'url(' + pixelPaths['orange'] + ')'}">{{ machine.name }}</div>
+  </div>
+</div>
