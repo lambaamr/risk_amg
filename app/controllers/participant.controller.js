@@ -10,7 +10,7 @@ exports.findAll = (req, res) => {
             res.send(participants);
         }
     });
-    
+
 };
 
 // Create and save a new Participant
@@ -18,8 +18,8 @@ exports.create = (req, res) => {
     const mturkCode = (() => {
         var code = '';
         var candidates = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        for (let i = 0; i < 8; i++) 
-            code += candidates.charAt(Math.floor(Math.random() * candidates.length)); 
+        for (let i = 0; i < 8; i++)
+            code += candidates.charAt(Math.floor(Math.random() * candidates.length));
         return code;
     })();
 
@@ -61,7 +61,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
     Participant.findById(req.params.participantId, (err, participant) => {
         if (err) {
-            res.status(500).send({message: 'Could not find a participant with id ' + 
+            res.status(500).send({message: 'Could not find a participant with id ' +
                 req.params.participantId});
         }
 
@@ -76,11 +76,18 @@ exports.update = (req, res) => {
         participant.reactionTime = req.body.reactionTime;
         participant.returned = req.body.returned;
         participant.actualProportion = req.body.actualProportion;
+        participant.opponent2Number = req.body.opponent2Number;
+        participant.proportionlt = req.body.proportionlt;
+        participant.reactionTimelt = req.body.reactionTimelt;
+        participant.returnedlt = req.body.returnedlt;
+        participant.actualProportionlt = req.body.actualProportionlt;
+        participant.netGainslt = req.body.netGainslt;
+        participant.endowmentlt = req.body.endowmentlt;
 
         participant.save((err, data) => {
             if (err) {
                 console.log(err);
-                res.status(500).send({message: 'Could not update participant with id ' + 
+                res.status(500).send({message: 'Could not update participant with id ' +
                     req.params.participantId});
             } else {
                 res.send(data);
