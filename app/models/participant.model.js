@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var ParticipantSchema = mongoose.Schema({
-    age: Number, 
+    age: Number,
     gender: String,
     experiment: Number,
     ip: String,
@@ -16,6 +16,13 @@ var ParticipantSchema = mongoose.Schema({
     proportion: [Number],
     reactionTime: [Number],
     returned: [Number],
+    endowmentlt: [Number],
+    actualProportionlt: [Number],
+    proportionlt: [Number],
+    netGainslt: [Number],
+    opponent2Number: [Number],
+    reactionTimelt: [Number],
+    returnedlt: [Number],
 }, {
     timestamps: true
 });
