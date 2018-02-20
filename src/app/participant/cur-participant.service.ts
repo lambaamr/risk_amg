@@ -190,11 +190,11 @@ export class CurParticipantService {
   }
 
   get reactionTimeslt(): number[] {
-    return this._participant.reactionTime;
+    return this._participant.reactionTimelt;
   }
 
   addReactTimelt(time: number): void {
-    this._participant.reactionTime.push(time);
+    this._participant.reactionTimelt.push(time);
   }
 
   get proportions(): number[] {
