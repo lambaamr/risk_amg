@@ -14,7 +14,7 @@ import { ParticipantService } from '../participant/participant.service';
 })
 
 export class OcirComponent {
-  answers: { value: string }[] = [
+  answersocir: { value: string }[] = [
     { value: '0' },
     { value: '0' },
     { value: '0' },
@@ -61,7 +61,7 @@ export class OcirComponent {
 
   isValid(): boolean {
     let numAnswered = 0;
-    this.answers.forEach(answer => {
+    this.answersocir.forEach(answer => {
       if (parseInt(answer.value) > 0)
         numAnswered++;
     });
