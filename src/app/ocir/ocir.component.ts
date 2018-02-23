@@ -70,6 +70,6 @@ export class OcirComponent {
       if (parseInt(answer.value) > 0)
         numAnswered++;
     });
-    return numAnswered === 8;
+    return numAnswered === 18;
   }
 }
