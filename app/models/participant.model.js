@@ -8,6 +8,7 @@ var ParticipantSchema = mongoose.Schema({
     mturkCode: String,
     name: String,
     numCorrect: Number,
+    numResponse: Number,
     payoff: Number,
     actualProportion: [Number],
     endowment: [Number],
@@ -23,7 +24,6 @@ var ParticipantSchema = mongoose.Schema({
     opponent2Number: [Number],
     reactionTimelt: [Number],
     returnedlt: [Number],
-    OcirAnswer: [String],
 }, {
     timestamps: true
 });

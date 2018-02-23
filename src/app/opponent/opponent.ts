@@ -1,7 +1,7 @@
 export class Opponent {
 
   // Rate at which mean proportion drifts
-  readonly rate: number = .04; 
+  readonly rate: number = .04;
 
   private _id: number;
   private _meanProp: number;
@@ -46,13 +46,13 @@ export class Opponent {
     return this._proportion;
   }
 
-  /* 
+  /*
    * Changes the mean proportion based on preset directions.
    * For the calculation, meanProp and rate are multiplied by 1000
    * in order to avoid JavaScript floating point precision issue.
    */
   drift(driftDirection: number): void {
-    var meanPropShifted = this._meanProp * 1000; 
+    var meanPropShifted = this._meanProp * 1000;
     var rate = this.rate * 1000;
     if (driftDirection < 0 && (meanPropShifted - rate) >= 0) {
       meanPropShifted -= rate;
@@ -65,7 +65,7 @@ export class Opponent {
 
   getReturn(endowment: number) {
     this._proportion = +(this.getProp(this.meanProp)).toFixed(3);
-    return +((this._proportion * (4 * endowment)).toFixed(2)); 
+    return +((this._proportion * (4 * endowment)).toFixed(2));
   }
 
   getProp(mean: number) {
@@ -74,4 +74,3 @@ export class Opponent {
     return Math.random() * (max - min) + min;
   }
 }
-

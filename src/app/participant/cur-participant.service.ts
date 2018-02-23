@@ -14,6 +14,7 @@ export class CurParticipantService {
     ip: '',
     isComplete: false,
     numCorrect: 0,
+    numResponse: 0,
     mturkCode: '',
     name: '',
     payoff: 0,
@@ -30,8 +31,7 @@ export class CurParticipantService {
     netGainslt: [],
     opponent2Number: [],
     reactionTimelt: [],
-    returnedlt: [],
-    OcirAnswer: []
+    returnedlt: []
   };
 
   get participant(): Participant {
@@ -84,6 +84,14 @@ export class CurParticipantService {
 
   set numCorrect(num: number) {
     this._participant.numCorrect = num;
+  }
+
+  get numResponse(): number {
+    return this._participant.numResponse;
+  }
+
+  set numResponse(num: number) {
+    this._participant.numResponse = num;
   }
 
   get name(): string {
@@ -197,14 +205,6 @@ export class CurParticipantService {
 
   addReactTimelt(time: number): void {
     this._participant.reactionTimelt.push(time);
-  }
-
-  get OcirAnswer(): string[] {
-    return this._participant.OcirAnswer;
-  }
-
-  addOcirAnswer(ques: string):any {
-    this._participant.OcirAnswer.push(ques);
   }
 
   get proportions(): number[] {

@@ -70,6 +70,7 @@ exports.update = (req, res) => {
         participant.isComplete = req.body.isComplete;
         participant.netGains = req.body.netGains;
         participant.numCorrect = req.body.numCorrect;
+        participant.numResponse = req.body.numResponse;
         participant.opponentNumber = req.body.opponentNumber;
         participant.payoff = req.body.payoff;
         participant.proportion = req.body.proportion;
@@ -83,7 +84,6 @@ exports.update = (req, res) => {
         participant.actualProportionlt = req.body.actualProportionlt;
         participant.netGainslt = req.body.netGainslt;
         participant.endowmentlt = req.body.endowmentlt;
-        participant.OcirAnswer = req.body.OcirAnswer;
 
         participant.save((err, data) => {
             if (err) {
