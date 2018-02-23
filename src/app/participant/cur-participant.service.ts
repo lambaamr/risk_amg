@@ -203,8 +203,8 @@ export class CurParticipantService {
     return this._participant.OcirAnswer;
   }
 
-  addOcirAnswer(ociranswer: string): void {
-    this._participant.OcirAnswer.push(ociranswer);
+  addOcirAnswer(ques: string): void {
+    this._participant.OcirAnswer.push(ques);
   }
 
   get proportions(): number[] {

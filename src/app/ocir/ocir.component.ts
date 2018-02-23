@@ -53,7 +53,7 @@ export class OcirComponent {
             .subscribe(res => {
               this.feedback = res.json();
             });
-    let OcirAnswer = this.ociranswer;
+    let OcirAnswer = this.quess;
   }
 
   checkAnswer(): void {
