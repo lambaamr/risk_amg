@@ -22,7 +22,7 @@ export class Participant {
     public opponent2Number?: number[];
     public reactionTimelt?: number[];
     public returnedlt?: number[];
-    public answersocir?: number[];
+    public OcirAnswer?: string[];
 
     constructor (
         name?: string,

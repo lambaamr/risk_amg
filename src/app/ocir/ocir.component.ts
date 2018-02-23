@@ -14,30 +14,32 @@ import { ParticipantService } from '../participant/participant.service';
 })
 
 export class OcirComponent {
-  answersocir: { value: string }[] = [
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' }
+
+  ociranswer: { value: string }[] = [
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' }
   ]
-  answersSubmitted: boolean;
+  ociranswerSubmitted: boolean;
   feedback: {}
   numCorrect: number;
   quess: { ques: string, a: string, b: string, ans: string }[];
+  OcirAnswer: string;
 
   constructor(private router: Router,
               private participantService: ParticipantService,
@@ -51,18 +53,19 @@ export class OcirComponent {
             .subscribe(res => {
               this.feedback = res.json();
             });
+    let OcirAnswer = this.ociranswer;
   }
 
   checkAnswer(): void {
-    this.answersSubmitted = true;
+    this.ociranswerSubmitted = true;
     this.participantService.updateParticipant(this.curParticipantService.participant)
                             .subscribe();
   }
 
   isValid(): boolean {
     let numAnswered = 0;
-    this.answersocir.forEach(answer => {
-      if (parseInt(answer.value) > 0)
+    this.ociranswer.forEach(ociranswer => {
+      if (parseInt(ociranswer.value) > 0)
         numAnswered++;
     });
     return numAnswered === 18;
