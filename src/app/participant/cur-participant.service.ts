@@ -203,7 +203,7 @@ export class CurParticipantService {
     return this._participant.OcirAnswer;
   }
 
-  addOcirAnswer(ques: string): any {
+  addOcirAnswer(ques: string):any {
     this._participant.OcirAnswer.push(ques);
   }
 

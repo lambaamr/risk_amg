@@ -16,24 +16,24 @@ import { ParticipantService } from '../participant/participant.service';
 export class OcirComponent {
 
   ociranswer: { value: string }[] = [
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' },
-    { value: '' }
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' },
+    { value: '0' }
   ]
   ociranswerSubmitted: boolean;
   feedback: {}
