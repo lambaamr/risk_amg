@@ -1,4 +1,4 @@
-<div *ngIf="!answerSubmitted" class="question-panel card">
+<div *ngIf="!ociranswerSubmitted" class="question-panel card">
   <h2>Survey 2</h2>
   <p>The following statements refer to experiences that many people have in their everyday lives. Indicate the number that best describes HOW MUCH that experience has DISTRESSED or BOTHERED you during the PAST MONTH.</p>
   <form (ngSubmit)="checkAnswer()" class="quiz-radio type1-text">
@@ -7,37 +7,37 @@
       <ul>
         <li>
           <label for="{{ques.id}}a">
-            <input type="radio" name="{{ques.id}}" id="{{ques.id}}a" [(ngModel)]="answer[idx].value" value=1>
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}a" [(ngModel)]="ociranswer[idx].value" value=1>
             <span [innerHTML]="ques.a"></span>
           </label>
         </li>
         <li>
           <label for="{{ques.id}}b">
-            <input type="radio" name="{{ques.id}}" id="{{ques.id}}b" [(ngModel)]="answer[idx].value" value=2>
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}b" [(ngModel)]="ociranswer[idx].value" value=2>
             <span [innerHTML]="ques.b"></span>
           </label>
         </li>
         <li>
           <label for="{{ques.id}}c">
-            <input type="radio" name="{{ques.id}}" id="{{ques.id}}c" [(ngModel)]="answer[idx].value" value=3>
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}c" [(ngModel)]="ociranswer[idx].value" value=3>
             <span [innerHTML]="ques.c"></span>
           </label>
         </li>
         <li>
           <label for="{{ques.id}}d">
-            <input type="radio" name="{{ques.id}}" id="{{ques.id}}d" [(ngModel)]="answer[idx].value" value=4>
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}d" [(ngModel)]="ociranswer[idx].value" value=4>
             <span [innerHTML]="ques.d"></span>
           </label>
         </li>
         <li>
           <label for="{{ques.id}}e">
-            <input type="radio" name="{{ques.id}}" id="{{ques.id}}e" [(ngModel)]="answer[idx].value" value=5>
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}e" [(ngModel)]="ociranswer[idx].value" value=5>
             <span [innerHTML]="ques.e"></span>
           </label>
         </li>
         <li>
           <label for="{{ques.id}}f">
-            <input type="radio" name="{{ques.id}}" id="{{ques.id}}f" [(ngModel)]="answer[idx].value" value=6>
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}f" [(ngModel)]="ociranswer[idx].value" value=6>
             <span [innerHTML]="ques.f"></span>
           </label>
         </li>
@@ -47,7 +47,7 @@
   </form>
 </div> <!-- .question-panel -->
 
-  <div *ngIf="answerSubmitted" class="feedback card">
+  <div *ngIf="ociranswerSubmitted" class="feedback card">
         <p> Thank you for your responses. </p>
       <tg-nav-button url="survey3" label="Next Survey"></tg-nav-button>
     </div>
