@@ -7,7 +7,6 @@ var ParticipantSchema = mongoose.Schema({
     ip: String,
     mturkCode: String,
     name: String,
-    answers: String,
     numCorrect: Number,
     payoff: Number,
     actualProportion: [Number],

@@ -31,7 +31,6 @@ exports.create = (req, res) => {
         isComplete: req.body.isComplete,
         mturkCode: mturkCode,
         name: req.body.name
-        answers: req.body.name
     });
 
     newParticipant.save((err, data) => {
