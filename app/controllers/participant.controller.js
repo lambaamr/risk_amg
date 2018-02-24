@@ -69,6 +69,7 @@ exports.update = (req, res) => {
         participant.ip = req.body.ip;
         participant.isComplete = req.body.isComplete;
         participant.netGains = req.body.netGains;
+        participant.answers = req.body.answers;
         participant.numCorrect = req.body.numCorrect;
         participant.opponentNumber = req.body.opponentNumber;
         participant.payoff = req.body.payoff;
@@ -83,7 +84,6 @@ exports.update = (req, res) => {
         participant.actualProportionlt = req.body.actualProportionlt;
         participant.netGainslt = req.body.netGainslt;
         participant.endowmentlt = req.body.endowmentlt;
-        participant.numResponse = req.body.numResponse;
 
         participant.save((err, data) => {
             if (err) {

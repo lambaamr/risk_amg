@@ -8,7 +8,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   },
   {
     "id": 18,
@@ -195,6 +195,6 @@
     "d": "<strong>3</strong> A lot",
     "e": "<strong>4</strong> Extremely",
     "f": "Prefer not to answer",
-    "ans": ""
+    "resp": ""
   }
 ]

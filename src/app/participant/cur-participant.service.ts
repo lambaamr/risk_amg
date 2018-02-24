@@ -16,6 +16,7 @@ export class CurParticipantService {
     numCorrect: 0,
     mturkCode: '',
     name: '',
+    answers: '',
     payoff: 0,
     actualProportion: [],
     endowment: [],
@@ -30,8 +31,7 @@ export class CurParticipantService {
     netGainslt: [],
     opponent2Number: [],
     reactionTimelt: [],
-    returnedlt: [],
-    numResponse: 0,
+    returnedlt: []
   };
 
   get participant(): Participant {
@@ -86,20 +86,20 @@ export class CurParticipantService {
     this._participant.numCorrect = num;
   }
 
-  get numResponse(): number {
-    return this._participant.numResponse;
-  }
-
-  set numResponse(num: number) {
-    this._participant.numResponse;
-  }
-
   get name(): string {
     return this._participant.name;
   }
 
   set name(firstName: string) {
     this._participant.name = firstName;
+  }
+
+  get answers(): string {
+    return this._participant.answers;
+  }
+
+  set answers(checkAnswer: string) {
+    this._participant.answers = checkAnswer;
   }
 
   get payoff(): number {

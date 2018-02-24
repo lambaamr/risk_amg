@@ -6,6 +6,7 @@ export class Participant {
     public isComplete?: boolean;
     public mturkCode?: string;
     public name?: string;
+    public answers?: string;
     public numCorrect?: number;
     public payoff?: number;
     public actualProportion?: number[];
@@ -22,7 +23,6 @@ export class Participant {
     public opponent2Number?: number[];
     public reactionTimelt?: number[];
     public returnedlt?: number[];
-    public numResponse?: number;
 
     constructor (
         name?: string,

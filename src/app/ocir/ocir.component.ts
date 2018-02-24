@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
+import { Participant } from '../participant/participant';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { ParticipantService } from '../participant/participant.service';
@@ -12,6 +13,7 @@ import { ParticipantService } from '../participant/participant.service';
   styleUrls: ['./ocir.component.css'],
   providers: [ ParticipantService ]
 })
+
 
 export class OcirComponent {
   answers: { value: string }[] = [
@@ -34,10 +36,12 @@ export class OcirComponent {
     { value: '0' },
     { value: '0' }
   ]
+
   answersSubmitted: boolean;
   feedback: {}
-  numResponse: number;
-  quess: { ques: string, a: string, b: string, c: string, d:string, e:string, f:string, id:string, ans: string }[];
+  numCorrect: number;
+  quess: { ques: string, a: string, b: string, resp: string }[];
+  givenResponse: string;
 
   constructor(private router: Router,
               private participantService: ParticipantService,
@@ -55,13 +59,12 @@ export class OcirComponent {
 
   checkAnswer(): void {
     this.answersSubmitted = true;
-    this.numResponse = this.answers.map((answer, idx) => {
-      return +(answer.value === this.quess[idx].id);
-    })
-    .reduce((total, current) => {return total + current}, 0);
-    this.curParticipantService.numResponse = this.numResponse;
     this.participantService.updateParticipant(this.curParticipantService.participant)
                             .subscribe();
+  }
+
+  checkResponse(): void {
+    this.curParticipantService.answers;
   }
 
   isValid(): boolean {
