@@ -31,6 +31,7 @@ exports.create = (req, res) => {
         isComplete: req.body.isComplete,
         mturkCode: mturkCode,
         name: req.body.name
+        answers: req.body.name
     });
 
     newParticipant.save((err, data) => {
@@ -69,7 +70,6 @@ exports.update = (req, res) => {
         participant.ip = req.body.ip;
         participant.isComplete = req.body.isComplete;
         participant.netGains = req.body.netGains;
-        participant.answers = req.body.answers;
         participant.numCorrect = req.body.numCorrect;
         participant.opponentNumber = req.body.opponentNumber;
         participant.payoff = req.body.payoff;
