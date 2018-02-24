@@ -37,7 +37,7 @@ export class OcirComponent {
   answersSubmitted: boolean;
   feedback: {}
   numResponse: number;
-  quess: { ques: string, a: string, b: string, ans: string }[];
+  quess: { ques: string, a: string, b: string, c: string, d:string, e:string, f:string, id:string, ans: string }[];
 
   constructor(private router: Router,
               private participantService: ParticipantService,
@@ -56,7 +56,7 @@ export class OcirComponent {
   checkAnswer(): void {
     this.answersSubmitted = true;
     this.numResponse = this.answers.map((answer, idx) => {
-      return +(answer.value === this.quess[idx].ans);
+      return +(answer.value === this.quess[idx].id);
     })
     .reduce((total, current) => {return total + current}, 0);
     this.curParticipantService.numResponse = this.numResponse;
