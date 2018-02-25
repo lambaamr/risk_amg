@@ -7,7 +7,6 @@ export class Participant {
     public mturkCode?: string;
     public name?: string;
     public numCorrect?: number;
-    public namCorrect?: number;
     public payoff?: number;
     public actualProportion?: number[];
     public endowment?: number[];
@@ -23,6 +22,7 @@ export class Participant {
     public opponent2Number?: number[];
     public reactionTimelt?: number[];
     public returnedlt?: number[];
+    public namCorrect?: number;
 
     constructor (
         name?: string,

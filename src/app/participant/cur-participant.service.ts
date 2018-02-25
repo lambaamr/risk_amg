@@ -14,7 +14,6 @@ export class CurParticipantService {
     ip: '',
     isComplete: false,
     numCorrect: 0,
-    namCorrect: 0,
     mturkCode: '',
     name: '',
     payoff: 0,
@@ -31,7 +30,8 @@ export class CurParticipantService {
     netGainslt: [],
     opponent2Number: [],
     reactionTimelt: [],
-    returnedlt: []
+    returnedlt: [],
+    namCorrect: 0
   };
 
   get participant(): Participant {
