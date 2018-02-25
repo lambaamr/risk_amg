@@ -14,9 +14,9 @@ export class CurParticipantService {
     ip: '',
     isComplete: false,
     numCorrect: 0,
+    namCorrect: 0,
     mturkCode: '',
     name: '',
-    answers: '',
     payoff: 0,
     actualProportion: [],
     endowment: [],
@@ -86,20 +86,20 @@ export class CurParticipantService {
     this._participant.numCorrect = num;
   }
 
+  get namCorrect(): number {
+    return this._participant.namCorrect;
+  }
+
+  set namCorrect(nam: number) {
+    this._participant.namCorrect = nam;
+  }
+
   get name(): string {
     return this._participant.name;
   }
 
   set name(firstName: string) {
     this._participant.name = firstName;
-  }
-
-  get answers(): string {
-    return this._participant.answers;
-  }
-
-  set answers(checkAnswer: string) {
-    this._participant.answers = checkAnswer;
   }
 
   get payoff(): number {

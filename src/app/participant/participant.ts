@@ -7,6 +7,7 @@ export class Participant {
     public mturkCode?: string;
     public name?: string;
     public numCorrect?: number;
+    public namCorrect?: number;
     public payoff?: number;
     public actualProportion?: number[];
     public endowment?: number[];
@@ -22,22 +23,19 @@ export class Participant {
     public opponent2Number?: number[];
     public reactionTimelt?: number[];
     public returnedlt?: number[];
-    public answers?: string;
 
     constructor (
         name?: string,
         age?: number,
         gender?: string,
         ip?: string,
-        isComplete?: boolean,
-        answers?: string
+        isComplete?: boolean
     ) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.ip = ip;
         this.isComplete = isComplete;
-        this.answers = answers;
     }
 
 }

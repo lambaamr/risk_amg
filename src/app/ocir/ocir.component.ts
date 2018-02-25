@@ -14,7 +14,6 @@ import { ParticipantService } from '../participant/participant.service';
   providers: [ ParticipantService ]
 })
 
-
 export class OcirComponent {
   answers: { value: string }[] = [
     { value: '0' },
@@ -39,7 +38,7 @@ export class OcirComponent {
 
   answersSubmitted: boolean;
   feedback: {}
-  numCorrect: number;
+  namCorrect: number;
   quess: { ques: string, a: string, b: string, resp: string }[];
   givenResponse: string;
 
@@ -59,12 +58,13 @@ export class OcirComponent {
 
   checkAnswer(): void {
     this.answersSubmitted = true;
+    this.namCorrect = this.answers.map((answer, idx) => {
+      return +(answer.value);
+    })
+    .reduce((total, current) => {return total + current}, 0);
+    this.curParticipantService.namCorrect = this.namCorrect;
     this.participantService.updateParticipant(this.curParticipantService.participant)
                             .subscribe();
-  }
-
-  checkResponse(): void {
-    this.curParticipantService.answers;
   }
 
   isValid(): boolean {
