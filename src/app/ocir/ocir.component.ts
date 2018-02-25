@@ -68,11 +68,11 @@ export class OcirComponent {
   }
 
   isValid(): boolean {
-    let namAnswered = 0;
+    let namCorrect = 0;
     this.answers.forEach(answer => {
       if (parseInt(answer.value) > 0)
-        namAnswered++;
+        namCorrect++;
     });
-    return namAnswered === 18;
+    return namCorrect === 18;
   }
 }
