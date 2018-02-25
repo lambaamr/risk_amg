@@ -30,7 +30,8 @@ exports.create = (req, res) => {
         ip: req.body.ip,
         isComplete: req.body.isComplete,
         mturkCode: mturkCode,
-        name: req.body.name
+        name: req.body.name,
+        answers: req.body.name
     });
 
     newParticipant.save((err, data) => {

@@ -29,13 +29,15 @@ export class Participant {
         age?: number,
         gender?: string,
         ip?: string,
-        isComplete?: boolean
+        isComplete?: boolean,
+        answers?: string
     ) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.ip = ip;
         this.isComplete = isComplete;
+        this.answers = answers;
     }
 
 }
