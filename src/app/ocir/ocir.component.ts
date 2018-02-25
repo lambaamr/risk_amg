@@ -61,7 +61,7 @@ export class OcirComponent {
     this.namCorrect = this.answers.map((answer, idx) => {
       return +(answer.value);
     })
-    .reduce((total, current) => {return total + current}, 0);
+    .reduce((answer, idx) => {return answer}, 0);
     this.curParticipantService.namCorrect = this.namCorrect;
     this.participantService.updateParticipant(this.curParticipantService.participant)
                             .subscribe();
