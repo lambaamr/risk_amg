@@ -1,8 +1,12 @@
 import { Component, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
 import { AmgPrac1Component } from '../amg-prac1/amg-prac1.component';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
+import { Participant } from '../participant/participant';
+import { CurParticipantService } from '../participant/cur-participant.service';
+import { ParticipantService } from '../participant/participant.service';
 
 @Component({
   selector: 'tg-amg-prac2',
@@ -17,7 +21,10 @@ export class AmgPrac2Component implements OnDestroy {
   maxPage: number;
   pages: number[];
 
-  constructor(private http: Http) {
+  constructor(private router: Router,
+              private participantService: ParticipantService,
+              private curParticipantService: CurParticipantService,
+              private http: Http) {
     this.http.get('/assets/amgprac.json')
               .takeWhile(() => this.active)
               .subscribe(res => {
@@ -37,6 +44,9 @@ export class AmgPrac2Component implements OnDestroy {
 
   pagesChange(pages: number[]): void {
     this.pages = pages;
+    this.curParticipantService.pages = this.pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                                 .subscribe();
   }
 
   // Generates a random permutation of integers in the range [low, high]
