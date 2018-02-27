@@ -4,11 +4,15 @@ import { Http } from '@angular/http';
 
 import { AmgPrac1Component } from '../amg-prac1/amg-prac1.component';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
+import { Participant } from '../participant/participant';
+import { CurParticipantService } from '../participant/cur-participant.service';
+import { ParticipantService } from '../participant/participant.service';
 
 @Component({
   selector: 'tg-amg-prac2',
   templateUrl: './amg-prac2.component.html',
-  styleUrls: ['./amg-prac2.component.css']
+  styleUrls: ['./amg-prac2.component.css'],
+  providers: [ ParticipantService ]
 })
 
 export class AmgPrac2Component implements OnDestroy {
@@ -18,8 +22,11 @@ export class AmgPrac2Component implements OnDestroy {
   maxPage: number;
   pages: number[];
 
-  constructor( private http: Http) {
-    this.http.get('/assets/amgprac.json')
+  constructor(private router: Router,
+              private participantService: ParticipantService,
+              private curParticipantService: CurParticipantService,
+              private http: Http) {
+          this.http.get('/assets/amgprac.json')
               .takeWhile(() => this.active)
               .subscribe(res => {
                 this.amgprac = res.json();
@@ -49,6 +56,13 @@ export class AmgPrac2Component implements OnDestroy {
       pages[i] = pages[swap_idx];
       pages[swap_idx] = temp;
     }
-    return pages;
+    return pages
+  }
+
+  checkPage(pages: number[]): void {
+    this.pages = pages;
+    this.curParticipantService.pages = this.pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                                 .subscribe();
   }
 }
