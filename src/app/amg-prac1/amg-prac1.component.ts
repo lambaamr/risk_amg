@@ -58,6 +58,13 @@ export class AmgPrac1Component implements OnInit {
     this.pagesChange.emit(this.pages);
   }
 
+  checkPage(pages: number[]): void {
+    this.pages = pages;
+    this.curParticipantService.pages = this.pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                                 .subscribe();
+  }
+
   setFixation(interval: number): void {
      if (this.pages.length > 0) {
        this.isFixation = true;

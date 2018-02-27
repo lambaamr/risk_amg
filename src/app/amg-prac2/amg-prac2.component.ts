@@ -58,11 +58,4 @@ export class AmgPrac2Component implements OnDestroy {
     }
     return pages
   }
-
-  checkPage(pages: number[]): void {
-    this.pages = pages;
-    this.curParticipantService.pages = this.pages;
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-                                 .subscribe();
-  }
 }
