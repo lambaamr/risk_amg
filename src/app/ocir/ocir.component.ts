@@ -38,7 +38,7 @@ export class OcirComponent {
 
   answersSubmitted: boolean;
   feedback: {}
-  namCorrect: number[];
+  ocirResponse: number[];
   quess: { ques: string, a: string, b: string, resp: string }[];
   givenResponse: string;
 
@@ -58,8 +58,8 @@ export class OcirComponent {
 
   checkAnswer(answers: string[]): void {
     this.answersSubmitted = true;
-    this.namCorrect = this.answers.map(answer => +(answer.value));
-    this.curParticipantService.namCorrect = this.namCorrect;
+    this.ocirResponse = this.answers.map(answer => +(answer.value));
+    this.curParticipantService.ocirResponse = this.ocirResponse;
     this.participantService.updateParticipant(this.curParticipantService.participant)
                                   .subscribe();
 
@@ -67,11 +67,11 @@ export class OcirComponent {
 
 
   isValid(): boolean {
-    let namCorrect = 0;
+    let ocirResponse = 0;
     this.answers.forEach(answer => {
       if (parseInt(answer.value) > 0)
-        namCorrect++;
+        ocirResponse++;
     });
-    return namCorrect === 18;
+    return ocirResponse === 18;
   }
 }

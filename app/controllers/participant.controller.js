@@ -83,7 +83,7 @@ exports.update = (req, res) => {
         participant.actualProportionlt = req.body.actualProportionlt;
         participant.netGainslt = req.body.netGainslt;
         participant.endowmentlt = req.body.endowmentlt;
-        participant.namCorrect = req.body.namCorrect;
+        participant.ocirResponse = req.body.ocirResponse;
 
         participant.save((err, data) => {
             if (err) {
