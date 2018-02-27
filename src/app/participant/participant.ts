@@ -23,6 +23,7 @@ export class Participant {
     public reactionTimelt?: number[];
     public returnedlt?: number[];
     public ocirResponse?: number[];
+    public gadResponse?: number[];
 
     constructor (
         name?: string,

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
+import { Participant } from '../participant/participant';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { ParticipantService } from '../participant/participant.service';
@@ -26,6 +27,7 @@ export class GadComponent {
   ]
   answersSubmitted: boolean;
   feedback: {}
+  gadResponse: number[];
   numCorrect: number;
   quess: { ques: string, a: string, b: string, ans: string }[];
 
@@ -43,18 +45,21 @@ export class GadComponent {
             });
   }
 
-  checkAnswer(): void {
+  checkAnswer(answers: string[]): void {
     this.answersSubmitted = true;
+    this.gadResponse = this.answers.map(answer => +(answer.value));
+    this.curParticipantService.gadResponse = this.gadResponse;
     this.participantService.updateParticipant(this.curParticipantService.participant)
-                            .subscribe();
+                                  .subscribe();
+
   }
 
   isValid(): boolean {
-    let numAnswered = 0;
+    let gadResponse = 0;
     this.answers.forEach(answer => {
       if (parseInt(answer.value) > 0)
-        numAnswered++;
+        gadResponse++;
     });
-    return numAnswered === 8;
+    return gadResponse === 8;
   }
 }
