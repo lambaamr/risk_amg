@@ -59,7 +59,8 @@ export class AmgPrac1Component implements OnInit {
   }
 
   checkPage(pages: number[]): void {
-    this.pages = pages;
+    this.pageChange.emit(this.page);
+    this.pagesChange.emit(this.pages);
     this.curParticipantService.pages = this.pages;
     this.participantService.updateParticipant(this.curParticipantService.participant)
                                  .subscribe();
