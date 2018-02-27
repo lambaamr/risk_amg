@@ -1,6 +1,9 @@
 import { Component, EventEmitter, OnInit, Input, Output, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
+import { Participant } from '../participant/participant';
+import { ParticipantService } from '../participant/participant.service';
+
 
 export enum KEY_CODE {
   f = 70,
@@ -10,7 +13,8 @@ export enum KEY_CODE {
 @Component({
   selector: 'tg-amg-prac1',
   templateUrl: './amg-prac1.component.html',
-  styleUrls: ['./amg-prac1.component.css']
+  styleUrls: ['./amg-prac1.component.css'],
+  providers: [ ParticipantService ]
 })
 
 
@@ -29,6 +33,7 @@ export class AmgPrac1Component implements OnInit {
 
 
   constructor(private curParticipantService: CurParticipantService,
+              private participantService: ParticipantService,
               private router: Router) { }
 
   ngOnInit() {
@@ -51,6 +56,10 @@ export class AmgPrac1Component implements OnInit {
     console.log(this.page);
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
+    this.curParticipantService.pages = this.pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                              .subscribe();
+
   }
 
   setFixation(interval: number): void {
