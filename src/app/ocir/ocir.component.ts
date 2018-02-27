@@ -38,7 +38,7 @@ export class OcirComponent {
 
   answersSubmitted: boolean;
   feedback: {}
-  namCorrect: number;
+  namCorrect: number[];
   quess: { ques: string, a: string, b: string, resp: string }[];
   givenResponse: string;
 

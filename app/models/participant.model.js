@@ -23,7 +23,7 @@ var ParticipantSchema = mongoose.Schema({
     opponent2Number: [Number],
     reactionTimelt: [Number],
     returnedlt: [Number],
-    namCorrect: number,
+    namCorrect: Number,
 }, {
     timestamps: true
 });
