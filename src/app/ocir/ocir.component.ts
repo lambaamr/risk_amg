@@ -16,24 +16,24 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class OcirComponent {
   answers: { value: string }[] = [
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' },
-    { value: '0' }
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' },
+    { value: '' }
   ]
 
   answersSubmitted: boolean;
@@ -56,16 +56,16 @@ export class OcirComponent {
             });
   }
 
-  checkAnswer(): void {
+  checkAnswer(answers: string[]): void {
     this.answersSubmitted = true;
     this.namCorrect = this.answers.map((answer, idx) => {
-      return +(answer.value);
+         return +(answer.value);
+       this.curParticipantService.namCorrect = this.namCorrect;
+       this.participantService.updateParticipant(this.curParticipantService.participant)
+                               .subscribe();
     })
-    .reduce((answer, idx) => {return answer});
-    this.curParticipantService.namCorrect = this.namCorrect;
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-                            .subscribe();
   }
+
 
   isValid(): boolean {
     let namCorrect = 0;

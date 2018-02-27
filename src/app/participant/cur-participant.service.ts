@@ -31,7 +31,7 @@ export class CurParticipantService {
     opponent2Number: [],
     reactionTimelt: [],
     returnedlt: [],
-    namCorrect: 0
+    namCorrect: []
   };
 
   get participant(): Participant {
@@ -86,11 +86,11 @@ export class CurParticipantService {
     this._participant.numCorrect = num;
   }
 
-  get namCorrect(): number {
+  get namCorrect(): number[] {
     return this._participant.namCorrect;
   }
 
-  set namCorrect(nam: number) {
+  set namCorrect(nam: number[] ) {
     this._participant.namCorrect = nam;
   }
 
