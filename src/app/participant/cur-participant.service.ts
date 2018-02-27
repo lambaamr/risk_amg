@@ -32,7 +32,9 @@ export class CurParticipantService {
     reactionTimelt: [],
     returnedlt: [],
     ocirResponse: [],
-    gadResponse: []
+    gadResponse: [],
+    siasResponse: [],
+    cesdResponse: []
   };
 
   get participant(): Participant {
@@ -101,6 +103,22 @@ export class CurParticipantService {
 
   set gadResponse(gad: number[] ) {
     this._participant.gadResponse = gad;
+  }
+
+  get siasResponse(): number[] {
+    return this._participant.siasResponse;
+  }
+
+  set siasResponse(sias: number[] ) {
+    this._participant.siasResponse = sias;
+  }
+
+  get cesdResponse(): number[] {
+    return this._participant.cesdResponse;
+  }
+
+  set cesdResponse(cesd: number[] ) {
+    this._participant.cesdResponse = cesd;
   }
 
   get name(): string {

@@ -25,6 +25,8 @@ var ParticipantSchema = mongoose.Schema({
     returnedlt: [Number],
     ocirResponse: [Number],
     gadResponse: [Number],
+    siasResponse: [Number],
+    cesdResponse: [Number],
 }, {
     timestamps: true
 });

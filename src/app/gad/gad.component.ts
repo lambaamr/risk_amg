@@ -28,7 +28,6 @@ export class GadComponent {
   answersSubmitted: boolean;
   feedback: {}
   gadResponse: number[];
-  numCorrect: number;
   quess: { ques: string, a: string, b: string, ans: string }[];
 
   constructor(private router: Router,

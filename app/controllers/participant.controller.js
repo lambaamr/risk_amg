@@ -85,6 +85,8 @@ exports.update = (req, res) => {
         participant.endowmentlt = req.body.endowmentlt;
         participant.ocirResponse = req.body.ocirResponse;
         participant.gadResponse = req.body.gadResponse;
+        participant.siasResponse = req.body.siasResponse;
+        participant.cesdResponse = req.body.cesdResponse;
 
         participant.save((err, data) => {
             if (err) {

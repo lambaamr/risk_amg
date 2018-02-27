@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
+import { Participant } from '../participant/participant';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { ParticipantService } from '../participant/participant.service';
@@ -38,7 +39,7 @@ export class SiasComponent {
   ]
   answersSubmitted: boolean;
   feedback: {}
-  numCorrect: number;
+  siasResponse: number[];
   quess: { ques: string, a: string, b: string, ans: string }[];
 
   constructor(private router: Router,
@@ -55,18 +56,21 @@ export class SiasComponent {
             });
   }
 
-  checkAnswer(): void {
+  checkAnswer(answers: string[]): void {
     this.answersSubmitted = true;
+    this.siasResponse = this.answers.map(answer => +(answer.value));
+    this.curParticipantService.siasResponse = this.siasResponse;
     this.participantService.updateParticipant(this.curParticipantService.participant)
-                            .subscribe();
+                                  .subscribe();
+
   }
 
   isValid(): boolean {
-    let numAnswered = 0;
+    let siasResponse = 0;
     this.answers.forEach(answer => {
       if (parseInt(answer.value) > 0)
-        numAnswered++;
+        siasResponse++;
     });
-    return numAnswered === 20;
+    return siasResponse === 20;
   }
 }

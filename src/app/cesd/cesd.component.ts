@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
+import { Participant } from '../participant/participant';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { ParticipantService } from '../participant/participant.service';
@@ -38,7 +39,7 @@ export class CesdComponent {
   ]
   answersSubmitted: boolean;
   feedback: {}
-  numCorrect: number;
+  cesdResponse: number[];
   quess: { ques: string, a: string, b: string, ans: string }[];
 
   constructor(private router: Router,
@@ -55,18 +56,21 @@ export class CesdComponent {
             });
   }
 
-  checkAnswer(): void {
+  checkAnswer(answers: string[]): void {
     this.answersSubmitted = true;
+    this.cesdResponse = this.answers.map(answer => +(answer.value));
+    this.curParticipantService.cesdResponse = this.cesdResponse;
     this.participantService.updateParticipant(this.curParticipantService.participant)
-                            .subscribe();
+                                  .subscribe();
+
   }
 
   isValid(): boolean {
-    let numAnswered = 0;
+    let cesdResponse = 0;
     this.answers.forEach(answer => {
       if (parseInt(answer.value) > 0)
-        numAnswered++;
+        cesdResponse++;
     });
-    return numAnswered === 20;
+    return cesdResponse === 20;
   }
 }

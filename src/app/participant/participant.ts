@@ -24,6 +24,8 @@ export class Participant {
     public returnedlt?: number[];
     public ocirResponse?: number[];
     public gadResponse?: number[];
+    public siasResponse?: number[];
+    public cesdResponse?: number[];
 
     constructor (
         name?: string,
