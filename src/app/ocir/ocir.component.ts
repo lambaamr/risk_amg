@@ -57,13 +57,11 @@ export class OcirComponent {
   }
 
   checkAnswer(answers: string[]): void {
-    this.answersSubmitted = true;
-    this.namCorrect = this.answers.map((answer, idx) => {
-         return +(answer.value);
-       this.curParticipantService.namCorrect = this.namCorrect;
-       this.participantService.updateParticipant(this.curParticipantService.participant)
-                               .subscribe();
-    })
+    this.namCorrect = this.answers.map(answer => return +(answer.value));
+    this.curParticipantService.namCorrect = this.namCorrect;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                                  .subscribe();
+
   }
 
 
