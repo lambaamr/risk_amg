@@ -2,21 +2,25 @@
   {
     "page": 0,
     "text": "<p>You will now complete practice trials of the lottery task. Click 'Next' to proceed. </p>",
-    "img": ""
+    "img": "",
+    "ans": ""
   },
   {
     "page": 1,
     "text": "",
-    "img": "/assets/images/image1.png"
+    "img": "/assets/images/image1.png",
+    "ans": "f"
   },
   {
     "page": 2,
     "text": "",
-    "img": "/assets/images/image44.png"
+    "img": "/assets/images/image44.png",
+    "ans": "j"
   },
   {
     "page": 3,
     "text": "",
-    "img": "/assets/images/image56.png"
+    "img": "/assets/images/image56.png",
+    "ans": "f"
   }
 ]

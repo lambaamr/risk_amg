@@ -2,31 +2,37 @@
   {
     "page": 0,
     "text": "<p>You will now enter the testing phase of the lottery task. Click 'Next' to proceed. </p>",
-    "img": ""
+    "img": "",
+    "ans": "f"
   },
   {
     "page": 1,
     "text": "",
-    "img": "/assets/images/image1.png"
+    "img": "/assets/images/image1.png",
+    "ans": "j"
   },
   {
     "page": 2,
     "text": "",
-    "img": "/assets/images/image38.png"
+    "img": "/assets/images/image38.png",
+    "ans": "f"
   },
   {
     "page": 3,
     "text": "",
-    "img": "/assets/images/image44.png"
+    "img": "/assets/images/image44.png",
+    "ans": "j"
   },
   {
     "page": 4,
     "text": "",
-    "img": "/assets/images/image55.png"
+    "img": "/assets/images/image55.png",
+    "ans": "f"
   },
   {
     "page": 5,
     "text": "",
-    "img": "/assets/images/image60.png"
+    "img": "/assets/images/image60.png",
+    "ans": "j"
   }
 ]
