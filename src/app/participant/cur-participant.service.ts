@@ -126,8 +126,8 @@ export class CurParticipantService {
     return this._participant.pages;
   }
 
-  set pages(pag: number[] ) {
-    this._participant.pages = pag;
+  set pages(page: number[] ) {
+    this._participant.pages = page;
   }
 
   get name(): string {
