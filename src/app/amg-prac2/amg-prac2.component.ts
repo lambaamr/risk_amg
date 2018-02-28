@@ -21,6 +21,7 @@ export class AmgPrac2Component implements OnDestroy {
   amgprac: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
+  numPages: number[];
 
   constructor(private router: Router,
               private participantService: ParticipantService,
@@ -39,7 +40,7 @@ export class AmgPrac2Component implements OnDestroy {
     this.active = false;
   }
 
-  pageChange(page: number): void{
+  pageChange(page: number): void {
     this.page = page;
   }
 
@@ -57,5 +58,13 @@ export class AmgPrac2Component implements OnDestroy {
       pages[swap_idx] = temp;
     }
     return pages
+  }
+
+  checkPages(pages: number[]): void {
+  this.pages = Array.from(Array(this.numPages).keys()).map(num => num + 1);
+  this.curParticipantService.pages = this.pages;
+  this.participantService.updateParticipant(this.curParticipantService.participant)
+                                .subscribe();
+
   }
 }
