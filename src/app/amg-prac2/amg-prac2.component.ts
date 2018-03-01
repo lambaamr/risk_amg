@@ -49,7 +49,7 @@ a
   }
 
   // Generates a random permutation of integers in the range [low, high]
-  shuffle(numPages: number []) {
+  shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
     for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
