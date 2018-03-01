@@ -20,7 +20,7 @@ export class AmgPrac2Component implements OnDestroy {
   page: number = 0;
   amgprac: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
-  pages: number[];
+  pracpages: number[];
   amgPage: number[];
 
   constructor(private router: Router,
@@ -32,8 +32,8 @@ export class AmgPrac2Component implements OnDestroy {
                .subscribe(res => {
                  this.amgprac = res.json();
                  this.maxPage = this.amgprac.length -1;
-                 this.pages = this.shuffle(this.maxPage);
-                 this.curParticipantService.pages = this.pages;
+                 this.pracpages = this.shuffle(this.maxPage);
+                 this.curParticipantService.pracpages = this.pracpages;
                  this.participantService.updateParticipant(this.curParticipantService.participant)
                  .subscribe();
                });
@@ -43,26 +43,26 @@ export class AmgPrac2Component implements OnDestroy {
     this.participantService.updateParticipant(this.curParticipantService.participant)
     .subscribe(() => console.log('success'));
     this.active = false;
-    console.log("curPart pages:" + this.curParticipantService.pages);
+    console.log("curPart pracpages:" + this.curParticipantService.pracpages);
   }
 
   pageChange(page: number): void {
     this.page = page;
   }
 
-  pagesChange(pages: number[]): void {
-    this.pages = pages;
+  pagesChange(pracpages: number[]): void {
+    this.pracpages = pracpages;
   }
 
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
-    let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
+    let pracpages = Array.from(Array(numPages).keys()).map(num => num + 1);
     for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
-      let temp = pages[i];
-      pages[i] = pages[swap_idx];
-      pages[swap_idx] = temp;
+      let temp = pracpages[i];
+      pracpages[i] = pracpages[swap_idx];
+      pracpages[swap_idx] = temp;
     }
-    return pages;
+    return pracpages;
   }
 }

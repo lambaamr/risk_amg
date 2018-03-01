@@ -23,7 +23,7 @@ export class AmgPrac1Component implements OnInit {
   @Input() text: string;
   @Input() imgSrc: string;
   @Input() maxPage: number;
-  @Input() pages: number[];
+  @Input() pracpages: number[];
 
 
   @Output() pageChange = new EventEmitter<number>();
@@ -52,18 +52,18 @@ export class AmgPrac1Component implements OnInit {
 
   setPage(page: number): void {
     this.page = page;
-    console.log(this.pages);
+    console.log(this.pracpages);
     console.log(this.page);
     this.pageChange.emit(this.page);
-    this.pagesChange.emit(this.pages);
+    this.pagesChange.emit(this.pracpages);
   }
 
   setFixation(interval: number): void {
-     if (this.pages.length > 0) {
+     if (this.pracpages.length > 0) {
        this.isFixation = true;
        setTimeout(() => {
          this.isFixation = false;
-         let page = this.pages.pop();
+         let page = this.pracpages.pop();
          this.setPage(page);
        }, interval);
      } else {
