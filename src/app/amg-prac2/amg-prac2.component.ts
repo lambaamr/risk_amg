@@ -22,7 +22,7 @@ export class AmgPrac2Component implements OnDestroy {
   maxPage: number;
   pages: number[];
   amgPage: number[];
-
+a
   constructor(private router: Router,
               private participantService: ParticipantService,
               private curParticipantService: CurParticipantService,
@@ -49,7 +49,7 @@ export class AmgPrac2Component implements OnDestroy {
   }
 
   // Generates a random permutation of integers in the range [low, high]
-  shuffle(numPages: number) {
+  shuffle(numPages: number []) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
     for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
@@ -57,6 +57,9 @@ export class AmgPrac2Component implements OnDestroy {
       pages[i] = pages[swap_idx];
       pages[swap_idx] = temp;
     }
-    return pages
+    return pages;
+    this.curParticipantService.pages = this.pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                                 .subscribe();
   }
 }

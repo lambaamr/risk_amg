@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
-import { Opponent } from './opponent'; 
+import { Opponent } from './opponent';
 
 @Component({
   selector: 'tg-opponent',
@@ -25,7 +25,7 @@ export class OpponentComponent implements OnInit {
   @Input() meanProp: number;
   @Input() name: string;
   @Input() directions: number[];
-  @Input() img: string; 
+  @Input() img: string;
   @Input() highlight: string;
 
   private _player: Opponent;
@@ -34,7 +34,7 @@ export class OpponentComponent implements OnInit {
     blue: '/assets/images/pixel_blue.png',
     yellow: '/assets/images/pixel_yellow.png',
     orange: '/assets/images/pixel_orange.png'
-  }; 
+  };
 
   constructor() {
   }
