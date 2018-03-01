@@ -3,11 +3,15 @@ import { Http } from '@angular/http';
 
 import { AmgTask1Component } from '../amg-task1/amg-task1.component';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
+import { CurParticipantService } from '../participant/cur-participant.service';
+import { ParticipantService } from '../participant/participant.service';
+
 
 @Component({
   selector: 'tg-amg-task2',
   templateUrl: './amg-task2.component.html',
-  styleUrls: ['./amg-task2.component.css']
+  styleUrls: ['./amg-task2.component.css'],
+  providers: [ ParticipantService ]
 })
 
 export class AmgTask2Component implements OnDestroy {
@@ -17,18 +21,30 @@ export class AmgTask2Component implements OnDestroy {
   maxPage: number;
   pages: number[];
 
-  constructor(private http: Http) {
+  constructor(private participantService: ParticipantService,
+             private curParticipantService: CurParticipantService,
+             private http: Http) {
     this.http.get('/assets/amgtask.json')
               .takeWhile(() => this.active)
               .subscribe(res => {
                 this.amgtask = res.json();
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
+                console.log("this.pages before " + this.pages);
+                console.log("curPart pages before " + this.curParticipantService.pages);
+                this.curParticipantService.pages = this.pages;
+                this.participantService.updateParticipant(this.curParticipantService.participant)
+                .subscribe();
+                console.log("this.pages after " + this.pages);
+                console.log("curPart pages after " + this.curParticipantService.pages);
               });
   }
 
   ngOnDestroy() {
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+    .subscribe(() => console.log('success'));
     this.active = false;
+    console.log("curPart pages:" + this.curParticipantService.pages);
   }
 
   pageChange(page: number): void{

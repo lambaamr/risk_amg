@@ -32,21 +32,11 @@ export class AmgPrac2Component implements OnDestroy {
                this.amgprac = res.json();
                this.maxpracPage = this.amgprac.length -1;
                this.pracpages = this.shuffle(this.maxpracPage);
-               console.log("this.pracpages before " + this.pracpages);
-               console.log("curPart pracpages before " + this.curParticipantService.pracpages);
-               this.curParticipantService.pracpages = this.pracpages;
-               this.participantService.updateParticipant(this.curParticipantService.participant)
-               .subscribe();
-               console.log("this.pracpages after " + this.pracpages);
-               console.log("curPart pracpages after " + this.curParticipantService.pracpages);
              });
            }
 
  ngOnDestroy() {
-   this.participantService.updateParticipant(this.curParticipantService.participant)
-   .subscribe(() => console.log('success'));
    this.active = false;
-   console.log("curPart pracpages:" + this.curParticipantService.pracpages);
  }
 
   pracpageChange(pracpage: number): void {
