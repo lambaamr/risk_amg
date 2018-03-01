@@ -31,13 +31,13 @@ export class AmgPrac2Component implements OnDestroy {
                .subscribe(res => {
                  this.amgprac = res.json();
                  this.pracpages = this.shuffle(this.amgprac.length -1);
-                 this.curParticipantService.pracpages = this.pracpages;
-                 this.participantService.updateParticipant(this.curParticipantService.participant)
-                 .subscribe();
                });
    }
 
   ngOnDestroy() {
+    this.curParticipantService.pracpages = this.pracpages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+    .subscribe();
     this.participantService.updateParticipant(this.curParticipantService.participant)
     .subscribe();
     this.active = false;
