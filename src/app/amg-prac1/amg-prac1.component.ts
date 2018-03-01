@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Input, Output, HostListener } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output, HostListener, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { Participant } from '../participant/participant';

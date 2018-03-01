@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
@@ -19,7 +19,6 @@ export class AmgPrac2Component implements OnDestroy {
   active: boolean = true;
   page: number = 0;
   amgprac: {page: number, text: string, imgSrc: string}[];
-  maxPage: number;
   pracpages: number[];
   amgPage: number[];
 
@@ -31,8 +30,7 @@ export class AmgPrac2Component implements OnDestroy {
                .takeWhile(() => this.active)
                .subscribe(res => {
                  this.amgprac = res.json();
-                 this.maxPage = this.amgprac.length -1;
-                 this.pracpages = this.shuffle(this.maxPage);
+                 this.pracpages = this.shuffle(this.amgprac.length -1);
                  this.curParticipantService.pracpages = this.pracpages;
                  this.participantService.updateParticipant(this.curParticipantService.participant)
                  .subscribe();
