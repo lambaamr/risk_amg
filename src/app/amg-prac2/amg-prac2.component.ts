@@ -22,7 +22,7 @@ export class AmgPrac2Component implements OnDestroy {
   maxPage: number;
   pages: number[];
   amgPage: number[];
-a
+
   constructor(private router: Router,
               private participantService: ParticipantService,
               private curParticipantService: CurParticipantService,

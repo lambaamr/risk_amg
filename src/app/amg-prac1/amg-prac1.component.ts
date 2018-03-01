@@ -56,6 +56,9 @@ export class AmgPrac1Component implements OnInit {
     console.log(this.page);
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
+    this.curParticipantService.pages = this.pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+                                   .subscribe();
   }
 
   setFixation(interval: number): void {
