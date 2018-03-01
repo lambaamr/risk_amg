@@ -35,7 +35,8 @@ export class CurParticipantService {
     gadResponse: [],
     siasResponse: [],
     cesdResponse: [],
-    pages: []
+    pages: [],
+    event: []
   };
 
   get participant(): Participant {
@@ -128,6 +129,14 @@ export class CurParticipantService {
 
   set pages(page: number[] ) {
     this._participant.pages = page;
+  }
+
+  get event(): number[] {
+    return this._participant.event
+  }
+
+  set event(key: number[] ) {
+    this._participant.event = key;
   }
 
   get name(): string {

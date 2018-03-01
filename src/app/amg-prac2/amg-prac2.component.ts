@@ -38,6 +38,8 @@ export class AmgPrac2Component implements OnDestroy {
 
   ngOnDestroy() {
     this.active = false;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+    .subscribe();
   }
 
   pageChange(page: number): void {
@@ -51,15 +53,15 @@ export class AmgPrac2Component implements OnDestroy {
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
+    this.curParticipantService.pages = pages;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+    .subscribe();
     for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
       let temp = pages[i];
       pages[i] = pages[swap_idx];
       pages[swap_idx] = temp;
-      this.curParticipantService.pages = pages;
-      this.participantService.updateParticipant(this.curParticipantService.participant)
-      .subscribe();
     }
-    return pages
+    return pages;
   }
 }

@@ -27,6 +27,7 @@ export class Participant {
     public siasResponse?: number[];
     public cesdResponse?: number[];
     public pages?: number[];
+    public event?: number[];
 
     constructor (
         name?: string,
