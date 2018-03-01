@@ -33,6 +33,9 @@ a
                 this.amgprac = res.json();
                 this.maxPage = this.amgprac.length -1;
                 this.pages = this.shuffle(this.maxPage);
+                this.curParticipantService.pages = this.pages;
+                this.participantService.updateParticipant(this.curParticipantService.participant)
+                                               .subscribe();
               });
   }
 
@@ -57,9 +60,6 @@ a
       pages[i] = pages[swap_idx];
       pages[swap_idx] = temp;
     }
-    return pages;
-    this.curParticipantService.pages = this.pages;
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-                                 .subscribe();
+    return pages
   }
 }
