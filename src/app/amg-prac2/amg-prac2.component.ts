@@ -24,24 +24,20 @@ export class AmgPrac2Component implements OnDestroy {
   amgPage: number[];
 
   constructor(private router: Router,
-              private participantService: ParticipantService,
-              private curParticipantService: CurParticipantService,
-              private http: Http) {
-          this.http.get('/assets/amgprac.json')
-              .takeWhile(() => this.active)
-              .subscribe(res => {
-                this.amgprac = res.json();
-                this.maxPage = this.amgprac.length -1;
-                this.pages = this.shuffle(this.maxPage);
-                console.log("this.pages before " + this.pages);
-                console.log("curPart pages before " + this.curParticipantService.pages);
-                this.curParticipantService.pages = this.pages;
-                this.participantService.updateParticipant(this.curParticipantService.participant)
-                .subscribe();
-                console.log("this.pages after " + this.pages);
-                console.log("curPart pages after " + this.curParticipantService.pages);
-              });
-            }
+               private participantService: ParticipantService,
+               private curParticipantService: CurParticipantService,
+               private http: Http) {
+           this.http.get('/assets/amgprac.json')
+               .takeWhile(() => this.active)
+               .subscribe(res => {
+                 this.amgprac = res.json();
+                 this.maxPage = this.amgprac.length -1;
+                 this.pages = this.shuffle(this.maxPage);
+                 this.curParticipantService.pages = this.pages;
+                 this.participantService.updateParticipant(this.curParticipantService.participant)
+                 .subscribe();
+               });
+   }
 
   ngOnDestroy() {
     this.participantService.updateParticipant(this.curParticipantService.participant)
