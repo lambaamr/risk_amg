@@ -52,7 +52,7 @@ export class AmgPrac2Component implements OnDestroy {
   shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
     this.pages = this.numPages;
-    this.curParticipantService.pages = this.numPages;
+    this.curParticipantService.numPages = this.numPages;
     this.participantService.updateParticipant(this.curParticipantService.participant)
     .subscribe();
     for (let i = numPages - 1; i > 0; i--) {
