@@ -48,9 +48,6 @@ export class AmgPrac2Component implements OnDestroy {
 
   pagesChange(pracpages: number[]): void {
     this.pracpages = pracpages;
-    this.curParticipantService.pracpages = this.pracpages;
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-    .subscribe();
   }
 
   // Generates a random permutation of integers in the range [low, high]
