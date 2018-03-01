@@ -19,7 +19,7 @@ export enum KEY_CODE {
 
 
 export class AmgPrac1Component implements OnInit {
-  @Input() page: number;
+  @Input() pracpage: number;
   @Input() text: string;
   @Input() imgSrc: string;
   @Input() maxPage: number;
@@ -51,11 +51,11 @@ export class AmgPrac1Component implements OnInit {
   }
 
 
-  setPage(page: number): void {
-    this.page = page;
+  setPage(pracpage: number): void {
+    this.pracpage = pracpage;
     console.log(this.pracpages);
-    console.log(this.page);
-    this.pageChange.emit(this.page);
+    console.log(this.pracpage);
+    this.pageChange.emit(this.pracpage);
     this.pagesChange.emit(this.pracpages);
   }
 
@@ -64,8 +64,8 @@ export class AmgPrac1Component implements OnInit {
        this.isFixation = true;
        setTimeout(() => {
          this.isFixation = false;
-         let page = this.pracpages.pop();
-         this.setPage(page);
+         let pracpage = this.pracpages.pop();
+         this.setPage(pracpage);
        }, interval);
      } else {
      this.router.navigateByUrl('/part1', { replaceUrl: true })

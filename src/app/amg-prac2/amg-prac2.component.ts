@@ -17,8 +17,8 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class AmgPrac2Component implements OnDestroy {
   active: boolean = true;
-  page: number = 0;
-  amgprac: {page: number, text: string, imgSrc: string}[];
+  pracpage: number = 0;
+  amgprac: {pracpage: number, text: string, imgSrc: string}[];
   pracpages: number[];
   maxPage: number;
   amgPage: number[];
@@ -45,8 +45,8 @@ export class AmgPrac2Component implements OnDestroy {
     this.active = false;
   }
 
-  pageChange(page: number): void {
-    this.page = page;
+  pageChange(pracpage: number): void {
+    this.pracpage = pracpage;
   }
 
   pagesChange(pracpages: number[]): void {
