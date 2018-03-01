@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Input, Output, HostListener, AfterViewInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output, HostListener, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { Participant } from '../participant/participant';
@@ -48,6 +48,11 @@ export class AmgPrac1Component implements OnInit {
     if (!this.isFixation && event.keyCode === KEY_CODE.j) {
       this.setFixation(1000);
     }
+  }
+
+  ngOnDestroy() {
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+    .subscribe();
   }
 
   setPage(page: number): void {
