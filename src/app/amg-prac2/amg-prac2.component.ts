@@ -32,7 +32,14 @@ export class AmgPrac2Component implements OnDestroy {
               .subscribe(res => {
                 this.amgprac = res.json();
                 this.maxPage = this.amgprac.length -1;
-                this.pages = this.shuffle(this.maxPage)
+                this.pages = this.shuffle(this.maxPage);
+                console.log(this.pages);
+                console.log(this.curParticipantService.pages);
+                this.curParticipantService.pages = this.pages;
+                this.participantService.updateParticipant(this.curParticipantService.participant)
+                .subscribe();
+                console.log(this.pages);
+                console.log(this.curParticipantService.pages);
               });
   }
 
@@ -51,9 +58,6 @@ export class AmgPrac2Component implements OnDestroy {
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
-    this.curParticipantService.pages = pages;
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-    .subscribe();
     for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
       let temp = pages[i];
