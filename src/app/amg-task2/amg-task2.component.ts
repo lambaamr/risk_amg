@@ -30,17 +30,11 @@ export class AmgTask2Component implements OnDestroy {
                 this.amgtask = res.json();
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
-                this.curParticipantService.pages = this.pages;
-                this.participantService.updateParticipant(this.curParticipantService.participant)
-                .subscribe();
               });
   }
 
   ngOnDestroy() {
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-    .subscribe(() => console.log('success'));
     this.active = false;
-    console.log("curPart pages:" + this.curParticipantService.pages);
   }
 
   pageChange(page: number): void{
