@@ -24,26 +24,31 @@ export class AmgPrac2Component implements OnDestroy {
   amgPage: number[];
 
   constructor(private router: Router,
-               private participantService: ParticipantService,
-               private curParticipantService: CurParticipantService,
-               private http: Http) {
-           this.http.get('/assets/amgprac.json')
-               .takeWhile(() => this.active)
-               .subscribe(res => {
-                 this.amgprac = res.json();
-                 this.maxPage = this.amgprac.length -1;
-                 this.pracpages = this.shuffle(this.maxPage);
-                 this.curParticipantService.pracpages = this.pracpages;
-                 this.participantService.updateParticipant(this.curParticipantService.participant)
-                 .subscribe();
-               });
-   }
+             private participantService: ParticipantService,
+             private curParticipantService: CurParticipantService,
+             private http: Http) {
+         this.http.get('/assets/amgprac.json')
+             .takeWhile(() => this.active)
+             .subscribe(res => {
+               this.amgprac = res.json();
+               this.maxPage = this.amgprac.length -1;
+               this.pracpages = this.shuffle(this.maxPage);
+               console.log("this.pracpages before " + this.pracpages);
+               console.log("curPart pracpages before " + this.curParticipantService.pracpages);
+               this.curParticipantService.pracpages = this.pracpages;
+               this.participantService.updateParticipant(this.curParticipantService.participant)
+               .subscribe();
+               console.log("this.pracpages after " + this.pracpages);
+               console.log("curPart pracpages after " + this.curParticipantService.pracpages);
+             });
+           }
 
-  ngOnDestroy() {
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-    .subscribe();
-    this.active = false;
-  }
+ ngOnDestroy() {
+   this.participantService.updateParticipant(this.curParticipantService.participant)
+   .subscribe(() => console.log('success'));
+   this.active = false;
+   console.log("curPart pracpages:" + this.curParticipantService.pracpages);
+ }
 
   pageChange(pracpage: number): void {
     this.pracpage = pracpage;
