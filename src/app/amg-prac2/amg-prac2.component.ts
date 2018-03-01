@@ -34,12 +34,12 @@ export class AmgPrac2Component implements OnDestroy {
                 this.maxPage = this.amgprac.length -1;
                 this.pages = this.shuffle(this.maxPage);
                 console.log(this.pages);
-                console.log(this.curParticipantService.pages);
+                console.log(curParticipantService.pages);
                 this.curParticipantService.pages = this.pages;
                 this.participantService.updateParticipant(this.curParticipantService.participant)
                 .subscribe();
                 console.log(this.pages);
-                console.log(this.curParticipantService.pages);
+                console.log(curParticipantService.pages);
               });
   }
 
