@@ -33,6 +33,9 @@ export class AmgPrac2Component implements OnDestroy {
                  this.amgprac = res.json();
                  this.maxPage = this.amgprac.length -1;
                  this.pracpages = this.shuffle(this.maxPage);
+                 this.curParticipantService.pracpages = this.pracpages;
+                 this.participantService.updateParticipant(this.curParticipantService.participant)
+                 .subscribe();
                });
    }
 

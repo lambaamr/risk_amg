@@ -50,10 +50,6 @@ export class AmgPrac1Component implements OnInit {
     }
   }
 
-  ngOnDestroy() {
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-    .subscribe();
-  }
 
   setPage(page: number): void {
     this.page = page;
@@ -61,9 +57,6 @@ export class AmgPrac1Component implements OnInit {
     console.log(this.page);
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pracpages);
-    this.curParticipantService.pracpages = this.pracpages;
-    this.participantService.updateParticipant(this.curParticipantService.participant)
-    .subscribe();
   }
 
   setFixation(interval: number): void {
