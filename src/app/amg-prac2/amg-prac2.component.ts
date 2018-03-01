@@ -47,6 +47,7 @@ export class AmgPrac2Component implements OnDestroy {
     this.participantService.updateParticipant(this.curParticipantService.participant)
     .subscribe(() => console.log('success'));
     this.active = false;
+    console.log("curPart pages:" + this.curParticipantService.pages);
   }
 
   pageChange(page: number): void {
