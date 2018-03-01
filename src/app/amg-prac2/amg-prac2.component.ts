@@ -20,8 +20,7 @@ export class AmgPrac2Component implements OnDestroy {
   pracpage: number = 0;
   amgprac: {pracpage: number, text: string, imgSrc: string}[];
   pracpages: number[];
-  maxPage: number;
-  amgPage: number[];
+  maxpracPage: number;
 
   constructor(private router: Router,
              private participantService: ParticipantService,
@@ -31,8 +30,8 @@ export class AmgPrac2Component implements OnDestroy {
              .takeWhile(() => this.active)
              .subscribe(res => {
                this.amgprac = res.json();
-               this.maxPage = this.amgprac.length -1;
-               this.pracpages = this.shuffle(this.maxPage);
+               this.maxpracPage = this.amgprac.length -1;
+               this.pracpages = this.shuffle(this.maxpracPage);
                console.log("this.pracpages before " + this.pracpages);
                console.log("curPart pracpages before " + this.curParticipantService.pracpages);
                this.curParticipantService.pracpages = this.pracpages;
@@ -50,18 +49,18 @@ export class AmgPrac2Component implements OnDestroy {
    console.log("curPart pracpages:" + this.curParticipantService.pracpages);
  }
 
-  pageChange(pracpage: number): void {
+  pracpageChange(pracpage: number): void {
     this.pracpage = pracpage;
   }
 
-  pagesChange(pracpages: number[]): void {
+  pracpagesChange(pracpages: number[]): void {
     this.pracpages = pracpages;
   }
 
   // Generates a random permutation of integers in the range [low, high]
-  shuffle(numPages: number) {
-    let pracpages = Array.from(Array(numPages).keys()).map(num => num + 1);
-    for (let i = numPages - 1; i > 0; i--) {
+  shuffle(numpracPages: number) {
+    let pracpages = Array.from(Array(numpracPages).keys()).map(num => num + 1);
+    for (let i = numpracPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
       let temp = pracpages[i];
       pracpages[i] = pracpages[swap_idx];

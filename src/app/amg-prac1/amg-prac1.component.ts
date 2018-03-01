@@ -22,12 +22,12 @@ export class AmgPrac1Component implements OnInit {
   @Input() pracpage: number;
   @Input() text: string;
   @Input() imgSrc: string;
-  @Input() maxPage: number;
+  @Input() maxpracPage: number;
   @Input() pracpages: number[];
 
 
-  @Output() pageChange = new EventEmitter<number>();
-  @Output() pagesChange = new EventEmitter<number[]>();
+  @Output() pracpageChange = new EventEmitter<number>();
+  @Output() pracpagesChange = new EventEmitter<number[]>();
 
   isFixation: boolean;
 
@@ -51,12 +51,12 @@ export class AmgPrac1Component implements OnInit {
   }
 
 
-  setPage(pracpage: number): void {
+  setpracPage(pracpage: number): void {
     this.pracpage = pracpage;
     console.log(this.pracpages);
     console.log(this.pracpage);
-    this.pageChange.emit(this.pracpage);
-    this.pagesChange.emit(this.pracpages);
+    this.pracpageChange.emit(this.pracpage);
+    this.pracpagesChange.emit(this.pracpages);
   }
 
   setFixation(interval: number): void {
@@ -65,7 +65,7 @@ export class AmgPrac1Component implements OnInit {
        setTimeout(() => {
          this.isFixation = false;
          let pracpage = this.pracpages.pop();
-         this.setPage(pracpage);
+         this.setpracPage(pracpage);
        }, interval);
      } else {
      this.router.navigateByUrl('/part1', { replaceUrl: true })

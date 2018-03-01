@@ -2,7 +2,7 @@
   <div *ngIf="pracpage === 0" class="welcome-text card">
     <h2>Part 1 Practice Phase</h2>
     <div [innerHTML]="text"></div>
-    <button (click)="setPage(pracpage + 1)">Next</button>
+    <button (click)="setpracPage(pracpage + 1)">Next</button>
   </div> <!-- #welcome-text -->
 
   <div *ngIf="pracpage >= 1" class="amgprac-text">
