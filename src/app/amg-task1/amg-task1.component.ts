@@ -48,7 +48,6 @@ export class AmgTask1Component implements OnInit {
   setPage(page: number): void {
     this.page = page;
     console.log(this.pages);
-    console.log(this.page);
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
   }
