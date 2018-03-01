@@ -30,13 +30,9 @@ export class AmgTask2Component implements OnDestroy {
                 this.amgtask = res.json();
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
-                console.log("this.pages before " + this.pages);
-                console.log("curPart pages before " + this.curParticipantService.pages);
                 this.curParticipantService.pages = this.pages;
                 this.participantService.updateParticipant(this.curParticipantService.participant)
                 .subscribe();
-                console.log("this.pages after " + this.pages);
-                console.log("curPart pages after " + this.curParticipantService.pages);
               });
   }
 
