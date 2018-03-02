@@ -29,7 +29,7 @@ export class CurParticipantService {
     proportionlt: [],
     netGainslt: [],
     opponent2Number: [],
-    reactionltTime: [],
+    ReactltTime: [],
     returnedlt: [],
     ocirResponse: [],
     gadResponse: [],
@@ -244,12 +244,12 @@ export class CurParticipantService {
   }
 
 
-  get reactionltTimes(): number[] {
-    return this._participant.reactionltTime;
+  get ReactltTime(): number[] {
+    return this._participant.ReactltTime;
   }
 
   addReactltTime(lttime: number): void {
-    this._participant.reactionltTime.push(lttime);
+    this._participant.ReactltTime.push(lttime);
   }
 
   get proportions(): number[] {
