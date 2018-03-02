@@ -10,35 +10,35 @@
     "page": 1,
     "text": "",
     "img": "/assets/images/image1.png",
-    "cond": "risk",
+    "cond": "1",
     "ans": "j"
   },
   {
     "page": 2,
     "text": "",
     "img": "/assets/images/image38.png",
-    "cond": "amg",
+    "cond": "2",
     "ans": "f"
   },
   {
     "page": 3,
     "text": "",
     "img": "/assets/images/image44.png",
-    "cond": "risk",
+    "cond": "1",
     "ans": "j"
   },
   {
     "page": 4,
     "text": "",
     "img": "/assets/images/image55.png",
-    "cond": "amg",
+    "cond": "2",
     "ans": "f"
   },
   {
     "page": 5,
     "text": "",
     "img": "/assets/images/image60.png",
-    "cond": "risk",
+    "cond": "1",
     "ans": "j"
   }
 ]

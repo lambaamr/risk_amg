@@ -132,11 +132,11 @@ export class CurParticipantService {
     this._participant.pages = pag;
   }
 
-  get cond(): string[] {
+  get cond(): number[] {
     return this._participant.cond;
   }
 
-  set cond(con: string[] ) {
+  set cond(con: number[] ) {
     this._participant.cond = con;
   }
 

@@ -21,7 +21,7 @@ export class AmgTask2Component implements OnDestroy {
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
-  cond: string[];
+  cond: number[];
 
   constructor(private router: Router,
              private participantService: ParticipantService,
