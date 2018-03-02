@@ -28,7 +28,6 @@ var ParticipantSchema = mongoose.Schema({
     siasResponse: [Number],
     cesdResponse: [Number],
     pages: [Number],
-    cond: [Number],
 }, {
     timestamps: true
 });

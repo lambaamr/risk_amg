@@ -29,7 +29,6 @@ export class Participant {
     public pages?: number[];
     public event?: number[];
     public keyPresses?: number[];
-    public cond?: number[];
 
     constructor (
         name?: string,
