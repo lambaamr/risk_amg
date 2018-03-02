@@ -20,7 +20,7 @@ export class Participant {
     public proportionlt?: number[];
     public netGainslt?: number[];
     public opponent2Number?: number[];
-    public reactionTime2?: number[];
+    public reaction2Time?: number[];
     public returnedlt?: number[];
     public ocirResponse?: number[];
     public gadResponse?: number[];

@@ -31,10 +31,10 @@ export class Game2Service {
     return this.oppIds.shift();
   }
 
-  getReactltTime(): number {
+  getReact2Time(): number {
     this.endowmentltT1 = performance.now();
-    let reactltTime = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
-    return reactltTime;
+    let reactTime = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
+    return reactTime;
   }
   inVolatilityPeriod(trial: number): boolean {
     let remainder = trial % 24;
