@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Input, Output, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
+import { ParticipantService } from '../participant/participant.service';
 
 export enum KEY_CODE {
   f = 70,
@@ -10,7 +11,8 @@ export enum KEY_CODE {
 @Component({
   selector: 'tg-amg-task1',
   templateUrl: './amg-task1.component.html',
-  styleUrls: ['./amg-task1.component.css']
+  styleUrls: ['./amg-task1.component.css'],
+  providers: [ ParticipantService ]
 })
 
 
@@ -20,6 +22,8 @@ export class AmgTask1Component implements OnInit {
   @Input() imgSrc: string;
   @Input() maxPage: number;
   @Input() pages: number[];
+  @Input() keyPresses: number[];
+
 
 
   @Output() pageChange = new EventEmitter<number>();
@@ -29,6 +33,7 @@ export class AmgTask1Component implements OnInit {
 
 
   constructor(private curParticipantService: CurParticipantService,
+              private participantService: ParticipantService,
               private router: Router) { }
 
   ngOnInit() {

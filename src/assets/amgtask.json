@@ -3,36 +3,42 @@
     "page": 0,
     "text": "<p>You will now enter the testing phase of the lottery task. Click 'Next' to proceed. </p>",
     "img": "",
+    "cond":"",
     "ans": "f"
   },
   {
     "page": 1,
     "text": "",
     "img": "/assets/images/image1.png",
+    "cond": "risk",
     "ans": "j"
   },
   {
     "page": 2,
     "text": "",
     "img": "/assets/images/image38.png",
+    "cond": "amg",
     "ans": "f"
   },
   {
     "page": 3,
     "text": "",
     "img": "/assets/images/image44.png",
+    "cond": "risk",
     "ans": "j"
   },
   {
     "page": 4,
     "text": "",
     "img": "/assets/images/image55.png",
+    "cond": "amg",
     "ans": "f"
   },
   {
     "page": 5,
     "text": "",
     "img": "/assets/images/image60.png",
+    "cond": "risk",
     "ans": "j"
   }
 ]
