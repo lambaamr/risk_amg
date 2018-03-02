@@ -121,6 +121,7 @@ export class Game2Component implements AfterViewInit, OnDestroy {
     setTimeout(() => {
         this.inTrial = true;
         this.oppSettings[oppId].highlight = 'white';
+        this.game2Service.endowmentltT0 = performance.now();
     }, 1200);
     let oppId = this.game2Service.getOppId(this.trialNumber);
     this.oppSettings[oppId].highlight = 'red';
