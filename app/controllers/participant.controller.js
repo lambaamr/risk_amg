@@ -87,7 +87,7 @@ exports.update = (req, res) => {
         participant.gadResponse = req.body.gadResponse;
         participant.siasResponse = req.body.siasResponse;
         participant.cesdResponse = req.body.cesdResponse;
-        participant.page = req.body.page;
+        participant.pages = req.body.pages;
 
         participant.save((err, data) => {
             if (err) {

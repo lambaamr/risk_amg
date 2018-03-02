@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
 import { AmgTask1Component } from '../amg-task1/amg-task1.component';
@@ -21,7 +22,8 @@ export class AmgTask2Component implements OnDestroy {
   maxPage: number;
   pages: number[];
 
-  constructor(private participantService: ParticipantService,
+  constructor(private router: Router,
+             private participantService: ParticipantService,
              private curParticipantService: CurParticipantService,
              private http: Http) {
     this.http.get('/assets/amgtask.json')
@@ -30,6 +32,9 @@ export class AmgTask2Component implements OnDestroy {
                 this.amgtask = res.json();
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
+                this.curParticipantService.pages = this.pages.slice();
+                this.participantService.updateParticipant(this.curParticipantService.participant)
+                .subscribe();
               });
   }
 
