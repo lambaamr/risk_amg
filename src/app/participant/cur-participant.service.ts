@@ -36,7 +36,8 @@ export class CurParticipantService {
     siasResponse: [],
     cesdResponse: [],
     pages: [],
-    keyPresses: []
+    keyPresses: [],
+    cond: []
   };
 
   get participant(): Participant {
@@ -131,12 +132,12 @@ export class CurParticipantService {
     this._participant.pages = pag;
   }
 
-  get keyPresses(): number[] {
-    return this._participant.keyPresses
+  get cond(): string[] {
+    return this._participant.cond;
   }
 
-  set keyPresses(key: number[] ) {
-    this._participant.keyPresses = key;
+  set cond(con: string[] ) {
+    this._participant.cond = con;
   }
 
   get name(): string {

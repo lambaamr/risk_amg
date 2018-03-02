@@ -21,6 +21,7 @@ export class AmgTask2Component implements OnDestroy {
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
+  cond: string[];
 
   constructor(private router: Router,
              private participantService: ParticipantService,
@@ -33,6 +34,7 @@ export class AmgTask2Component implements OnDestroy {
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
                 this.curParticipantService.pages = this.pages.slice();
+                this.curParticipantService.cond = this.cond.slice();
                 this.participantService.updateParticipant(this.curParticipantService.participant)
                 .subscribe();
               });
