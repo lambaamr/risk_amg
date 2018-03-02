@@ -131,6 +131,14 @@ export class CurParticipantService {
     this._participant.pages = pag;
   }
 
+  get keyPresses(): string [] {
+    return this._participant.keyPresses;
+  }
+
+  set keyPresses(key: string []) {
+    this._participant.keyPresses = key;
+  }
+
   get name(): string {
     return this._participant.name;
   }

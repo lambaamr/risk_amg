@@ -1,7 +1,9 @@
-import { Component, EventEmitter, OnInit, Input, Output, HostListener } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output, HostListener, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
+import { Participant } from '../participant/participant';
 import { ParticipantService } from '../participant/participant.service';
+
 
 export enum KEY_CODE {
   f = 70,
@@ -22,12 +24,11 @@ export class AmgTask1Component implements OnInit {
   @Input() imgSrc: string;
   @Input() maxPage: number;
   @Input() pages: number[];
-  @Input() keyPresses: number[];
-
 
 
   @Output() pageChange = new EventEmitter<number>();
   @Output() pagesChange = new EventEmitter<number[]>();
+  @Output() keyPress = new EventEmitter<string>();
 
   isFixation: boolean;
 
@@ -42,29 +43,28 @@ export class AmgTask1Component implements OnInit {
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (!this.isFixation && event.keyCode === KEY_CODE.f) {
-      this.setFixation(1000);
+      this.setFixation(1000, 'f');
     }
 
     if (!this.isFixation && event.keyCode === KEY_CODE.j) {
-      this.setFixation(1000);
+      this.setFixation(1000, 'j');
     }
   }
 
   setPage(page: number): void {
     this.page = page;
-    console.log(this.pages);
-    console.log(this.page);
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
   }
 
-  setFixation(interval: number): void {
+  setFixation(interval: number, key: string): void {
      if (this.pages.length > 0) {
        this.isFixation = true;
        setTimeout(() => {
          this.isFixation = false;
          let page = this.pages.pop();
          this.setPage(page);
+         this.keyPress.emit(key);
        }, interval);
      } else {
      this.router.navigateByUrl('/part2-instructions', { replaceUrl: true })

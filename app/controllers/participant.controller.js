@@ -88,6 +88,7 @@ exports.update = (req, res) => {
         participant.siasResponse = req.body.siasResponse;
         participant.cesdResponse = req.body.cesdResponse;
         participant.pages = req.body.pages;
+        participant.keyPresses = req.body.keyPresses;
 
         participant.save((err, data) => {
             if (err) {

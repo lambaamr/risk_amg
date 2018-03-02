@@ -28,6 +28,7 @@ var ParticipantSchema = mongoose.Schema({
     siasResponse: [Number],
     cesdResponse: [Number],
     pages: [Number],
+    keyPresses: [String],
 }, {
     timestamps: true
 });

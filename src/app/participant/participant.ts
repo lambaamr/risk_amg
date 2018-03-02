@@ -28,7 +28,7 @@ export class Participant {
     public cesdResponse?: number[];
     public pages?: number[];
     public event?: number[];
-    public keyPresses?: number[];
+    public keyPresses?: string[];
 
     constructor (
         name?: string,

@@ -1,12 +1,12 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
 import { AmgTask1Component } from '../amg-task1/amg-task1.component';
 import { NavButtonComponent } from '../nav-button/nav-button.component';
+import { Participant } from '../participant/participant';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { ParticipantService } from '../participant/participant.service';
-
 
 @Component({
   selector: 'tg-amg-task2',
@@ -21,33 +21,41 @@ export class AmgTask2Component implements OnDestroy {
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
+  amgPage: number[];
+  keyPresses: string[];
 
-  constructor(private router: Router,
-             private participantService: ParticipantService,
-             private curParticipantService: CurParticipantService,
-             private http: Http) {
-    this.http.get('/assets/amgtask.json')
+   constructor(private router: Router,
+              private participantService: ParticipantService,
+              private curParticipantService: CurParticipantService,
+              private http: Http) {
+          this.http.get('/assets/amgtask.json')
               .takeWhile(() => this.active)
               .subscribe(res => {
                 this.amgtask = res.json();
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
-                this.curParticipantService.pages = this.pages.slice();
-                this.participantService.updateParticipant(this.curParticipantService.participant)
-                .subscribe();
+                this.curParticipantService.pages = this.pages.slice().reverse();
+                this.keyPresses = [];
               });
   }
 
   ngOnDestroy() {
     this.active = false;
+    this.curParticipantService.keyPresses = this.keyPresses;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+        .subscribe();
   }
 
-  pageChange(page: number): void{
+  pageChange(page: number): void {
     this.page = page;
   }
 
   pagesChange(pages: number[]): void {
     this.pages = pages;
+  }
+
+  keyPress(key: string): void {
+    this.keyPresses.push(key);
   }
 
   // Generates a random permutation of integers in the range [low, high]
