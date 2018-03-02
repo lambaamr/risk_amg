@@ -21,7 +21,7 @@ var ParticipantSchema = mongoose.Schema({
     proportionlt: [Number],
     netGainslt: [Number],
     opponent2Number: [Number],
-    reactionTimelt: [Number],
+    reactionltTime: [Number],
     returnedlt: [Number],
     ocirResponse: [Number],
     gadResponse: [Number],

@@ -78,7 +78,7 @@ exports.update = (req, res) => {
         participant.actualProportion = req.body.actualProportion;
         participant.opponent2Number = req.body.opponent2Number;
         participant.proportionlt = req.body.proportionlt;
-        participant.reactionTimelt = req.body.reactionTimelt;
+        participant.reactionltTime = req.body.reactionltTime;
         participant.returnedlt = req.body.returnedlt;
         participant.actualProportionlt = req.body.actualProportionlt;
         participant.netGainslt = req.body.netGainslt;
