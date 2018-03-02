@@ -33,8 +33,8 @@ export class Game2Service {
 
   getReactltTime(): number {
     this.endowmentltT1 = performance.now();
-    let reactltTime = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
-    return reactltTime;
+    let lt_reactionTime = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
+    return lt_reactionTime;
   }
 
   inVolatilityPeriod(trial: number): boolean {
