@@ -31,7 +31,7 @@ export class Game2Service {
     return this.oppIds.shift();
   }
 
-  getReactltTime(): number {
+  getlt_reactionTime(): number {
     this.endowmentltT1 = performance.now();
     let lt_reactionTime = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
     return lt_reactionTime;

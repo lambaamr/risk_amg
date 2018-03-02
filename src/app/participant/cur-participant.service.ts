@@ -244,12 +244,12 @@ export class CurParticipantService {
   }
 
 
-  get lt_reactionTimes(): number[] {
+  get lt_reactionTime(): number[] {
     return this._participant.lt_reactionTime;
   }
 
-  addReactltTime(lt_time: number): void {
-    this._participant.lt_reactionTime.push(lt_time);
+  addlt_reactionTime(time: number): void {
+    this._participant.lt_reactionTime.push(time);
   }
 
   get proportions(): number[] {
