@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CurParticipantService } from '../participant/cur-participant.service';
 import { Participant } from '../participant/participant';
 import { ParticipantService } from '../participant/participant.service';
+import { AmgTask2Component  } from '../amg-task2/amg-task2.component';
 
 
 export enum KEY_CODE {
@@ -31,6 +32,8 @@ export class AmgTask1Component implements OnInit {
   @Output() keyPress = new EventEmitter<string>();
 
   isFixation: boolean;
+  keyPressesT0: number;
+  keyPressesT1: number;
 
 
   constructor(private curParticipantService: CurParticipantService,
@@ -51,10 +54,18 @@ export class AmgTask1Component implements OnInit {
     }
   }
 
+  getAmgReactTime(): number {
+    this.keyPressesT1 = performance.now();
+    let amgreactTime = +(this.keyPressesT1 - this.keyPressesT0).toFixed(3);
+    return amgreactTime;
+  }
+
   setPage(page: number): void {
     this.page = page;
+    this.keyPressesT0 = performance.now();
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
+    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
   }
 
   setFixation(interval: number, key: string): void {
