@@ -50,7 +50,6 @@ export class AmgTask2Component implements OnDestroy {
 
   pageChange(page: number): void {
     this.page = page;
-    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
   }
 
   pagesChange(pages: number[]): void {
@@ -60,6 +59,7 @@ export class AmgTask2Component implements OnDestroy {
   keyPress(key: string): void {
     this.keyPresses.push(key);
     this.keyPressesT0 = performance.now();
+    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
   }
 
   getAmgReactTime(): number {
