@@ -37,7 +37,7 @@ export class CurParticipantService {
     cesdResponse: [],
     pages: [],
     keyPresses: [],
-    AmgReactTime: [],
+    amgreactionTime: []
   };
 
   get participant(): Participant {
@@ -252,12 +252,12 @@ export class CurParticipantService {
     this._participant.reactionTimelt.push(time);
   }
 
-  get AmgReactTime(): number[] {
-    return this._participant.AmgReactTime;
+  get amgreactionTimes(): number[] {
+    return this._participant.amgreactionTime;
   }
 
   addAmgReactTime(time: number): void {
-    this._participant.AmgReactTime.push(time);
+    this._participant.amgreactionTime.push(time);
   }
 
   get proportions(): number[] {

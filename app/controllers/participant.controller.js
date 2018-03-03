@@ -89,7 +89,7 @@ exports.update = (req, res) => {
         participant.cesdResponse = req.body.cesdResponse;
         participant.pages = req.body.pages;
         participant.keyPresses = req.body.keyPresses;
-        participant.AmgReactTime = req.body.AmgReactTime;
+        participant.amgreactionTime = req.body.amgreactionTime;
 
         participant.save((err, data) => {
             if (err) {

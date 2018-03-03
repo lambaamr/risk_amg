@@ -29,7 +29,7 @@ export class Participant {
     public pages?: number[];
     public event?: number[];
     public keyPresses?: string[];
-    public AmgReactTime?: number[];
+    public amgreactionTime?: number[];
 
 
     constructor (

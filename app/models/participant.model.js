@@ -29,7 +29,7 @@ var ParticipantSchema = mongoose.Schema({
     cesdResponse: [Number],
     pages: [Number],
     keyPresses: [String],
-    AmgReactTime: [Number],
+    amgreactionTime: [Number],
 }, {
     timestamps: true
 });

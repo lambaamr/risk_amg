@@ -43,6 +43,7 @@ export class AmgTask2Component implements OnDestroy {
 
   ngOnDestroy() {
     this.active = false;
+    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
     this.curParticipantService.keyPresses = this.keyPresses;
     this.participantService.updateParticipant(this.curParticipantService.participant)
         .subscribe();
@@ -58,16 +59,14 @@ export class AmgTask2Component implements OnDestroy {
 
   keyPress(key: string): void {
     this.keyPresses.push(key);
+    this.keyPressesT0 = performance.now();
   }
 
   getAmgReactTime(): number {
-    this.keyPressesT0 = performance.now();
     this.keyPressesT1 = performance.now();
-    let AmgReactTime = +(this.keyPressesT1 - this.keyPressesT0);
-    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
-    return AmgReactTime;
+    let amgreactTime = +(this.keyPressesT1 - this.keyPressesT0).toFixed(3);
+    return amgreactTime;
   }
-
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
