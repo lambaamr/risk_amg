@@ -62,9 +62,9 @@ export class AmgTask2Component implements OnDestroy {
     this.keyPressesT0 = performance.now();
   }
 
-  getAmgReactTime(): number {
+  getAmgReactTime(): number{
     this.keyPressesT1 = performance.now();
-    let amgreactTime = +(this.keyPressesT1 - this.keyPressesT0).toFixed(3);
+    let amgreactTime = +(this.keyPressesT1 - this.keyPressesT0);
     return amgreactTime;
   }
   // Generates a random permutation of integers in the range [low, high]
