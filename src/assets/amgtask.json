@@ -9,7 +9,7 @@
   {
     "page": 1,
     "text": "",
-    "img": "/assets/images/image1.png",
+    "img": "/assets/images/image2.png",
     "cond": "1",
     "ans": "j"
   },
@@ -38,6 +38,13 @@
     "page": 5,
     "text": "",
     "img": "/assets/images/image60.png",
+    "cond": "1",
+    "ans": "j"
+  },
+  {
+    "page": 6,
+    "text": "",
+    "img": "/assets/images/image20.png",
     "cond": "1",
     "ans": "j"
   }
