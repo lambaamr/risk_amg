@@ -59,7 +59,6 @@ export class AmgTask2Component implements OnDestroy {
   keyPress(key: string): void {
     this.keyPresses.push(key);
     this.keyPressesT0 = performance.now();
-    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
   }
 
   getAmgReactTime(): number {
@@ -69,6 +68,7 @@ export class AmgTask2Component implements OnDestroy {
   }
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
+    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
     for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
