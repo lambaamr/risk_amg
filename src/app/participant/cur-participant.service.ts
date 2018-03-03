@@ -29,14 +29,15 @@ export class CurParticipantService {
     proportionlt: [],
     netGainslt: [],
     opponent2Number: [],
-    reaction2Time: [],
+    reactionTimelt: [],
     returnedlt: [],
     ocirResponse: [],
     gadResponse: [],
     siasResponse: [],
     cesdResponse: [],
     pages: [],
-    keyPresses: []
+    keyPresses: [],
+    AmgReactTime: [],
   };
 
   get participant(): Participant {
@@ -243,12 +244,20 @@ export class CurParticipantService {
     this._participant.reactionTime.push(time);
   }
 
-  get reaction2Times(): number[] {
-    return this._participant.reaction2Time;
+  get reactionTimelts(): number[] {
+    return this._participant.reactionTimelt;
   }
 
-  addReact2Time(time: number): void {
-    this._participant.reaction2Time.push(time);
+  addReactTimelt(time: number): void {
+    this._participant.reactionTimelt.push(time);
+  }
+
+  get AmgReactTime(): number[] {
+    return this._participant.AmgReactTime;
+  }
+
+  addAmgReactTime(time: number): void {
+    this._participant.AmgReactTime.push(time);
   }
 
   get proportions(): number[] {

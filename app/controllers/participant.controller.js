@@ -78,7 +78,7 @@ exports.update = (req, res) => {
         participant.actualProportion = req.body.actualProportion;
         participant.opponent2Number = req.body.opponent2Number;
         participant.proportionlt = req.body.proportionlt;
-        participant.reaction2Time = req.body.reaction2Time;
+        participant.reactionTimelt = req.body.reactionTimelt;
         participant.returnedlt = req.body.returnedlt;
         participant.actualProportionlt = req.body.actualProportionlt;
         participant.netGainslt = req.body.netGainslt;
@@ -89,6 +89,7 @@ exports.update = (req, res) => {
         participant.cesdResponse = req.body.cesdResponse;
         participant.pages = req.body.pages;
         participant.keyPresses = req.body.keyPresses;
+        participant.AmgReactTime = req.body.AmgReactTime;
 
         participant.save((err, data) => {
             if (err) {

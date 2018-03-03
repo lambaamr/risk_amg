@@ -23,6 +23,8 @@ export class AmgTask2Component implements OnDestroy {
   pages: number[];
   amgPage: number[];
   keyPresses: string[];
+  keyPressesT0: number;
+  keyPressesT1: number;
 
    constructor(private router: Router,
               private participantService: ParticipantService,
@@ -56,6 +58,14 @@ export class AmgTask2Component implements OnDestroy {
 
   keyPress(key: string): void {
     this.keyPresses.push(key);
+  }
+
+  getAmgReactTime(): number {
+    this.keyPressesT0 = performance.now();
+    this.keyPressesT1 = performance.now();
+    let AmgReactTime = +(this.keyPressesT1 - this.keyPressesT0).toFixed(3);
+    this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
+    return AmgReactTime;
   }
 
   // Generates a random permutation of integers in the range [low, high]

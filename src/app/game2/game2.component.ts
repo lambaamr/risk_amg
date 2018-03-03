@@ -133,7 +133,7 @@ export class Game2Component implements AfterViewInit, OnDestroy {
 
   setEndowmentlt() {
     this.endowmentltSubmitted = true;
-    this.curParticipantService.addReact2Time(this.game2Service.getReact2Time());
+    this.curParticipantService.addReactTimelt(this.game2Service.getReactTimelt());
     this.oppReturn = this.opponent2.machine.getReturnlt(this.endowmentlt);
     this.netGainlt = +((1 - this.endowmentlt + this.oppReturn).toFixed(2));
     this.curParticipantService.addEndowmentlt(this.endowmentlt);

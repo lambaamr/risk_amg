@@ -20,7 +20,7 @@ export class Participant {
     public proportionlt?: number[];
     public netGainslt?: number[];
     public opponent2Number?: number[];
-    public reaction2Time?: number[];
+    public reactionTimelt?: number[];
     public returnedlt?: number[];
     public ocirResponse?: number[];
     public gadResponse?: number[];
@@ -29,6 +29,8 @@ export class Participant {
     public pages?: number[];
     public event?: number[];
     public keyPresses?: string[];
+    public AmgReactTime?: number[];
+
 
     constructor (
         name?: string,
