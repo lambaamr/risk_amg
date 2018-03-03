@@ -2,7 +2,7 @@
   <div *ngIf="page === 0" class="welcome-text card">
     <h2>Part 1 Testing Phase</h2>
     <div [innerHTML]="text"></div>
-    <button (click)="setPage(page + 1)">Next</button>
+    <button (click)="setPage(++page)">Next</button>
   </div> <!-- #welcome-text -->
 
   <div *ngIf="page !== 0" class="amgtask-text">
