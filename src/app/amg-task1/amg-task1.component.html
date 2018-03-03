@@ -5,9 +5,9 @@
     <button (click)="setPage(page + 1)">Next</button>
   </div> <!-- #welcome-text -->
 
-  <div *ngIf="page > 0" class="amgtask-text">
+  <div *ngIf="page <= 5" class="amgtask-text">
     <div [innerHTML]="text"></div>
-    <div *ngIf="page > 0" class="amgtask-image"><img [src]="imgSrc"></div>
+    <div *ngIf="page <= 5" class="amgtask-image"><img [src]="imgSrc"></div>
   </div> <!-- #instruction-text -->
 
 
