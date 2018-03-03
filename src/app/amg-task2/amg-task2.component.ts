@@ -43,7 +43,7 @@ export class AmgTask2Component implements OnDestroy {
 
   ngOnDestroy() {
     this.active = false;
-    this.curParticipantService.keyPresses = this.keyPresses;
+    this.curParticipantService.keyPresses = this.keyPresses + 1;
     this.participantService.updateParticipant(this.curParticipantService.participant)
         .subscribe();
   }
