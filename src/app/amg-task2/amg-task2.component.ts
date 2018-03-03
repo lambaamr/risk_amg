@@ -37,7 +37,6 @@ export class AmgTask2Component implements OnDestroy {
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
                 this.curParticipantService.pages = this.pages.slice().reverse();
-                this.keyPresses = [];
               });
   }
 
@@ -50,6 +49,7 @@ export class AmgTask2Component implements OnDestroy {
 
   pageChange(page: number): void {
     this.page = page;
+    this.keyPresses = [];
   }
 
   pagesChange(pages: number[]): void {
