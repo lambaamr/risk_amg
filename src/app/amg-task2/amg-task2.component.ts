@@ -17,7 +17,7 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class AmgTask2Component implements OnDestroy {
   active: boolean = true;
-  page: number = 0;
+  page: number = 1;
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
@@ -34,7 +34,7 @@ export class AmgTask2Component implements OnDestroy {
               .takeWhile(() => this.active)
               .subscribe(res => {
                 this.amgtask = res.json();
-                this.maxPage = this.amgtask.length -2;
+                this.maxPage = this.amgtask.length;
                 this.pages = this.shuffle(this.maxPage);
                 this.curParticipantService.pages = this.pages.slice().reverse();
                 this.keyPresses = [];
