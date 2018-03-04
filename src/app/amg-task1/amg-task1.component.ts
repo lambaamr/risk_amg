@@ -30,6 +30,8 @@ export class AmgTask1Component implements OnInit {
   @Output() keyPress = new EventEmitter<string>();
 
   isFixation: boolean;
+  keyPresses: string[];
+
 
 
   constructor(private curParticipantService: CurParticipantService,
@@ -65,6 +67,7 @@ export class AmgTask1Component implements OnInit {
          let page = this.pages.pop();
          this.setPage(page);
          this.keyPress.emit(key);
+         this.curParticipantService.keyPresses = this.keyPresses;
        }, interval);
      } else {
      this.router.navigateByUrl('/part2-instructions', { replaceUrl: true })

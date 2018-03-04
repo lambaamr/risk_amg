@@ -63,7 +63,6 @@ export class AmgTask2Component implements OnDestroy {
 
   getAmgReactTime(): number {
     this.keyPressesT1 = performance.now();
-    this.curParticipantService.keyPresses = this.keyPresses;
     let amgreactTime = +(this.keyPressesT1 - this.keyPressesT0).toFixed(3);
     return amgreactTime;
   }
