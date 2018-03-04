@@ -1,12 +1,5 @@
 [
   {
-    "page": 0,
-    "text": "<p>You will now enter the testing phase of the lottery task. Click 'Next' to proceed. </p>",
-    "img": "",
-    "cond":"",
-    "ans": "f"
-  },
-  {
     "page": 1,
     "text": "",
     "img": "/assets/images/image2.png",
