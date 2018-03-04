@@ -47,5 +47,12 @@
     "img": "/assets/images/image20.png",
     "cond": "1",
     "ans": "j"
+  },
+  {
+    "page": 7,
+    "text": "",
+    "img": "/assets/images/image1.png",
+    "cond": "1",
+    "ans": "j"
   }
 ]
