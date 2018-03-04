@@ -31,6 +31,8 @@ export class AmgTask1Component implements OnInit {
 
   isFixation: boolean;
   keyPresses: string[];
+  keyPressesT0: number;
+  keyPressesT1: number;
 
 
 
@@ -52,7 +54,7 @@ export class AmgTask1Component implements OnInit {
     }
   }
 
-  keyPress(key: string): void {
+  KeyPress(key: string): void {
     this.keyPresses.push(key);
     this.keyPressesT0 = performance.now();
   }
