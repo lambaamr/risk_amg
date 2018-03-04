@@ -52,11 +52,16 @@ export class AmgTask1Component implements OnInit {
     }
   }
 
+  keyPress(key: string): void {
+    this.keyPresses.push(key);
+    this.keyPressesT0 = performance.now();
+  }
 
   setPage(page: number): void {
     this.page = page;
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
+    this.keyPresses = [];
     this.curParticipantService.keyPresses = this.keyPresses;
   }
 
