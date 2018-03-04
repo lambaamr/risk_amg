@@ -34,8 +34,8 @@ export class AmgTask2Component implements OnDestroy {
               .takeWhile(() => this.active)
               .subscribe(res => {
                 this.amgtask = res.json();
-                this.maxPage = this.amgtask.length;
-                this.pages = this.shuffle(this.maxPage);
+                this.maxPage = this.amgtask.length -1;
+                this.pages = this.shuffle(this.amgtask.length - 1);
                 this.curParticipantService.pages = this.pages.slice().reverse();
                 this.keyPresses = [];
               });
