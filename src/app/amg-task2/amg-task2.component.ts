@@ -17,7 +17,7 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class AmgTask2Component implements OnDestroy {
   active: boolean = true;
-  page: number = 1;
+  page: number = 0;
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
