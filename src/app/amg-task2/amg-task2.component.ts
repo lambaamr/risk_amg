@@ -59,6 +59,7 @@ export class AmgTask2Component implements OnDestroy {
 
   keyPress(key: string): void {
     this.keyPresses.push(key);
+    this.curParticipantService.keyPresses = this.keyPresses;
     this.keyPressesT0 = performance.now();
   }
 
