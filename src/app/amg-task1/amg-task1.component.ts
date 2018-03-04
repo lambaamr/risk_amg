@@ -30,10 +30,6 @@ export class AmgTask1Component implements OnInit {
   @Output() keyPress = new EventEmitter<string>();
 
   isFixation: boolean;
-  keyPresses: string[];
-  keyPressesT0: number;
-  keyPressesT1: number;
-
 
 
   constructor(private curParticipantService: CurParticipantService,
@@ -54,17 +50,11 @@ export class AmgTask1Component implements OnInit {
     }
   }
 
-  KeyPress(key: string): void {
-    this.keyPresses.push(key);
-    this.keyPressesT0 = performance.now();
-  }
 
   setPage(page: number): void {
     this.page = page;
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
-    this.keyPresses = [];
-    this.curParticipantService.keyPresses = this.keyPresses;
   }
 
   setFixation(interval: number, key: string): void {

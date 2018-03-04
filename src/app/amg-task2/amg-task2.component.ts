@@ -17,7 +17,7 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class AmgTask2Component implements OnDestroy {
   active: boolean = true;
-  page: number = 0;
+  page: number = 2;
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
@@ -37,6 +37,7 @@ export class AmgTask2Component implements OnDestroy {
                 this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
                 this.curParticipantService.pages = this.pages.slice().reverse();
+                this.keyPresses = [];
               });
   }
 
@@ -53,6 +54,12 @@ export class AmgTask2Component implements OnDestroy {
   pagesChange(pages: number[]): void {
     this.pages = pages;
     this.curParticipantService.addAmgReactTime(this.getAmgReactTime());
+  }
+
+  keyPress(key: string): void {
+    this.keyPresses.push(key);
+    this.curParticipantService.keyPresses = this.keyPresses;
+    this.keyPressesT0 = performance.now();
   }
 
   getAmgReactTime(): number {
