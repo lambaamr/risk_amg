@@ -5,13 +5,8 @@
     <button (click)="setPage (page + 0)">Next</button>
   </div> <!-- #welcome-text -->
 
-  <div *ngIf="page <= 6" class="amgtask-text">
-    <div [innerHTML]="text"></div>
-    <div *ngIf="page <= 6" class="amgtask-image"><img [src]="imgSrc"></div>
-  </div> <!-- #instruction-text -->
-
-
-</div> <!-- #instruction -->
+  <div *ngIf="page >= 1" class="amgtask-text">
+  <div *ngIf="page >= 1" class="amgtask-image"><img [src]="imgSrc"></div>
 
 <div class="fixation" *ngIf="isFixation">
   <p>+</p>
