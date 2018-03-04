@@ -57,6 +57,7 @@ export class AmgTask1Component implements OnInit {
     this.page = page;
     this.pageChange.emit(this.page);
     this.pagesChange.emit(this.pages);
+    this.curParticipantService.keyPresses = this.keyPresses;
   }
 
   setFixation(interval: number, key: string): void {
@@ -67,7 +68,6 @@ export class AmgTask1Component implements OnInit {
          let page = this.pages.pop();
          this.setPage(page);
          this.keyPress.emit(key);
-         this.curParticipantService.keyPresses = this.keyPresses;
        }, interval);
      } else {
      this.router.navigateByUrl('/part2-instructions', { replaceUrl: true })
