@@ -51,7 +51,6 @@ import { GameQuizComponent } from './game-quiz/game-quiz.component';
 import { SlotQuizComponent } from './slot-quiz/slot-quiz.component';
 import { Opponent2Component } from './opponent2/opponent2.component';
 import { SuspicionCheckComponent } from './suspicion-check/suspicion-check.component';
-import { Debrief2Component } from './debrief2/debrief2.component';
 
 @NgModule({
   declarations: [
@@ -90,8 +89,7 @@ import { Debrief2Component } from './debrief2/debrief2.component';
     GameQuizComponent,
     SlotQuizComponent,
     Opponent2Component,
-    SuspicionCheckComponent,
-    Debrief2Component
+    SuspicionCheckComponent
   ],
   imports: [
     BrowserModule,
