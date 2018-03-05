@@ -17,10 +17,11 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class AmgTask2Component implements OnDestroy {
   active: boolean = true;
-  page: number = 1;
+  page: number = 0;
   amgtask: {page: number, text: string, imgSrc: string}[];
   maxPage: number;
   pages: number[];
+  numPages: number[];
   amgPage: number[];
   keyPresses: string[];
   keyPressesT0: number;
@@ -34,9 +35,9 @@ export class AmgTask2Component implements OnDestroy {
               .takeWhile(() => this.active)
               .subscribe(res => {
                 this.amgtask = res.json();
-                this.maxPage = this.amgtask.length;
+                this.maxPage = this.amgtask.length -1;
                 this.pages = this.shuffle(this.maxPage);
-                this.curParticipantService.pages = this.pages.slice().reverse();
+                this.curParticipantService.numPages = this.numPages.slice().reverse();
                 this.keyPresses = [];
               });
   }
@@ -70,7 +71,7 @@ export class AmgTask2Component implements OnDestroy {
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
-    for (let i = numPages - 1; i > 0; i--) {
+    for (let i = numPages -1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
       let temp = pages[i];
       pages[i] = pages[swap_idx];
