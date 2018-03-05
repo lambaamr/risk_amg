@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "ques": "<h3>Did you believe, at any time, that the other players in Part 2 may not have been real? On a scale from 1-6, where 1 represents ‘completely believed’ and 6 represents ‘didn’t believe at all’, how much did you believe you were playing with real partners?</h3>",
+    "a": "1 - I completely believed that the other players were real at all",
+    "b": "2 - I mostly believed that the other players were real",
+    "c": "3 - I believed that the other players were real but had some doubts",
+    "d": "4 - I believed that the other players were not real but had some doubts",
+    "e": "5 - I mostly did not believe that the other players were real",
+    "f": "6 - I completely did not believe that the other players were real at all",
+    "resp": ""
+  }
+]

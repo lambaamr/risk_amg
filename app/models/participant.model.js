@@ -27,6 +27,7 @@ var ParticipantSchema = mongoose.Schema({
     gadResponse: [Number],
     siasResponse: [Number],
     cesdResponse: [Number],
+    suspicionResponse: [Number],
     pages: [Number],
     pracpages: [Number],
     keyPresses: [String],

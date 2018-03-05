@@ -1,7 +1,7 @@
 <div *ngIf="!answersSubmitted" class="question-panel card">
-  <h2>Survey 4</h2>
-  <p>Below is a list of some ways you may have felt or behaved. Please indicate how often you have felt this way during the last week by checking the appropriate space.</p>
-  <form (ngSubmit)="checkAnswer()" class="quiz-radio type1-text">
+  <h2>Debriefing</h2>
+  <p>We are interested in how people make decisions in different economic situations. We have been running this study for a while, and while you played a game with other mTurkers, some participants have wondered if these people are in fact real. They are indeed real. However, it is important for us to know whether you doubted if the other players were real or not.</p>
+  <form (ngSubmit)="checkAnswer()"  class="quiz-radio type1-text">
     <div *ngFor="let ques of quess; let idx=index">
       <span [innerHTML]="ques.ques"></span>
       <ul>
@@ -35,6 +35,12 @@
             <span [innerHTML]="ques.e"></span>
           </label>
         </li>
+        <li>
+          <label for="{{ques.id}}f">
+            <input type="radio" name="{{ques.id}}" id="{{ques.id}}f" [(ngModel)]="answers[idx].value" value=6>
+            <span [innerHTML]="ques.f"></span>
+          </label>
+        </li>
       </ul>
     </div>
     <button type="submit" [disabled]="!isValid()">Submit</button>
@@ -42,6 +48,6 @@
 </div> <!-- .question-panel -->
 
   <div *ngIf="answersSubmitted" class="feedback card">
-    <p> Thank you for your responses. </p>
-      <tg-nav-button url="debrief" label="Proceed"></tg-nav-button>
+        <p> Thank you for your response. </p>
+      <tg-nav-button url="payoff" label="Next Survey"></tg-nav-button>
     </div>

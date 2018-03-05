@@ -50,6 +50,8 @@ import { AmgQuizComponent } from './amg-quiz/amg-quiz.component';
 import { GameQuizComponent } from './game-quiz/game-quiz.component';
 import { SlotQuizComponent } from './slot-quiz/slot-quiz.component';
 import { Opponent2Component } from './opponent2/opponent2.component';
+import { SuspicionCheckComponent } from './suspicion-check/suspicion-check.component';
+import { Debrief2Component } from './debrief2/debrief2.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,9 @@ import { Opponent2Component } from './opponent2/opponent2.component';
     AmgQuizComponent,
     GameQuizComponent,
     SlotQuizComponent,
-    Opponent2Component
+    Opponent2Component,
+    SuspicionCheckComponent,
+    Debrief2Component
   ],
   imports: [
     BrowserModule,
