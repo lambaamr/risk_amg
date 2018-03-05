@@ -25,6 +25,7 @@ export class AmgTask2Component implements OnDestroy {
   keyPresses: string[];
   keyPressesT0: number;
   keyPressesT1: number;
+  lastPage: number[];
 
    constructor(private router: Router,
               private participantService: ParticipantService,
@@ -70,7 +71,7 @@ export class AmgTask2Component implements OnDestroy {
   // Generates a random permutation of integers in the range [low, high]
   shuffle(numPages: number) {
     let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
-    for (let i = numPages -1; i > 0; i--) {
+    for (let i = numPages -1; i >= 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
       let temp = pages[i];
       pages[i] = pages[swap_idx];
