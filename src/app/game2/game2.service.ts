@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Game2Service {
-  readonly totalTrials = 3;
+  readonly totalTrials = 84;
 
   endowmentltT0: number;
   endowmentltT1: number;
@@ -36,6 +36,7 @@ export class Game2Service {
     let reactTimelt = +(this.endowmentltT1 - this.endowmentltT0).toFixed(3);
     return reactTimelt;
   }
+
   inVolatilityPeriod(trial: number): boolean {
     let remainder = trial % 24;
     return trial > 10 && ((remainder >= 0 && remainder < 4) || (remainder > 12 && remainder < 24));
