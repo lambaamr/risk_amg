@@ -13,29 +13,29 @@
     <ul>
       <li *ngFor="let item of content?.purpose.list2">{{ item }}</li>
     </ul>
-    <span [innerHTML]="content?.purpose.par4"></span>
-    <ol>
+    <div [innerHTML]="content?.purpose.par4"></div>
+    <ul>
       <li *ngFor="let item of content?.purpose.list3">{{ item }}</li>
-    </ol>
+    </ul>
   </div>
   <div>
-    <strong>Potential Risks and Benefits</strong>
+    <strong>What are the risks?</strong>
     <span [innerHTML]="content?.risks"></span>
   </div>
   <div>
-    <strong>Rights</strong>
+    <strong>What if I want to stop? What are my rights as a participant?</strong>
     <span [innerHTML]="content?.rights"></span>
   </div>
   <div>
-    <strong>Compensation</strong>
+    <strong>Will I be paid?</strong>
     <span [innerHTML]="content?.compensation"></span>
   </div>
   <div>
-    <strong>Confidentiality of data</strong>
+    <strong>How will my information be protected?</strong>
     <span [innerHTML]="content?.confidentiality"></span>
   </div>
   <div>
-    <strong>Further questions</strong>
+    <strong>Who can I talk to if I have questions about this study? Who can I talk to if I have questions about my rights as a participant?</strong>
     <span [innerHTML]="content?.questions"></span>
   </div>
   <p>You may print this page for your records.</p>
@@ -53,4 +53,3 @@
     </div>
   </form>
 </div>
-
