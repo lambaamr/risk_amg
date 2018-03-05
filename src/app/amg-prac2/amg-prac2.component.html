@@ -1,6 +1,6 @@
 <div id="amg-prac2">
  <div *ngFor="let prac of amgprac">
-   <tg-amg-prac1 *ngIf="page === prac.page" [page]="prac.page" [text]="prac.text" [imgSrc]="prac.img" [maxPage]="maxPage" [pages]="pages" (pageChange)="pageChange($event)" (pagesChange)="pagesChange($event)" (keyPress)="keyPress($event)">
+   <tg-amg-prac1 *ngIf="pracpage === prac.pracpage" [pracpage]="prac.pracpage" [text]="prac.text" [imgSrc]="prac.img" [maxpracPage]="maxpracPage" [pracpages]="pracpages" (pracpageChange)="pracpageChange($event)" (pracpagesChange)="pracpagesChange($event)">
    </tg-amg-prac1>
  </div>
 </div> <!-- #instructions -->
