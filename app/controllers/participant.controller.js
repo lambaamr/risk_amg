@@ -65,34 +65,34 @@ exports.update = (req, res) => {
                 req.params.participantId});
         }
 
-        participant.endowment = req.body.endowment;
         participant.ip = req.body.ip;
         participant.isComplete = req.body.isComplete;
-        participant.netGains = req.body.netGains;
-        participant.numCorrect = req.body.numCorrect;
-        participant.opponentNumber = req.body.opponentNumber;
         participant.payoff = req.body.payoff;
+        participant.numCorrect = req.body.numCorrect;
+        participant.pracpages = req.body.pracpages;
+        participant.prackeyPresses = req.body.prackeyPresses;
+        participant.pages = req.body.pages;
+        participant.keyPresses = req.body.keyPresses;
+        participant.amgreactionTime = req.body.amgreactionTime;
+        participant.opponentNumber = req.body.opponentNumber;
         participant.proportion = req.body.proportion;
-        participant.reactionTime = req.body.reactionTime;
-        participant.returned = req.body.returned;
         participant.actualProportion = req.body.actualProportion;
+        participant.endowment = req.body.endowment;
+        participant.returned = req.body.returned;
+        participant.netGains = req.body.netGains;
+        participant.reactionTime = req.body.reactionTime;
         participant.opponent2Number = req.body.opponent2Number;
         participant.proportionlt = req.body.proportionlt;
-        participant.reactionTimelt = req.body.reactionTimelt;
-        participant.returnedlt = req.body.returnedlt;
         participant.actualProportionlt = req.body.actualProportionlt;
-        participant.netGainslt = req.body.netGainslt;
         participant.endowmentlt = req.body.endowmentlt;
+        participant.returnedlt = req.body.returnedlt;
+        participant.netGainslt = req.body.netGainslt;
+        participant.reactionTimelt = req.body.reactionTimelt;
+        participant.siasResponse = req.body.siasResponse;
         participant.ocirResponse = req.body.ocirResponse;
         participant.gadResponse = req.body.gadResponse;
-        participant.siasResponse = req.body.siasResponse;
         participant.cesdResponse = req.body.cesdResponse;
-        participant.suspicionResponse = req.body.cesdResponse;
-        participant.pages = req.body.pages;
-        participant.pracpages = req.body.pracpages;
-        participant.keyPresses = req.body.keyPresses;
-        participant.prackeyPresses = req.body.prackeyPresses;
-        participant.amgreactionTime = req.body.amgreactionTime;
+        participant.suspicionResponse = req.body.suspicionResponse;
 
         participant.save((err, data) => {
             if (err) {

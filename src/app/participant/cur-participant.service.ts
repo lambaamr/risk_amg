@@ -35,11 +35,11 @@ export class CurParticipantService {
     gadResponse: [],
     siasResponse: [],
     cesdResponse: [],
-    suspicionResponse: [],
     pages: [],
     pracpages: [],
     keyPresses: [],
     prackeyPresses: [],
+    suspicionResponse: [],
     amgreactionTime: []
   };
 
@@ -107,8 +107,8 @@ export class CurParticipantService {
     return this._participant.suspicionResponse;
   }
 
-  set suspicionResponse(susp: number[] ) {
-    this._participant.suspicionResponse = susp;
+  set suspicionResponse(sus: number[] ) {
+    this._participant.suspicionResponse = sus;
   }
 
   get gadResponse(): number[] {
