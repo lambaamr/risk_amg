@@ -35,7 +35,7 @@ export class CurParticipantService {
     gadResponse: [],
     siasResponse: [],
     cesdResponse: [],
-    numPages: [],
+    pages: [],
     keyPresses: [],
     amgreactionTime: []
   };
@@ -124,12 +124,12 @@ export class CurParticipantService {
     this._participant.cesdResponse = cesd;
   }
 
-  get numPages(): number[] {
-    return this._participant.numPages;
+  get pages(): number[] {
+    return this._participant.pages;
   }
 
-  set numPages(pag: number[] ) {
-    this._participant.numPages = pag;
+  set pages(pag: number[] ) {
+    this._participant.pages = pag;
   }
 
   get keyPresses(): string [] {

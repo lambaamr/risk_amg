@@ -1,13 +1,13 @@
 <div class="amg-prac1" *ngIf="!isFixation">
-  <div *ngIf="pracpage === 0" class="welcome-text card">
+  <div *ngIf="page === 0" class="welcome-text card">
     <h2>Part 1 Practice Phase</h2>
     <div [innerHTML]="text"></div>
-    <button (click)="setpracPage(pracpage + 1)">Next</button>
+    <button (click)="setPage(page + 1)">Next</button>
   </div> <!-- #welcome-text -->
 
-  <div *ngIf="pracpage >= 1" class="amgprac-text">
+  <div *ngIf="page >= 1" class="amgprac-text">
     <div [innerHTML]="text"></div>
-    <div *ngIf="pracpage >= 1" class="amgprac-image"><img [src]="imgSrc"></div>
+    <div *ngIf="page >= 1" class="amgprac-image"><img [src]="imgSrc"></div>
   </div> <!-- #instruction-text -->
 
 

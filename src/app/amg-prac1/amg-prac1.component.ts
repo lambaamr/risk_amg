@@ -19,15 +19,16 @@ export enum KEY_CODE {
 
 
 export class AmgPrac1Component implements OnInit {
-  @Input() pracpage: number;
+  @Input() page: number;
   @Input() text: string;
   @Input() imgSrc: string;
-  @Input() maxpracPage: number;
-  @Input() pracpages: number[];
+  @Input() maxPage: number;
+  @Input() pages: number[];
 
 
-  @Output() pracpageChange = new EventEmitter<number>();
-  @Output() pracpagesChange = new EventEmitter<number[]>();
+  @Output() pageChange = new EventEmitter<number>();
+  @Output() pagesChange = new EventEmitter<number[]>();
+  @Output() keyPress = new EventEmitter<string>();
 
   isFixation: boolean;
 
@@ -42,30 +43,28 @@ export class AmgPrac1Component implements OnInit {
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (!this.isFixation && event.keyCode === KEY_CODE.f) {
-      this.setFixation(1000);
+      this.setFixation(1000, 'f');
     }
 
     if (!this.isFixation && event.keyCode === KEY_CODE.j) {
-      this.setFixation(1000);
+      this.setFixation(1000, 'j');
     }
   }
 
-
-  setpracPage(pracpage: number): void {
-    this.pracpage = pracpage;
-    console.log(this.pracpages);
-    console.log(this.pracpage);
-    this.pracpageChange.emit(this.pracpage);
-    this.pracpagesChange.emit(this.pracpages);
+  setPage(page: number): void {
+    this.page = page;
+    this.pageChange.emit(this.page);
+    this.pagesChange.emit(this.pages);
   }
 
-  setFixation(interval: number): void {
-     if (this.pracpages.length > 0) {
+  setFixation(interval: number, key: string): void {
+     if (this.pages.length > 0) {
        this.isFixation = true;
        setTimeout(() => {
          this.isFixation = false;
-         let pracpage = this.pracpages.pop();
-         this.setpracPage(pracpage);
+         let page = this.pages.pop();
+         this.setPage(page);
+         this.keyPress.emit(key);
        }, interval);
      } else {
      this.router.navigateByUrl('/part1', { replaceUrl: true })

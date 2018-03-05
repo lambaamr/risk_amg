@@ -17,45 +17,54 @@ import { ParticipantService } from '../participant/participant.service';
 
 export class AmgPrac2Component implements OnDestroy {
   active: boolean = true;
-  pracpage: number = 0;
-  amgprac: {pracpage: number, text: string, imgSrc: string}[];
-  pracpages: number[];
-  maxpracPage: number;
+  page: number = 0;
+  amgprac: {page: number, text: string, imgSrc: string}[];
+  maxPage: number;
+  pages: number[];
+  amgPage: number[];
+  keyPresses: string[];
 
-  constructor(private router: Router,
-             private participantService: ParticipantService,
-             private curParticipantService: CurParticipantService,
-             private http: Http) {
-         this.http.get('/assets/amgprac.json')
-             .takeWhile(() => this.active)
-             .subscribe(res => {
-               this.amgprac = res.json();
-               this.maxpracPage = this.amgprac.length -1;
-               this.pracpages = this.shuffle(this.maxpracPage);
-             });
-           }
-
- ngOnDestroy() {
-   this.active = false;
- }
-
-  pracpageChange(pracpage: number): void {
-    this.pracpage = pracpage;
+   constructor(private router: Router,
+              private participantService: ParticipantService,
+              private curParticipantService: CurParticipantService,
+              private http: Http) {
+          this.http.get('/assets/amgprac.json')
+              .takeWhile(() => this.active)
+              .subscribe(res => {
+                this.amgprac = res.json();
+                this.maxPage = this.amgprac.length -1;
+                this.pages = this.shuffle(this.maxPage);
+                this.keyPresses = [];
+              });
   }
 
-  pracpagesChange(pracpages: number[]): void {
-    this.pracpages = pracpages;
+  ngOnDestroy() {
+    this.active = false;
+    this.participantService.updateParticipant(this.curParticipantService.participant)
+        .subscribe();
+  }
+
+  pageChange(page: number): void {
+    this.page = page;
+  }
+
+  pagesChange(pages: number[]): void {
+    this.pages = pages;
+  }
+
+  keyPress(key: string): void {
+    this.keyPresses.push(key);
   }
 
   // Generates a random permutation of integers in the range [low, high]
-  shuffle(numpracPages: number) {
-    let pracpages = Array.from(Array(numpracPages).keys()).map(num => num + 1);
-    for (let i = numpracPages - 1; i > 0; i--) {
+  shuffle(numPages: number) {
+    let pages = Array.from(Array(numPages).keys()).map(num => num + 1);
+    for (let i = numPages - 1; i > 0; i--) {
       const swap_idx = Math.floor(Math.random() * (i+1));
-      let temp = pracpages[i];
-      pracpages[i] = pracpages[swap_idx];
-      pracpages[swap_idx] = temp;
+      let temp = pages[i];
+      pages[i] = pages[swap_idx];
+      pages[swap_idx] = temp;
     }
-    return pracpages;
+    return pages;
   }
 }
