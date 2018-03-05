@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Game2Service {
-  readonly totalTrials = 3;
+  readonly totalTrials = 84;
 
   endowmentltT0: number;
   endowmentltT1: number;
