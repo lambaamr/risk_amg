@@ -27,8 +27,10 @@ export class Participant {
     public siasResponse?: number[];
     public cesdResponse?: number[];
     public pages?: number[];
+    public pracpages?: number[];
     public event?: number[];
     public keyPresses?: string[];
+    public prackeyPresses?: string[];
     public amgreactionTime?: number[];
 
 

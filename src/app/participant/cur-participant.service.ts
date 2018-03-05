@@ -36,7 +36,9 @@ export class CurParticipantService {
     siasResponse: [],
     cesdResponse: [],
     pages: [],
+    pracpages: [],
     keyPresses: [],
+    prackeyPresses: [],
     amgreactionTime: []
   };
 
@@ -132,12 +134,28 @@ export class CurParticipantService {
     this._participant.pages = pag;
   }
 
+  get pracpages(): number[] {
+    return this._participant.pracpages;
+  }
+
+  set pracpages(pracpag: number[] ) {
+    this._participant.pracpages = pracpag;
+  }
+
   get keyPresses(): string [] {
     return this._participant.keyPresses
   }
 
   set keyPresses(key: string []) {
     this._participant.keyPresses = key;
+  }
+
+  get prackeyPresses(): string [] {
+    return this._participant.prackeyPresses
+  }
+
+  set prackeyPresses(key: string []) {
+    this._participant.prackeyPresses = key;
   }
 
   get name(): string {
