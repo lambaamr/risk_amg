@@ -11,24 +11,26 @@ import { CurParticipantService } from '../participant/cur-participant.service';
   providers: [ ParticipantService ]
 })
 
+
+
 export class PayoffComponent implements OnDestroy, AfterViewInit {
   idx1: number;
   idx2: number;
-  payoff: number; 
-  netGains: number[]; 
+  payoff: number;
+  netGains: number[];
 
   constructor(private participantService: ParticipantService,
               private curParticipantService: CurParticipantService,
               private elementRef: ElementRef) {
-    this.netGains = this.curParticipantService.netGains; 
-    this.idx1 = this.generateIndex(this.netGains.length); 
+    this.netGains = this.curParticipantService.netGains;
+    this.idx1 = this.generateIndex(this.netGains.length);
     do {
-      this.idx2 = this.generateIndex(this.netGains.length); 
+      this.idx2 = this.generateIndex(this.netGains.length);
     } while (this.idx2 === this.idx1)
 
     this.payoff = +((this.netGains[this.idx1] + this.netGains[this.idx2]).toFixed(2));
     this.curParticipantService.payoff = this.payoff;
-    this.curParticipantService.isComplete = true;  
+    this.curParticipantService.isComplete = true;
   }
 
   ngAfterViewInit() {
@@ -40,7 +42,7 @@ export class PayoffComponent implements OnDestroy, AfterViewInit {
                             .subscribe(() => console.log('Success'));
   }
 
-  /* 
+  /*
    * Helper functions
    */
 
