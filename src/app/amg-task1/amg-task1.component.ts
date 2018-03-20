@@ -50,6 +50,10 @@ export class AmgTask1Component implements OnInit {
     }
   }
 
+  initiateTask(): void {
+    let page = this.pages.pop();
+    this.setPage(page);
+  }
 
   setPage(page: number): void {
     this.page = page;
@@ -58,16 +62,16 @@ export class AmgTask1Component implements OnInit {
   }
 
   setFixation(interval: number, key: string): void {
-     if (this.pages.length > 0) {
-       this.isFixation = true;
-       setTimeout(() => {
-         this.isFixation = false;
-         let page = this.pages.pop();
-         this.setPage(page);
-         this.keyPress.emit(key);
-       }, interval);
-     } else {
-     this.router.navigateByUrl('/part2-instructions', { replaceUrl: true })
-     }
-   }
+    this.keyPress.emit(key);
+    if (this.pages.length > 0) {
+      this.isFixation = true;
+      setTimeout(() => {
+        this.isFixation = false;
+        let page = this.pages.pop();
+        this.setPage(page);
+      }, interval);
+    } else {
+        this.router.navigateByUrl('/part2-instructions', { replaceUrl: true })
+    }
+  }
 }
