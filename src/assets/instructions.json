@@ -1,7 +1,7 @@
 [
   {
     "page": 1,
-    "text": "<p>Welcome to the experiment! Today you will be taking part in a study that will involve 4 experimental components. Please click the “Next” button to proceed with the experiment guidelines.</p>",
+    "text": "<p>Welcome to the experiment! Today you will be taking part in a study that will involve 4 experimental components. <p><strong> PLEASE NOTE: This study is strictly for scientific & academic purposes so please do not complete this task unless you are able and willing to take the experiment seriously. </strong></p><p>If not, please exit immediately. If you are able and willing to take this experiment seriously, please click the “Next” button to proceed with the experiment guidelines.</p>",
     "img": "/assets/images/pic_guide.png"
   },
   {

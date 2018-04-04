@@ -31,7 +31,6 @@ export class AmgTask1Component implements OnInit {
 
   isFixation: boolean;
 
-
   constructor(private curParticipantService: CurParticipantService,
               private participantService: ParticipantService,
               private router: Router) { }
