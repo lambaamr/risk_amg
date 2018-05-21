@@ -10,7 +10,7 @@
     "id": 2,
     "question": "<h3>Which of the following will determine your bonus payment?</h3>",
     "a": "Total points accumulated throughout various tasks during the study.",
-    "b": "A computer algorithm will randomly select one of the experimental sections you completed and will then select two trials you completed to determine your final bonus payment.",
+    "b": "A computer algorithm will randomly select one of the experimental sections you completed and will then select one trial you completed to determine your final bonus payment.",
     "ans": "2"
   },
   {
