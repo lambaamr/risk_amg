@@ -57,7 +57,7 @@ const routes: Routes = [
   { path: 'part3', component: Game2Component },
   { path: 'part2-instructions', component: TrustInstructions2Component },
   { path: 'players-search', component: OpponentSearchComponent },
-  { path: 'code', component: CodeComponent },
+  { path: 'code-dsl458', component: CodeComponent },
   { path: 'payoff', component: PayoffComponent },
   { path: 'debrief', component: SuspicionCheckComponent },
   { path: 'end', component: TerminationComponent }

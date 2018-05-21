@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "question": "<h3>In this task what do the blue and red chips indicate?</h3>",
-    "a": "The blue and red chips indicate my chances of winning the lottery and winning nothing.",
-    "b": "The blue and red chips indicate my chances of winning the guaranteed $0.25 on each trial.",
+    "question": "<h3>What does the gray box represent if it is covering 74 chips?</h3>",
+    "a": "If the gray box is covering 74 chips then my chances of winning could be anywhere from 13% (all the covered chips are actually losing chips) to 87% (all the covered chips are actually winning chips).",
+    "b": "The gray box represents my chances of losing the lottery.  If 74 chips are covered, it means I have a 74% chance of losing the lottery.",
     "ans": "1"
   },
   {
