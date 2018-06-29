@@ -15,9 +15,9 @@
   },
   {
     "id": 3,
-    "question": "<h3>What does the guaranteed winning of $0.25 represent?</h3>",
-    "a": "The guaranteed $0.25 represents what I will earn whether or not I decide to play the lottery.",
-    "b": "On each trial I can decide whether I would like to take my chances and play the lottery (in which case I would earn the lottery winnings or nothing) or simply select the guaranteed $0.25 option, which means I will receive a sure $0.25 payout if that trial is randomly selected to determine my bonus payment.",
+    "question": "<h3>What does the guaranteed winning of $5.00 represent?</h3>",
+    "a": "The guaranteed $5.00 represents what I will earn whether or not I decide to play the lottery.",
+    "b": "On each trial I can decide whether I would like to take my chances and play the lottery (in which case I would earn the lottery winnings or nothing) or simply select the guaranteed $5.00 option, which means I will receive a sure $5.00 payout if that trial is randomly selected to determine my bonus payment.",
     "ans": "2"
   }
 ]

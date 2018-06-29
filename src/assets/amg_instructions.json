@@ -21,7 +21,7 @@
   },
   {
     "page": 5,
-    "text": "<p>Above and below each bar is a number indicating a dollar amount, which represents how much money you could earn in that lottery. If you play this lottery and draw a blue chip, you will get an additional $2.50. If you draw a red chip instead, you will get $0.</p><p>Please note that the colors may be associated with different monetary amounts in each lottery, such that the blue chips will sometimes represent getting $0, and the red chips will sometimes represent getting $0.</p>",
+    "text": "<p>Above and below each bar is a number indicating a dollar amount, which represents how much money you could earn in that lottery. If you play this lottery and draw a blue chip, you will get an additional $10.00. If you draw a red chip instead, you will get $0.</p><p>Please note that the colors may be associated with different monetary amounts in each lottery, such that the blue chips will sometimes represent getting $0, and the red chips will sometimes represent getting $0.</p>",
     "img": "/assets/images/amg2.png"
   },
   {
@@ -31,17 +31,17 @@
   },
   {
     "page": 7,
-    "text": "<p>On each trial, you will be asked to choose between two options using the <strong>[F]</strong> and <strong>[J]</strong> keys, which correspond to the left and right options. For example, you can either earn a guaranteed $0.25, or play the lottery for the $ amount indicated above the bar, where the odds of winning are indicated by the number of chips at the top of the bar (in this case there is a 75% chance of winning $2.50).</p><p>Keep in mind that the side the certain $0.25 or lottery appears on will switch throughout the task.</p>",
+    "text": "<p>On each trial, you will be asked to choose between two options using the <strong>[F]</strong> and <strong>[J]</strong> keys, which correspond to the left and right options. For example, you can either earn a guaranteed $5.00, or play the lottery for the $ amount indicated above the bar, where the odds of winning are indicated by the number of chips at the top of the bar (in this case there is a 75% chance of winning $10.00).</p><p>Keep in mind that the side the certain $5.00 or lottery appears on will switch throughout the task.</p>",
     "img": "/assets/images/amg4.png"
   },
   {
     "page": 8,
-    "text": "<p>On the partial information trials, you will also be asked to choose between the guarenteed $0.25 or the lottery.</p><p>However, remember that on these trials you only have <strong>partial</strong> information about what your chances of winning are. For example, on this trial your chances of winning the lottery for $1.00 could be anywhere between 25% or 75% because 50 chips are covered.</p>",
+    "text": "<p>On the partial information trials, you will also be asked to choose between the guarenteed $5.00 or the lottery.</p><p>However, remember that on these trials you only have <strong>partial</strong> information about what your chances of winning are. For example, on this trial your chances of winning the lottery for $10.00 could be anywhere between 25% or 75% because 50 chips are covered.</p>",
     "img": "/assets/images/amg5.png"
   },
   {
     "page": 9,
-    "text": "<p>If this phase of the experiment is selected to determine your bonus payment, the computer will randomly select <strong>one</strong> of your trials to pay you for! Based on your decision on that trial, we will either pay you the certain $0.25 (if that is what you chose on that trial) or the computer will play the lottery on your behalf for the lottery amount on that trial. For example, if you had a 75% chance of winning $2.50, the computer will draw a chip and you will be paid for that trial if the lottery is won!</p>",
+    "text": "<p>If this phase of the experiment is selected to determine your bonus payment, the computer will randomly select <strong>one</strong> of your trials to pay you for! Based on your decision on that trial, we will either pay you the certain $5.00 (if that is what you chose on that trial) or the computer will play the lottery on your behalf for the lottery amount on that trial. For example, if you had a 75% chance of winning $10.00, the computer will draw a chip and you will be paid for that trial if the lottery is won!</p>",
     "img": "/assets/images/amg4.png"
   },
   {
