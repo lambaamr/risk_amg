@@ -1,7 +1,7 @@
 /*
  * Component for the experiment's first page. The participant's
  * first name, age, gender, and IP are collected, and an entry is created
- * in the database. 
+ * in the database.
  */
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -37,14 +37,14 @@ export class NameComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.ipService.getIp().takeWhile(() => this.active).subscribe(ip => this.ip = ip);
   }
-  
+
   ngOnDestroy() {
     this.active = false;
   }
-  /* 
+  /*
    * Saves the new participant to the database, and updates the participant's
    * information in the CurParticipantService which is shared across all
-   * components. 
+   * components.
    */
   createParticipant(): void {
     const newParticipant = new Participant(this.firstName, parseInt(this.age), this.gender, this.ip, this.isComplete);
@@ -58,8 +58,8 @@ export class NameComponent implements OnInit, OnDestroy {
           this.curParticipantService.ip = participant.ip;
           this.curParticipantService.name = participant.name;
 
-          this.router.navigateByUrl('/informed-consent', { replaceUrl: true });
-        }); 
+          this.router.navigateByUrl('/part1-instructions', { replaceUrl: true });
+        });
   } 
 
   isValid(): boolean {

@@ -70,7 +70,7 @@ export class AmgTask1Component implements OnInit {
         this.setPage(page);
       }, interval);
     } else {
-        this.router.navigateByUrl('/part2-instructions', { replaceUrl: true })
+        this.router.navigateByUrl('/end', { replaceUrl: true })
     }
   }
 }
